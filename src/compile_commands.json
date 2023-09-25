@@ -1,0 +1,192 @@
+[
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/animacion.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/animacion.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/animacion.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/aplicacion-ig.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/aplicacion-ig.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/aplicacion-ig.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/camara.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/camara.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/camara.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/escena.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/escena.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/escena.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/eventos-raton.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-raton.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-raton.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/eventos-teclado.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/grafo-escena.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/main.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/main.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/main.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/malla-ind.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-ind.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-ind.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/malla-revol.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-revol.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-revol.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/materiales-luces.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/materiales-luces.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/materiales-luces.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/objeto3d.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/objeto3d.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/objeto3d.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/seleccion.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/seleccion.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/seleccion.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/vaos-vbos.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/vaos-vbos.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/vaos-vbos.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/animacion.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/animacion.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/animacion.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/aplicacion-ig.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/aplicacion-ig.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/aplicacion-ig.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/camara.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/camara.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/camara.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/escena.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/escena.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/escena.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/eventos-raton.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-raton.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-raton.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/eventos-teclado.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/grafo-escena.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/main.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/main.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/main.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/malla-ind.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-ind.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-ind.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/malla-revol.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-revol.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-revol.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/materiales-luces.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/materiales-luces.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/materiales-luces.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/objeto3d.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/objeto3d.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/objeto3d.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/seleccion.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/seleccion.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/seleccion.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/vaos-vbos.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/vaos-vbos.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/vaos-vbos.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp"
+}
+]

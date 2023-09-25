@@ -1,0 +1,4 @@
+/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles/debug_exe.dir
+/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles/release_exe.dir
+/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles/edit_cache.dir
+/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles/rebuild_cache.dir
