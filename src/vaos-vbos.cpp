@@ -258,7 +258,7 @@ void DescrVBOInds::crearVBO( )
    CError();
 }
 // ---------------------------------------------------------------------------------------------
-
+DescrVAO descriptorVAO = new DescrVAO(, vertices);
 DescrVBOInds::~DescrVBOInds()
 {
    delete [] (unsigned char *) own_indices ;

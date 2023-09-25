@@ -124,11 +124,11 @@ void MallaInd::visualizarGL( )
    //  Si el VAO ya está creado, (dvao no nulo), no hay que hacer nada.
    //
    if(dvao == nullptr){
-      dvao->crearVAO();
+      
    }
 
    // COMPLETAR: práctica 1: visualizar el VAO usando el método 'draw' de 'DescrVAO'
-
+   dvao->draw();
 
    // COMPLETAR: práctica 1: restaurar color anterior del cauce 
    //
