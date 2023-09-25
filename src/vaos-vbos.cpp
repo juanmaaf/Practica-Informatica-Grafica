@@ -137,15 +137,17 @@ void DescrVBOAtribs::crearVBO()
    //
    // añadir el código para crear el VBO (transferir datos y registrar metadatos), se 
    // deben de dar estos pasos:
-   //
-   // 1. generar un nuevo identificador o nombre de VBO 
-   // 2. fija este buffer como buffer 'activo' actualmente en el 'target' GL_ARRAY_BUFFER
-   // 3. transferir los datos desde la memoria de la aplicación al VBO en GPU
-   // 4. registrar para este índice de atributo, la localización y el formato de la tabla en el buffer 
-   // 5. desactivar el buffer
-   // 6. habilitar el uso de esta tabla de atributos
-   //
 
+   // 1. crear y activar VBO (vacío por ahora)
+   glGenBuffers( 1, &buffer ); // produce buffer >0
+   glBindBuffer( GL_ARRAY_BUFFER, buffer );
+   // 2. transfiere datos desde aplicación al VBO en GPU
+   glBufferData( GL_ARRAY_BUFFER, tot_size, data, GL_STATIC_DRAW );
+   // 3. registra formato de datos y dirección de inicio en memoria
+   glVertexAttribPointer( index, size, type, GL_FALSE, stride, offset );
+   // 4. habilita la tabla, desactiva VBO
+   glEnableVertexAttribArray( index );
+   glBindBuffer( GL_ARRAY_BUFFER, 0 );
 
    // comprobar que no ha habido error durante la creación del VBO
    CError();
@@ -245,13 +247,13 @@ void DescrVBOInds::crearVBO( )
    //
    // Añadir el código para crear el VBO en la GPU y transferir los datos, se deben 
    // de dar estos pasos:
-   //
-   // 1. crear un nuevo nombre o identificador de VBO 
-   // 2. activar ('bind') el buffer en el 'target' GL_ELEMENT_ARRAY_BUFFER
-   // 3. transferir los datos desde la memoria de la aplicación al VBO en GPU
-   //
 
-      
+   // 1. crear y activar el VBO (vacío por ahora)
+   glGenBuffers( 1, &buffer ); // produce buffer >0
+   glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, buffer );
+   // 2. copiar los índices desde la aplicación al VBO en la GPU
+   glBufferData( GL_ELEMENT_ARRAY_BUFFER, tot_size, indices, GL_STATIC_DRAW);
+
    // comprueba que no ha habido error al crear el VBO 
    CError();
 }
@@ -274,8 +276,6 @@ DescrVBOInds::~DescrVBOInds()
 // ******************************************************************************************************
 // Clase DescrVAO
 // ------------------------------------------------------------------------------------------------------
-
-
 
 DescrVAO::DescrVAO( const unsigned p_num_atribs, DescrVBOAtribs * p_dvbo_posiciones ) 
 {
@@ -434,6 +434,19 @@ void DescrVAO::draw( const GLenum mode )
    //     - visualizar con 'glDrawArrays'
    //
    // 3. Desactivar el VAO (activar el VAO 0 con 'glBindVertexArray')
+
+   // 1. asegurarnos de que el VAO esta creado y activado
+   if ( array == 0 )
+   crearVAO(); // crear y activar el VAO
+   else
+   glBindVertexArray( array ); // activar el VAO
+   // 2. visualizar con la llamada correspondiente de OpenGL
+   if ( dvbo_indices != nullptr ) // es una secuencia indexada
+   glDrawElements( mode, idxs_count, idxs_type, offset );
+   else // no es una secuencia indexada
+   glDrawArrays( mode, first, count );
+   // 3. desactivar VAO
+   glBindVertexArray( 0 );
 
 
 
