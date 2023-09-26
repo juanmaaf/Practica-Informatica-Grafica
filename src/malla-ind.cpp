@@ -124,14 +124,14 @@ void MallaInd::visualizarGL( )
    //  Si el VAO ya está creado, (dvao no nulo), no hay que hacer nada.
    //
    if(dvao == nullptr){
-      //DescrVBOAtribs vbo_atribs = new DescrVBOAtribs(numero_atributos_cauce, &vertices);
-      //DescrVAO vao_descr = new DescrVAO(numero_atributos_cauce, &vbo_atribs);
-      //DescrVBOInds vbo_index = new DescrVBOInds(&triangulos);
+      DescrVBOAtribs* vbo_atribs = new DescrVBOAtribs(numero_atributos_cauce, vertices);
+      dvao = new DescrVAO(numero_atributos_cauce, vbo_atribs);
+      DescrVBOInds* vbo_index = new DescrVBOInds(triangulos);
 
-      //vao_descr.agregar(vbo_index);
+      dvao->agregar(vbo_index);
  
       for(unsigned i; i < numero_atributos_cauce; ++i){
-
+         
       }
    }
 
