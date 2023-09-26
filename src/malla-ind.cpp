@@ -124,19 +124,21 @@ void MallaInd::visualizarGL( )
    //  Si el VAO ya está creado, (dvao no nulo), no hay que hacer nada.
    //
    if(dvao == nullptr){
-      DescrVBOAtribs* vbo_atribs = new DescrVBOAtribs(numero_atributos_cauce, vertices);
+      DescrVBOAtribs * vbo_atribs = new DescrVBOAtribs(numero_atributos_cauce, vertices);
       dvao = new DescrVAO(numero_atributos_cauce, vbo_atribs);
-      DescrVBOInds* vbo_index = new DescrVBOInds(triangulos);
+      DescrVBOInds * vbo_index = new DescrVBOInds(triangulos);
 
       dvao->agregar(vbo_index);
  
       for(unsigned i; i < numero_atributos_cauce; ++i){
-         
+         if((vbo_atribs != nullptr)){
+            dvao->agregar(vbo_atribs);
+         }
       }
    }
 
    // COMPLETAR: práctica 1: visualizar el VAO usando el método 'draw' de 'DescrVAO'
-   dvao->draw(GL_FILL);
+   dvao->draw(GL_TRIANGLES);
 
    // COMPLETAR: práctica 1: restaurar color anterior del cauce 
    //
@@ -167,7 +169,19 @@ void MallaInd::visualizarGeomGL( )
    //    2. Dibujar la malla (únicamente visualizará los triángulos)
    //    3. Volver a activar todos los atributos para los cuales la tabla no esté vacía
    // ....
+   for(unsigned i = 1; i < numero_atributos_cauce; ++i){
+      //if(dvao[i] != nullptr){
 
+      
+   }
+
+   visualizarGL();
+   
+   for(unsigned i = 1; i < numero_atributos_cauce; ++i){
+      //if(dvao[i] != nullptr){
+
+      
+   }
 }
 
 // -----------------------------------------------------------------------------
