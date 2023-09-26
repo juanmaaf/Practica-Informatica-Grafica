@@ -170,17 +170,17 @@ void MallaInd::visualizarGeomGL( )
    //    3. Volver a activar todos los atributos para los cuales la tabla no esté vacía
    // ....
    for(unsigned i = 1; i < numero_atributos_cauce; ++i){
-      //if(dvao[i] != nullptr){
-
-      
+      if(dvao != nullptr){
+         dvao->habilitarAtrib(i, false);
+      }
    }
 
    visualizarGL();
    
    for(unsigned i = 1; i < numero_atributos_cauce; ++i){
-      //if(dvao[i] != nullptr){
-
-      
+      if(dvao != nullptr){
+         dvao->habilitarAtrib(i, true);
+      }
    }
 }
 
