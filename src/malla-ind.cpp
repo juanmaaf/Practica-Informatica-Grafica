@@ -124,16 +124,31 @@ void MallaInd::visualizarGL( )
    //  Si el VAO ya está creado, (dvao no nulo), no hay que hacer nada.
    //
    if(dvao == nullptr){
-      DescrVBOAtribs * vbo_atribs = new DescrVBOAtribs(numero_atributos_cauce, vertices);
-      dvao = new DescrVAO(numero_atributos_cauce, vbo_atribs);
-      DescrVBOInds * vbo_index = new DescrVBOInds(triangulos);
+      DescrVBOAtribs * vbo_vertices = new DescrVBOAtribs(numero_atributos_cauce, vertices);
+      dvao = new DescrVAO(numero_atributos_cauce, vbo_vertices);
+      DescrVBOInds * vbo_triangl = new DescrVBOInds(triangulos);
 
-      dvao->agregar(vbo_index);
+      dvao->agregar(vbo_triangl);
  
-      for(unsigned i; i < numero_atributos_cauce; ++i){
-         if((vbo_atribs != nullptr)){
-            dvao->agregar(vbo_atribs);
-         }
+      if(col_ver.size() > 0){
+         DescrVBOAtribs * vbo_col_ver = new DescrVBOAtribs(numero_atributos_cauce, col_ver);
+         dvao->agregar(vbo_col_ver);
+      }
+      if(nor_ver.size() > 0){
+         DescrVBOAtribs * vbo_nor_ver = new DescrVBOAtribs(numero_atributos_cauce, nor_ver);
+         dvao->agregar(vbo_nor_ver);
+      }
+      if(nor_tri.size() > 0){
+         DescrVBOAtribs * vbo_nor_tri = new DescrVBOAtribs(numero_atributos_cauce, nor_tri);
+         dvao->agregar(vbo_nor_tri);
+      }
+      if(cc_tt_ver.size()){
+         DescrVBOAtribs * vbo_cc_tt_ver = new DescrVBOAtribs(numero_atributos_cauce, cc_tt_ver);
+         dvao->agregar(vbo_cc_tt_ver);
+      }
+      if(segmentos_normales.size()){
+         DescrVBOAtribs * vbo_seg_norm = new DescrVBOAtribs(numero_atributos_cauce, segmentos_normales);
+         dvao->agregar(vbo_seg_norm);
       }
    }
 
@@ -169,19 +184,11 @@ void MallaInd::visualizarGeomGL( )
    //    2. Dibujar la malla (únicamente visualizará los triángulos)
    //    3. Volver a activar todos los atributos para los cuales la tabla no esté vacía
    // ....
-   for(unsigned i = 1; i < numero_atributos_cauce; ++i){
-      if(dvao != nullptr){
-         dvao->habilitarAtrib(i, false);
-      }
-   }
+   
 
    visualizarGL();
    
-   for(unsigned i = 1; i < numero_atributos_cauce; ++i){
-      if(dvao != nullptr){
-         dvao->habilitarAtrib(i, true);
-      }
-   }
+   
 }
 
 // -----------------------------------------------------------------------------
