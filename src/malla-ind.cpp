@@ -342,10 +342,10 @@ Tetraedro::Tetraedro()
 : MallaInd( "tetraedro 4 vértices" )
 {
    vertices = {
-      {0.0, -1.0, 0.0}, // Vértice 0
-      {1.0, 1.0, -1.0}, // Vértice 1
-      {-1.0, 1.0, -1.0}, // Vértice 2
-      {0.0, 1.0, 1.0}  // Vértice 3
+      {0.0, 1.0, 0.0}, // Vértice 0
+      {1.0, -1.0, -1.0}, // Vértice 1
+      {-1.0, -1.0, -1.0}, // Vértice 2
+      {0.0, -1.0, 1.0}  // Vértice 3
    };
 
    triangulos = {
