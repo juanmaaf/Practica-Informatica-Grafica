@@ -131,23 +131,23 @@ void MallaInd::visualizarGL( )
       dvao->agregar(vbo_triangl);
  
       if(col_ver.size() > 0){
-         DescrVBOAtribs * vbo_col_ver = new DescrVBOAtribs(numero_atributos_cauce, col_ver);
+         DescrVBOAtribs * vbo_col_ver = new DescrVBOAtribs(ind_atrib_colores, col_ver);
          dvao->agregar(vbo_col_ver);
       }
       if(nor_ver.size() > 0){
-         DescrVBOAtribs * vbo_nor_ver = new DescrVBOAtribs(numero_atributos_cauce, nor_ver);
+         DescrVBOAtribs * vbo_nor_ver = new DescrVBOAtribs(ind_atrib_normales, nor_ver);
          dvao->agregar(vbo_nor_ver);
       }
       if(nor_tri.size() > 0){
-         DescrVBOAtribs * vbo_nor_tri = new DescrVBOAtribs(numero_atributos_cauce, nor_tri);
+         DescrVBOAtribs * vbo_nor_tri = new DescrVBOAtribs(ind_atrib_normales, nor_tri);
          dvao->agregar(vbo_nor_tri);
       }
       if(cc_tt_ver.size() > 0){
-         DescrVBOAtribs * vbo_cc_tt_ver = new DescrVBOAtribs(numero_atributos_cauce, cc_tt_ver);
+         DescrVBOAtribs * vbo_cc_tt_ver = new DescrVBOAtribs(ind_atrib_coord_text, cc_tt_ver);
          dvao->agregar(vbo_cc_tt_ver);
       }
       if(segmentos_normales.size() > 0){
-         DescrVBOAtribs * vbo_seg_norm = new DescrVBOAtribs(numero_atributos_cauce, segmentos_normales);
+         DescrVBOAtribs * vbo_seg_norm = new DescrVBOAtribs(ind_atrib_normales, segmentos_normales);
          dvao->agregar(vbo_seg_norm);
       }
    }
@@ -342,10 +342,10 @@ Tetraedro::Tetraedro()
 : MallaInd( "tetraedro 4 vértices" )
 {
    vertices = {
-      {1.0, 1.0, 1.0}, // Vértice 0
-      {0.0,-1.0, 1.0}, // Vértice 1
-      {-1.0, 1.0, 1.0}, // Vértice 2
-      {0.0, 0.0, -1.0}  // Vértice 3
+      {0.0, -1.0, 0.0}, // Vértice 0
+      {1.0, 1.0, -1.0}, // Vértice 1
+      {-1.0, 1.0, -1.0}, // Vértice 2
+      {0.0, 1.0, 1.0}  // Vértice 3
    };
 
    triangulos = {
@@ -387,12 +387,14 @@ CuboColores::CuboColores()
          {1,5,7}, {1,7,3}  // Z+ (+1)
       } ;
 
-   col_ver = 
-      {     {0.0, 0.0, 0.0}, {0.0, 0.0, 1.0}, 
-            {0.0, 1.0, 0.0}, {0.0, 1.0, 1.0},
-            {1.0, 0.0, 0.0}, {1.0, 0.0, 1.0},
-            {1.0, 1.0, 0.0}, {1.0, 1.0, 1.0}
-      } ;
+   for(unsigned i = 0; i < vertices.size(); ++i){
+      float r = (vertices[i].x + 1.0) / 2.0;
+      float g = (vertices[i].y + 1.0) / 2.0;
+      float b = (vertices[i].z + 1.0) / 2.0;
+
+      col_ver.push_back({r, g, b});
+   }
+   
 }
 
 // -----------------------------------------------------------------------------------------------
