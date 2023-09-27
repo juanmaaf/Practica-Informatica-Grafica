@@ -185,10 +185,31 @@ void MallaInd::visualizarGeomGL( )
    //    3. Volver a activar todos los atributos para los cuales la tabla no esté vacía
    // ....
    
+   // 1-Colores
+   // 2-Normales
+   // 3-CoordText
 
+   if(col_ver.size() > 0){
+      dvao->habilitarAtrib(1, false);
+   }
+   if(nor_ver.size() > 0 || nor_tri.size() > 0 || segmentos_normales.size() > 0){
+      dvao->habilitarAtrib(2, false);
+   }
+   if(cc_tt_ver.size() > 0){
+      dvao->habilitarAtrib(3, false);
+   }
+   
    visualizarGL();
    
-   
+   if(col_ver.size() > 0){
+      dvao->habilitarAtrib(1, true);
+   }
+   if(nor_ver.size() > 0 || nor_tri.size() > 0 || segmentos_normales.size() > 0){
+      dvao->habilitarAtrib(2, true);
+   }
+   if(cc_tt_ver.size() > 0){
+      dvao->habilitarAtrib(3, true);
+   }
 }
 
 // -----------------------------------------------------------------------------
