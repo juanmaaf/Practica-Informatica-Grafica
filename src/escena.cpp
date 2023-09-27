@@ -130,6 +130,8 @@ void Escena::visualizarGL( )
       case ModosVisu::puntos:
          glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
          break;
+      default:
+      break;
    }
 
    CError();
@@ -176,7 +178,10 @@ void Escena::visualizarGL( )
       //      - fijar el modo de polígonos a modo 'lineas'
       // 
       // ...........
+      cauce->fijarColor( 0.0, 0.0, 0.0 );
+      glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
+      objeto->visualizarGeomGL();
    }
    
 
