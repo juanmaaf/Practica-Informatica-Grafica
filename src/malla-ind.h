@@ -125,5 +125,20 @@ class Cubo : public MallaInd
 
 // ---------------------------------------------------------------------
 
+class Tetraedro : public MallaInd
+{
+   public:
+      Tetraedro();
+};
+
+// ---------------------------------------------------------------------
+
+class CuboColores : public MallaInd
+{
+   public:
+      CuboColores();
+};
+
+// ---------------------------------------------------------------------
 
 #endif
