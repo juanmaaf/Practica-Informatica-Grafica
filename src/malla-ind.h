@@ -141,4 +141,12 @@ class CuboColores : public MallaInd
 
 // ---------------------------------------------------------------------
 
+class EstrellaZ : public MallaInd
+{
+   public:
+      EstrellaZ(unsigned n);
+};
+
+// ---------------------------------------------------------------------
+
 #endif

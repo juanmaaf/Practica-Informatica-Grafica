@@ -31,6 +31,7 @@
 #include "malla-ind.h"   // declaración de 'ContextoVis'
 #include "lector-ply.h"
 #include "seleccion.h"   // para 'ColorDesdeIdent' 
+#include "cmath"
 
 
 // *****************************************************************************
@@ -397,5 +398,12 @@ CuboColores::CuboColores()
    
 }
 
+// Clase EstrellaZ
+
+EstrellaZ::EstrellaZ(unsigned n)
+:  MallaInd( "estrella opcional 1 n puntas" )
+{
+   
+};
 // -----------------------------------------------------------------------------------------------
 
