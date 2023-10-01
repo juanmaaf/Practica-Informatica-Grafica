@@ -327,6 +327,13 @@ Escena1::Escena1()
    objetos.push_back( new EstrellaZ(9) );
 
    objetos.push_back( new CasaX() );
+
+   objetos.push_back( new MallaTriangulo() );
+
+   objetos.push_back( new MallaCuadrado() );
+
+   objetos.push_back( new MallaPiramideL() );
+
 }
 
 // -------------------------------------------------------------------------
