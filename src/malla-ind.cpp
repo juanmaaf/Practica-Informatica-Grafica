@@ -355,8 +355,7 @@ Tetraedro::Tetraedro()
       {0, 2, 3} // Cara 3
    };
 
-   glm::vec3 color = { 0.2, 0.5, 0.7 };
-   ponerColor(color);
+   ponerColor({ 0.2, 0.5, 0.7 });
 }
 
 // Clase 'CuboColores
@@ -423,10 +422,11 @@ EstrellaZ::EstrellaZ(unsigned n)
       col_ver.push_back({x, y, z}); // Color basado en las coordenadas X, Y y Z
    }
 
-   // Crear los vértices intermedios
+   // Crear los vértices interiores
    for (unsigned i = 0; i < n; ++i)
    {
-      float angulo = 2.0 * M_PI * i / n + M_PI/2.0;
+      float angulo = 2.0 * M_PI * i / n;
+      angulo += angulo/2.0;
       float x = centroX + radio/2.0 * cos(angulo);
       float y = centroY + radio/2.0 * sin(angulo);
       float z = centroZ;
@@ -444,7 +444,7 @@ EstrellaZ::EstrellaZ(unsigned n)
 
 
 CasaX::CasaX()
-:  MallaInd( "cubo 8 vértices" )
+:  MallaInd( "casa 10 vértices" )
 {
 
    vertices =
@@ -481,6 +481,68 @@ CasaX::CasaX()
    {
       col_ver.push_back({vertices[i].x, vertices[i].y, vertices[i].z});
    }
+}
+
+// Clase MallaTriangulo
+
+MallaTriangulo::MallaTriangulo()
+:  MallaInd( "triángulo 3 vértices" )
+{
+
+   vertices =
+      {  { -1.0, -1.0, -1.0 }, // 0
+         { -1.0, -1.0, +1.0 }, // 1
+         { -1.0, +1.0, -1.0 }, // 2
+      } ;
+
+
+
+   triangulos =
+      { 
+         {}
+      } ;
+}
+
+
+// Clase MallaCuadrado
+
+MallaCuadrado::MallaCuadrado()
+:  MallaInd( "cuadrado 4 vértices" )
+{
+
+   vertices =
+      {  { -1.0, -1.0, -1.0 }, // 0
+         { -1.0, -1.0, +1.0 }, // 1
+         { -1.0, +1.0, -1.0 }, // 2
+         { -1.0, +1.0, +1.0 }, // 3
+      } ;
+
+
+
+   triangulos =
+      {
+
+      } ;
+}
+
+
+// Clase MallaPiramideL
+
+MallaPiramideL::MallaPiramideL()
+:  MallaInd( "cubo 8 vértices" )
+{
+
+   vertices =
+      {
+         
+      } ;
+
+
+
+   triangulos =
+      {
+
+      } ;
 }
 
 // -----------------------------------------------------------------------------------------------
