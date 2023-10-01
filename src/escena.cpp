@@ -325,6 +325,8 @@ Escena1::Escena1()
    objetos.push_back( new CuboColores() );
 
    objetos.push_back( new EstrellaZ(9) );
+
+   objetos.push_back( new CasaX() );
 }
 
 // -------------------------------------------------------------------------

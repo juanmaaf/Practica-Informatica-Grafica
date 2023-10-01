@@ -334,7 +334,6 @@ Cubo::Cubo()
          {0,6,4}, {0,2,6}, // Z-
          {1,5,7}, {1,7,3}  // Z+ (+1)
       } ;
-
 }
 
 //Clase Tetraedro
@@ -403,7 +402,80 @@ CuboColores::CuboColores()
 EstrellaZ::EstrellaZ(unsigned n)
 :  MallaInd( "estrella opcional 1 n puntas" )
 {
-   
+   float radio = 0.5;
+   float centroX = 0.5;
+   float centroY = 0.5;
+   float centroZ = 0.0;
+
+   // Crear vértice central
+   vertices.push_back({centroX, centroY, centroZ});
+   col_ver.push_back({1.0, 1.0, 1.0}); // Color blanco para el vértice central
+
+   // Crear los vértices de las puntas
+   for (unsigned i = 0; i < n; ++i)
+   {
+      float angulo = 2.0 * M_PI * i / n;
+      float x = centroX + radio * cos(angulo);
+      float y = centroY + radio * sin(angulo);
+      float z = centroZ;
+
+      vertices.push_back({x, y, z});
+      col_ver.push_back({x, y, z}); // Color basado en las coordenadas X, Y y Z
+   }
+
+   // Crear los vértices intermedios
+   for (unsigned i = 0; i < n; ++i)
+   {
+      float angulo = 2.0 * M_PI * i / n + M_PI/2.0;
+      float x = centroX + radio/2.0 * cos(angulo);
+      float y = centroY + radio/2.0 * sin(angulo);
+      float z = centroZ;
+
+      vertices.push_back({x, y, z});
+      col_ver.push_back({x, y, z}); // Color basado en las coordenadas X, Y y Z
+   }
+
+   // Crear los triángulos
+   for (unsigned i = 1; i <= 2*n; ++i)
+   {
+      triangulos.push_back({0, i, (i % n) + 1});
+   }
 };
+
+
+CasaX::CasaX()
+:  MallaInd( "cubo 8 vértices" )
+{
+
+   vertices =
+      {  { -1.0, -1.0, -1.0 }, // 0
+         { -1.0, -1.0, +0.5 }, // 1
+         { -1.0, +1.0, -1.0 }, // 2
+         { -1.0, +1.0, +0.5 }, // 3
+         { +1.0, -1.0, -1.0 }, // 4
+         { +1.0, -1.0, +0.5 }, // 5
+         { +1.0, +1.0, -1.0 }, // 6
+         { +1.0, +1.0, +0.5 }, // 7
+         { -1.0, 0.0, +1.0 }, // 8
+         { +1.0, 0.0, +1.0 }  // 9
+      } ;
+
+
+
+   triangulos =
+      {  {0,1,3}, {0,3,2}, // X-
+         {4,7,5}, {4,6,7}, // X+ (+4)
+
+         {0,5,1}, {0,4,5}, // Y-
+         {2,3,7}, {2,7,6}, // Y+ (+2)
+         {1,3,8}, {5,7,9},
+         {1,5,8}, {5,8,9},
+         {3,7,8}, {7,8,9}
+
+         //{0,6,4}, {0,2,6}, // Z-
+         //{1,5,7}, {1,7,3}  // Z+ (+1)
+      } ;
+}
+
 // -----------------------------------------------------------------------------------------------
 
