@@ -181,7 +181,7 @@ void CamaraOrbitalSimple::actualizarMatrices()
       near      = 0.05,
       far       = near+1000.0 ;
 
-   matriz_proye = perspective( fovy_grad, 1.0f/ratio_vp, near, far ); //MAT_Perspectiva( fovy_grad, ratio_vp, near, far ); // CUA: ratio_vp es y/x, pero esta función esperael 'aspect', que parece ser x/y
+   matriz_proye = perspective( radians(fovy_grad), 1.0f/ratio_vp, near, far ); //MAT_Perspectiva( fovy_grad, ratio_vp, near, far ); // CUA: ratio_vp es y/x, pero esta función esperael 'aspect', que parece ser x/y
    matrices_actualizadas = true ;
 }
 // -----------------------------------------------------------------------------
