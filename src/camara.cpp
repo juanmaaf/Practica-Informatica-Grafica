@@ -447,7 +447,7 @@ void Camara3Modos::actualizarMatrices()
 
    matriz_vista = MAT_Vista( eje, org );
    if ( perspectiva )
-      matriz_proye = perspective( fovy_grad, 1.0f/ratio_vp, near, far );  // CUA: ratio_vp es y/x, pero esta función esperael 'aspect', que parece ser x/y
+      matriz_proye = perspective( radians(fovy_grad), 1.0f/ratio_vp, near, far );  // CUA: ratio_vp es y/x, pero esta función esperael 'aspect', que parece ser x/y
    else
    {
       constexpr float s = 8.0 ;
