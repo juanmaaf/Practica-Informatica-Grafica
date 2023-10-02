@@ -324,7 +324,17 @@ Escena1::Escena1()
    
    objetos.push_back( new CuboColores() );
 
+   objetos.push_back( new EstrellaZ(3) );
+
+   objetos.push_back( new EstrellaZ(5) );
+
+   objetos.push_back( new EstrellaZ(7) );
+
    objetos.push_back( new EstrellaZ(9) );
+
+   objetos.push_back( new EstrellaZ(17) );
+
+   objetos.push_back( new EstrellaZ(21) );
 
    objetos.push_back( new CasaX() );
 

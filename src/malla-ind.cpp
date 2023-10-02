@@ -425,8 +425,7 @@ EstrellaZ::EstrellaZ(unsigned n)
    // Crear los vértices interiores
    for (unsigned i = 0; i < n; ++i)
    {
-      float angulo = 2.0 * M_PI * i / n;
-      angulo += angulo/2.0;
+      float angulo = 2.0 * M_PI * i / n + M_PI / n;
       float x = centroX + radio/2.0 * cos(angulo);
       float y = centroY + radio/2.0 * sin(angulo);
       float z = centroZ;
@@ -436,10 +435,16 @@ EstrellaZ::EstrellaZ(unsigned n)
    }
 
    // Crear los triángulos
-   for (unsigned i = 1; i <= 2*n; ++i)
+   for (unsigned i = 0; i < 2*n-1; ++i)
    {
-      triangulos.push_back({0, i, (i % n) + 1});
+      if(i < n){
+         triangulos.push_back({0, i+1, (n+1+i)%(2*n+1)});
+      }
+      else{
+         triangulos.push_back({0, i+1, (n+1+i)%(2*n-1)});
+      }
    }
+   triangulos.push_back({0,1,2*n});
 };
 
 
