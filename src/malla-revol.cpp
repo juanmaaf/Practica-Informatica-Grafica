@@ -85,8 +85,6 @@ void MallaRevol::inicializar
          triangulos.push_back({k, k + m + 1, k + 1});
       }
    }
-
-
 }
 
 // -----------------------------------------------------------------------------
@@ -103,7 +101,8 @@ MallaRevolPLY::MallaRevolPLY
    // Leer los vértice del perfil desde un PLY, después llamar a 'inicializar'
    // ...........................
 
-
+   LeerVerticesPLY(nombre_arch, vertices);
+   inicializar(vertices,nperfiles);
 }
 
 
