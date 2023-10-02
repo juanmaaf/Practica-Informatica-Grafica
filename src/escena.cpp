@@ -332,10 +332,6 @@ Escena1::Escena1()
 
    objetos.push_back( new EstrellaZ(9) );
 
-   objetos.push_back( new EstrellaZ(17) );
-
-   objetos.push_back( new EstrellaZ(21) );
-
    objetos.push_back( new CasaX() );
 
    objetos.push_back( new MallaTriangulo() );
@@ -353,7 +349,14 @@ Escena1::Escena1()
 // los objetos que se indican en los guiones de las práctica 2
 // .......
 
+Escena2::Escena2()
+{
+   using namespace std ;
+   cout << "Creando objetos de la práctica 2." << endl ;
 
+   //objetos.push_back();
+
+}
 
 // -------------------------------------------------------------------------
 // COMPLETAR: práctica 3: completar constructor de 'Escena3'

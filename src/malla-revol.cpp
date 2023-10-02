@@ -55,8 +55,36 @@ void MallaRevol::inicializar
    //
    // ............................... 
 
+   //Creación Tabla vértices
+   unsigned n = perfil.size();
+   unsigned m = num_copias;
 
+   for (unsigned i = 0; i < n; ++i){
+      for(unsigned j = 0; j < m; ++j){
+         float angulo = 2 * M_PI * i / (n - 1);
+         float x = j / static_cast<float>(m - 1); // Coordenada X original (entre 0 y 1)
 
+         // Rotar el vértice alrededor del eje Y
+         float x_rotado = x * cos(angulo);
+         float z_rotado = -x * sin(angulo);
+
+         // Agregar el vértice a la tabla de vértices como un vector [x, 0, z]
+         vertices.push_back({x_rotado, 0.0, z_rotado});
+      }
+   }
+
+   //Creación Tabla triángulos
+   for(unsigned i = 0; i < n-1; ++i){
+      for(unsigned j = 0; j < m-1; ++j){
+         int k = i * m + j;
+
+         // Añadir triángulo formado por los índices k, k + m y k + m + 1
+         triangulos.push_back({k, k + m, k + m + 1});
+
+         // Añadir triángulo formado por los índices k, k + m + 1 y k + 1
+         triangulos.push_back({k, k + m + 1, k + 1});
+      }
+   }
 
 
 }

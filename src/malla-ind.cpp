@@ -200,7 +200,7 @@ void MallaInd::visualizarGeomGL( )
       dvao->habilitarAtrib(3, false);
    }
    
-   visualizarGL();
+   dvao->draw(GL_TRIANGLES);
    
    if(col_ver.size() > 0){
       dvao->habilitarAtrib(1, true);
@@ -297,7 +297,7 @@ MallaPLY::MallaPLY( const std::string & nombre_arch )
 
    // COMPLETAR: práctica 2: leer archivo PLY e inicializar la malla
    // ..........................
-
+   LeerPLY(nombre_arch, vertices, triangulos);
 
    // COMPLETAR: práctica 4: invocar  a 'calcularNormales' para el cálculo de normales
    // .................
@@ -348,14 +348,14 @@ Tetraedro::Tetraedro()
       {0.0, -1.0, 1.0}  // Vértice 3
    };
 
+   ponerColor({ 0.2, 0.5, 0.7 });
+
    triangulos = {
       {0, 1, 2}, // Cara 0
       {0, 1, 3}, // Cara 1
       {1, 2, 3}, // Cara 2
       {0, 2, 3} // Cara 3
    };
-
-   ponerColor({ 0.2, 0.5, 0.7 });
 }
 
 // Clase 'CuboColores
