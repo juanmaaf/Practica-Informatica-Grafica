@@ -146,7 +146,9 @@ Esfera::Esfera(const int num_verts_per, const unsigned nperfiles)
 {
    std::vector<glm::vec3> perfil =
       {  
-         
+         {0.0, +1.0, 0.0},
+         {+1.0, 0.0, 0.0},
+         {0.0, -1.0, 0.0}
       } ;
 
    inicializar(perfil, nperfiles);
