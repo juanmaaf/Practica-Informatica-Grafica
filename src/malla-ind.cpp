@@ -644,13 +644,27 @@ RejillaY::RejillaY(unsigned n, unsigned m)
    //Colores igual coordenadas (x,y,z)
 
    // Generar vértices
-   for(unsigned i = 0; i < n*m; ++i){
+   for(unsigned i = 0; i < n; ++i){
+      float index_i = 1.0/n * i;
+      for(unsigned j = 0; j < m; ++j){
+         float index_j = 1.0/m * j;
 
+         vertices.push_back({index_i, 0.0, index_j});
+         col_ver.push_back({index_i, 0.0, index_j});
+      }
    }
-
    // Generar triángulos
-   for(unsigned i = 0; i < 2*(n-1)*(m-1); ++i){
+   for (unsigned i = 0; i < n - 1; ++i) {
+      for (unsigned j = 0; j < m - 1; ++j) {
+        int currentVertex = i * m + j;
+        int nextRowVertex = (i + 1) * m + j;
 
+        // Triángulo 1
+        triangulos.push_back({currentVertex, nextRowVertex, currentVertex + 1});
+
+        // Triángulo 2
+        triangulos.push_back({currentVertex + 1, nextRowVertex, nextRowVertex + 1});
+      }
    }
 }
 
