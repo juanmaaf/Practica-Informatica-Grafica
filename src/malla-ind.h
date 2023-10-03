@@ -181,4 +181,12 @@ class MallaPiramideL : public MallaInd
 
 // ---------------------------------------------------------------------
 
+class PiramideEstrellaZ : public MallaInd
+{
+   public:
+      PiramideEstrellaZ(unsigned n);
+};
+
+// ---------------------------------------------------------------------
+
 #endif

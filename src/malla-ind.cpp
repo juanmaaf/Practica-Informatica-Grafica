@@ -559,5 +559,74 @@ MallaPiramideL::MallaPiramideL()
       } ;
 }
 
+
+// Clase PiramideEstrellaZ
+
+PiramideEstrellaZ::PiramideEstrellaZ(unsigned n)
+:  MallaInd( "piramide estrella opcional 1 n puntas" )
+{
+   float radio = 0.5;
+   float centroX = 0.5;
+   float centroY = 0.5;
+   float centroZ = 0.0;
+
+   // Crear vértice central
+   vertices.push_back({centroX, centroY, centroZ});
+   col_ver.push_back({1.0, 1.0, 1.0}); // Color blanco para el vértice central
+
+   // Crear los vértices de las puntas
+   for (unsigned i = 0; i < n; ++i)
+   {
+      float angulo = 2.0 * M_PI * i / n;
+      float x = centroX + radio * cos(angulo);
+      float y = centroY + radio * sin(angulo);
+      float z = centroZ;
+
+      vertices.push_back({x, y, z});
+      col_ver.push_back({x, y, z}); // Color basado en las coordenadas X, Y y Z
+   }
+
+   // Crear los vértices interiores
+   for (unsigned i = 0; i < n; ++i)
+   {
+      float angulo = 2.0 * M_PI * i / n + M_PI / n;
+      float x = centroX + radio/2.0 * cos(angulo);
+      float y = centroY + radio/2.0 * sin(angulo);
+      float z = centroZ;
+
+      vertices.push_back({x, y, z});
+      col_ver.push_back({x, y, z}); // Color basado en las coordenadas X, Y y Z
+   }
+
+   // Crear vértice cúspide
+   vertices.push_back({centroX, centroY, 0.5});
+   col_ver.push_back({1.0, 1.0, 1.0}); // Color blanco para la cúspide
+   unsigned index_cuspide = vertices.size()-1;
+
+   // Crear los triángulos Base
+   for (unsigned i = 0; i < 2*n-1; ++i)
+   {
+      if(i < n){
+         triangulos.push_back({0, i+1, (n+1+i)%(2*n+1)});
+      }
+      else{
+         triangulos.push_back({0, i+1, (n+1+i)%(2*n-1)});
+      }
+   }
+   triangulos.push_back({0,1,2*n});
+
+   // Crear los triángulos Laterales
+   for (unsigned i = 0; i < 2*n-1; ++i)
+   {
+      if(i < n){
+         triangulos.push_back({index_cuspide, i+1, (n+1+i)%(2*n+1)});
+      }
+      else{
+         triangulos.push_back({index_cuspide, i+1, (n+1+i)%(2*n-1)});
+      }
+   }
+   triangulos.push_back({index_cuspide,1,2*n});
+};
+
 // -----------------------------------------------------------------------------------------------
 
