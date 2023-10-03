@@ -401,6 +401,8 @@ CuboColores::CuboColores()
 EstrellaZ::EstrellaZ(unsigned n)
 :  MallaInd( "estrella opcional 1 n puntas" )
 {
+   assert (n > 1);
+
    float radio = 0.5;
    float centroX = 0.5;
    float centroY = 0.5;
@@ -565,6 +567,8 @@ MallaPiramideL::MallaPiramideL()
 PiramideEstrellaZ::PiramideEstrellaZ(unsigned n)
 :  MallaInd( "piramide estrella opcional 1 n puntas" )
 {
+   assert(n > 1);
+
    float radio = 0.5;
    float centroX = 0.5;
    float centroY = 0.5;
