@@ -632,5 +632,16 @@ PiramideEstrellaZ::PiramideEstrellaZ(unsigned n)
    triangulos.push_back({index_cuspide,1,2*n});
 };
 
+
+//Clase RejillaY
+
+RejillaY::RejillaY(unsigned n, unsigned m)
+: MallaInd( "rejilla opcional 2" )
+{
+   assert(n > 1 && m > 1);
+
+   
+}
+
 // -----------------------------------------------------------------------------------------------
 

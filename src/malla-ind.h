@@ -189,4 +189,12 @@ class PiramideEstrellaZ : public MallaInd
 
 // ---------------------------------------------------------------------
 
+class RejillaY : public MallaInd
+{
+   public:
+      RejillaY(unsigned n, unsigned m);
+};
+
+// ---------------------------------------------------------------------
+
 #endif
