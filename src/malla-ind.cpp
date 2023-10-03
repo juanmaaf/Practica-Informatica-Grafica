@@ -639,8 +639,19 @@ RejillaY::RejillaY(unsigned n, unsigned m)
 : MallaInd( "rejilla opcional 2" )
 {
    assert(n > 1 && m > 1);
-
    
+   // Y siempre 0
+   //Colores igual coordenadas (x,y,z)
+
+   // Generar vértices
+   for(unsigned i = 0; i < n*m; ++i){
+
+   }
+
+   // Generar triángulos
+   for(unsigned i = 0; i < 2*(n-1)*(m-1); ++i){
+
+   }
 }
 
 // -----------------------------------------------------------------------------------------------
