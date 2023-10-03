@@ -56,20 +56,20 @@ void MallaRevol::inicializar
    // ............................... 
 
    //Creación Tabla vértices
-   unsigned n = perfil.size();
-   unsigned m = num_copias;
+   unsigned n = num_copias;
+   unsigned m = perfil.size();
 
    for (unsigned i = 0; i < n; ++i){
       for(unsigned j = 0; j < m; ++j){
          float angulo = 2 * M_PI * i / (n - 1);
-         float x = j / static_cast<float>(m - 1); // Coordenada X original (entre 0 y 1)
+         float r = perfil[j].x;
 
          // Rotar el vértice alrededor del eje Y
-         float x_rotado = x * cos(angulo);
-         float z_rotado = -x * sin(angulo);
+         float x_rotado = r * cos(angulo);
+         float z_rotado = -r * sin(angulo);
 
          // Agregar el vértice a la tabla de vértices como un vector [x, 0, z]
-         vertices.push_back({x_rotado, 0.0, z_rotado});
+         vertices.push_back({x_rotado, perfil[j].y, z_rotado});
       }
    }
 
@@ -101,10 +101,55 @@ MallaRevolPLY::MallaRevolPLY
    // Leer los vértice del perfil desde un PLY, después llamar a 'inicializar'
    // ...........................
 
-   LeerVerticesPLY(nombre_arch, vertices);
-   inicializar(vertices,nperfiles);
+   std::vector<glm::vec3> perfil;
+
+   LeerVerticesPLY(nombre_arch, perfil);
+   inicializar(perfil,nperfiles);
+}
+
+// Clase Cilindro
+
+Cilindro::Cilindro(const int num_verts_per, const unsigned nperfiles)
+:  MallaRevol()
+{
+   std::vector<glm::vec3> perfil =
+      {  
+         {0.0, +1.0, 0.0},
+         {+1.0, +1.0, 0.0},
+         {+1.0, 0.0, 0.0},
+         {0.0, 0.0, 0.0}
+      } ;
+
+   inicializar(perfil, nperfiles);
 }
 
 
+// Clase Cono
+
+Cono::Cono(const int num_verts_per, const unsigned nperfiles)
+:  MallaRevol()
+{
+   std::vector<glm::vec3> perfil =
+      {  
+         {0.0, +1.0, 0.0},
+         {+1.0, 0.0, 0.0},
+         {0.0, 0.0, 0.0}
+      } ;
+
+   inicializar(perfil, nperfiles);
+}
+
+// Clase Esfera
+
+Esfera::Esfera(const int num_verts_per, const unsigned nperfiles)
+:  MallaRevol()
+{
+   std::vector<glm::vec3> perfil =
+      {  
+         
+      } ;
+
+   inicializar(perfil, nperfiles);
+}
 
 

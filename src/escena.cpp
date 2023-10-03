@@ -354,8 +354,25 @@ Escena2::Escena2()
    using namespace std ;
    cout << "Creando objetos de la práctica 2." << endl ;
 
-   //objetos.push_back();
+   objetos.push_back(new MallaRevolPLY("peon.ply", 24) );
 
+   objetos.push_back(new MallaRevolPLY("lata-pcue.ply", 24) );
+
+   objetos.push_back(new MallaRevolPLY("lata-pinf.ply", 24) );
+
+   objetos.push_back(new MallaRevolPLY("lata-psup.ply", 24) );
+
+   objetos.push_back(new MallaPLY("big_dodge.ply") );
+
+   objetos.push_back(new MallaPLY("ant.ply") );
+
+   objetos.push_back(new MallaPLY("beethoven.ply") );
+
+   objetos.push_back(new Cilindro(24, 32) );
+
+   objetos.push_back(new Cono(24, 32) );
+
+   objetos.push_back(new Esfera(24, 32) );
 }
 
 // -------------------------------------------------------------------------
