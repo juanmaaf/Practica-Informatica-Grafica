@@ -144,13 +144,16 @@ Cono::Cono(const int num_verts_per, const unsigned nperfiles)
 Esfera::Esfera(const int num_verts_per, const unsigned nperfiles)
 :  MallaRevol()
 {
-   std::vector<glm::vec3> perfil =
-      {  
-         {0.0, +1.0, 0.0},
-         {+1.0, 0.0, 0.0},
-         {0.0, -1.0, 0.0}
-      } ;
+   // Crear el perfil de la esfera (un círculo en el plano XY)
+   std::vector<glm::vec3> perfil;
+   for (int i = 0; i < num_verts_per; ++i) {
+      float angulo = 2 * M_PI * i / (num_verts_per - 1);
+      float x = cos(angulo);
+      float y = sin(angulo);
+      perfil.push_back( {x, y, 0.0});
+   }
 
+   // Llama a la función de inicialización de MallaRevol utilizando el perfil creado
    inicializar(perfil, nperfiles);
 }
 

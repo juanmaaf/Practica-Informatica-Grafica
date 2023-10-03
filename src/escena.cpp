@@ -372,7 +372,7 @@ Escena2::Escena2()
 
    objetos.push_back(new Cono(24, 32) );
 
-   objetos.push_back(new Esfera(24, 32) );
+   objetos.push_back(new Esfera(30, 30) );
 }
 
 // -------------------------------------------------------------------------
