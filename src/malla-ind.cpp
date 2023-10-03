@@ -656,14 +656,12 @@ RejillaY::RejillaY(unsigned n, unsigned m)
    // Generar triángulos
    for (unsigned i = 0; i < n - 1; ++i) {
       for (unsigned j = 0; j < m - 1; ++j) {
-        int currentVertex = i * m + j;
-        int nextRowVertex = (i + 1) * m + j;
+        int index_actual = i * m + j;
+        int index_siguiente = (i + 1) * m + j;
 
-        // Triángulo 1
-        triangulos.push_back({currentVertex, nextRowVertex, currentVertex + 1});
+        triangulos.push_back({index_actual, index_siguiente, index_actual + 1});
 
-        // Triángulo 2
-        triangulos.push_back({currentVertex + 1, nextRowVertex, nextRowVertex + 1});
+        triangulos.push_back({index_actual + 1, index_siguiente, index_siguiente + 1});
       }
    }
 }
