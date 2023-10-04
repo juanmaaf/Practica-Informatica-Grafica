@@ -666,5 +666,57 @@ RejillaY::RejillaY(unsigned n, unsigned m)
    }
 }
 
+//Clase MallaTorre
+
+MallaTorre::MallaTorre(unsigned n)
+: MallaInd( "mallatorre opcional 3" )
+{
+   // n plantas
+   // 4 caras por planta -> Cuadrado lado 1 unidad
+   // 4(n+1) vértices y 8n triángulo
+
+   /*
+      HG    GF    FE    EH
+      DC    CB    BA    AD
+
+      A  0  i
+      B  1  i+1
+      C  2  i+2
+      D  3  i+3
+      E  4  i+4
+      F  5  i+5
+      G  6  i+6
+      H  7  i+7
+   */
+
+   assert(n > 0);
+   
+   // Crear base
+   vertices.push_back({0,0,0});
+   vertices.push_back({1,0,0});
+   vertices.push_back({1,0,1});
+   vertices.push_back({0,0,1});
+
+   // Crear vértices superiores de cada
+   for(unsigned i = 0; i < n; ++i){
+      vertices.push_back({0,i+1,0});
+      vertices.push_back({1,i+1,0});
+      vertices.push_back({1,i+1,1});
+      vertices.push_back({0,i+1,1});
+   }
+
+   // Crear triángulos por planta
+   for(unsigned i = 0; i < 8*n; i += 4){
+      triangulos.push_back({i+3, i+2, i+6});
+      triangulos.push_back({i+3, i+6, i+7});
+      triangulos.push_back({i+2, i+1, i+5});
+      triangulos.push_back({i+2, i+5, i+6});
+      triangulos.push_back({i+1, i, i+4});
+      triangulos.push_back({i+1, i+4, i+5});
+      triangulos.push_back({i, i+3, i+7});
+      triangulos.push_back({i, i+7, i+4});
+   }
+}
+
 // -----------------------------------------------------------------------------------------------
 

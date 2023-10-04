@@ -197,4 +197,12 @@ class RejillaY : public MallaInd
 
 // ---------------------------------------------------------------------
 
+class MallaTorre : public MallaInd
+{
+   public:
+      MallaTorre(unsigned n);
+};
+
+// ---------------------------------------------------------------------
+
 #endif
