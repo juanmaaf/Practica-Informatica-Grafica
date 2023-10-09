@@ -138,8 +138,8 @@ Cono::Cono(const int num_verts_per, const unsigned nperfiles)
    std::vector<glm::vec3> perfil;
    float altura = 1.0f;
    float radio = 1.0f;
-   float altura_norm = altura / (num_verts_per - 3);
-   float radio_norm = radio / (num_verts_per - 3);
+   float altura_norm = altura / (num_verts_per - 2);
+   float radio_norm = radio / (num_verts_per - 2);
 
    perfil.push_back({0.0,0.0,0.0});
 
