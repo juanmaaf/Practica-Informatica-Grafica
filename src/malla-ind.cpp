@@ -704,8 +704,8 @@ MallaTorre::MallaTorre(unsigned n)
       vertices.push_back({1,i+1,1});   //G
       vertices.push_back({0,i+1,1});   //H
    }
-
-   // Crear triángulos por planta
+   
+   // Crear triángulos por planta  BUCLE 8 Push
    for(unsigned i = 0; i < 4*n; i += 4){
       triangulos.push_back({i,i+3,i+4});
       triangulos.push_back({i+3,i+7,i+4});

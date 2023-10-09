@@ -368,15 +368,20 @@ Escena2::Escena2()
 
    objetos.push_back(new MallaPLY("beethoven.ply") );
 
-   objetos.push_back(new Cilindro(24, 32) );
+   objetos.push_back(new Cilindro(24, 30) );
 
-   objetos.push_back(new Cono(24, 32) );
+   objetos.push_back(new Cilindro(8, 30) );
+
+   objetos.push_back(new Cono(24, 30) );
+
+   objetos.push_back(new Cono(8, 30) );
 
    objetos.push_back(new Esfera(30, 30) );
 
    objetos.push_back(new PiramideEstrellaZ(8) );
 
    objetos.push_back(new RejillaY(10,8) );
+
    objetos.push_back(new RejillaY(3,8) );
 
    objetos.push_back(new MallaTorre(5) );
