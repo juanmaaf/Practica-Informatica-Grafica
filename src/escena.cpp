@@ -377,6 +377,7 @@ Escena2::Escena2()
    objetos.push_back(new PiramideEstrellaZ(8) );
 
    objetos.push_back(new RejillaY(10,8) );
+   objetos.push_back(new RejillaY(3,8) );
 
    objetos.push_back(new MallaTorre(5) );
 }

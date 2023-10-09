@@ -645,9 +645,9 @@ RejillaY::RejillaY(unsigned n, unsigned m)
 
    // Generar vértices
    for(unsigned i = 0; i < n; ++i){
-      float index_i = 1.0/n * i;
+      float index_i = 1.0/(n-1) * i;
       for(unsigned j = 0; j < m; ++j){
-         float index_j = 1.0/m * j;
+         float index_j = 1.0/(m-1) * j;
 
          vertices.push_back({index_i, 0.0, index_j});
          col_ver.push_back({index_i, 0.0, index_j});
