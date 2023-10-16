@@ -197,7 +197,7 @@ void NodoGrafoEscena::visualizarGeomGL(  )
 
    //   3. Restaurar la copia guardada de la matriz de modelado (con 'popMM')
    cauce->popMM() ;
-   
+
    // .......
 
 }
@@ -264,7 +264,8 @@ unsigned NodoGrafoEscena::agregar( const EntradaNGE & entrada )
 {
    // COMPLETAR: práctica 3: agregar la entrada al nodo, devolver índice de la entrada agregada
    // ........
-   return 0 ; // sustituir por lo que corresponda ....
+   entradas.push_back(entrada);
+   return entradas.size()-1 ;
 
 }
 // -----------------------------------------------------------------------------
@@ -297,15 +298,20 @@ glm::mat4 * NodoGrafoEscena::leerPtrMatriz( unsigned indice )
    //
    // Devolver el puntero a la matriz en la entrada indicada por 'indice'. 
    // Debe de dar error y abortar si: 
-   //   - el índice está fuera de rango 
+   //   - el índice está fuera de rango
+   assert( indice < entradas.size() );
+
    //   - la entrada no es de tipo transformación
-   //   - el puntero a la matriz es nulo 
+   assert( entradas[indice].tipo == TipoEntNGE::transformacion );
+
+   //   - el puntero a la matriz es nulo
+   assert( entradas[indice].matriz != nullptr );
+
    //
    // Sustituir 'return nullptr' por lo que corresponda.
    //
-   return nullptr ;
-
-
+   return entradas[indice].matriz ;
+   
 }
 // -----------------------------------------------------------------------------
 // si 'centro_calculado' es 'false', recalcula el centro usando los centros
