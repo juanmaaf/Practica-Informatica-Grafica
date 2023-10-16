@@ -111,14 +111,40 @@ void NodoGrafoEscena::visualizarGL(  )
    // 1. Si el objeto tiene un color asignado (se comprueba con 'tieneColor')
    //     - hacer push del color actual del cauce (con 'pushColor') y después
    //     - fijar el color en el cauce (con 'fijarColor'), usando el color del objeto (se lee con 'leerColor()')
-   // 2. Guardar copia de la matriz de modelado (con 'pushMM'), 
+   if(tieneColor()){
+      cauce->pushColor();
+      cauce->fijarColor(leerColor());
+   }
+
+   // 2. Guardar copia de la matriz de modelado (con 'pushMM'),
+   cauce->pushMM();
+
    // 3. Para cada entrada del vector de entradas:
    //     - si la entrada es de tipo objeto: llamar recursivamente a 'visualizarGL'
    //     - si la entrada es de tipo transformación: componer la matriz (con 'compMM')
+   for(unsigned i = 0; i < entradas.size(); ++i ){
+      switch (entradas[i].tipo){
+         case TipoEntNGE::objeto:
+            entradas[i].objeto->visualizarGL();
+         break;
+
+         case TipoEntNGE::transformacion:
+            cauce->compMM( *(entradas[i].matriz) );
+         break;
+
+         default:
+         break;
+      }
+   }
+
    // 4. Restaurar la copia guardada de la matriz de modelado (con 'popMM')
+   cauce->popMM() ;
+
    // 5. Si el objeto tiene color asignado:
    //     - restaurar el color original a la entrada (con 'popColor')
-
+   if(tieneColor()){
+      cauce->popColor();
+   }
 
    // COMPLETAR: práctica 4: añadir gestión de los materiales cuando la iluminación está activada    
    //
@@ -149,11 +175,29 @@ void NodoGrafoEscena::visualizarGeomGL(  )
    // Se dan estos pasos:
    //
    // 1. Guardar copia de la matriz de modelado (con 'pushMM'), 
+   cauce->pushMM();
+
    // 2. Para cada entrada del vector de entradas:
    //         - Si la entrada es de tipo objeto: llamar recursivamente a 'visualizarGeomGL'.
    //         - Si la entrada es de tipo transformación: componer la matriz (con 'compMM').
-   //   3. Restaurar la copia guardada de la matriz de modelado (con 'popMM')
+   for(unsigned i = 0; i < entradas.size(); ++i ){
+      switch (entradas[i].tipo){
+         case TipoEntNGE::objeto:
+            entradas[i].objeto->visualizarGeomGL();
+         break;
 
+         case TipoEntNGE::transformacion:
+            cauce->compMM( *(entradas[i].matriz) );
+         break;
+
+         default:
+         break;
+      }
+   }
+
+   //   3. Restaurar la copia guardada de la matriz de modelado (con 'popMM')
+   cauce->popMM() ;
+   
    // .......
 
 }
