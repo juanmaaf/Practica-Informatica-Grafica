@@ -24,6 +24,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-ind.cpp" "CMakeFiles/release_exe.dir/malla-ind.cpp.o" "gcc" "CMakeFiles/release_exe.dir/malla-ind.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-revol.cpp" "CMakeFiles/release_exe.dir/malla-revol.cpp.o" "gcc" "CMakeFiles/release_exe.dir/malla-revol.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/materiales-luces.cpp" "CMakeFiles/release_exe.dir/materiales-luces.cpp.o" "gcc" "CMakeFiles/release_exe.dir/materiales-luces.cpp.o.d"
+  "/home/juanmaaf/Escritorio/IG/PracticaIG/src/modelo-jer.cpp" "CMakeFiles/release_exe.dir/modelo-jer.cpp.o" "gcc" "CMakeFiles/release_exe.dir/modelo-jer.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/objeto3d.cpp" "CMakeFiles/release_exe.dir/objeto3d.cpp.o" "gcc" "CMakeFiles/release_exe.dir/objeto3d.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/seleccion.cpp" "CMakeFiles/release_exe.dir/seleccion.cpp.o" "gcc" "CMakeFiles/release_exe.dir/seleccion.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/vaos-vbos.cpp" "CMakeFiles/release_exe.dir/vaos-vbos.cpp.o" "gcc" "CMakeFiles/release_exe.dir/vaos-vbos.cpp.o.d"

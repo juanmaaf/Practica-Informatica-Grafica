@@ -574,6 +574,33 @@ materiales-luces.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/materiales-luces.cpp.s
 .PHONY : materiales-luces.cpp.s
 
+modelo-jer.o: modelo-jer.cpp.o
+.PHONY : modelo-jer.o
+
+# target to build an object file
+modelo-jer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/modelo-jer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/modelo-jer.cpp.o
+.PHONY : modelo-jer.cpp.o
+
+modelo-jer.i: modelo-jer.cpp.i
+.PHONY : modelo-jer.i
+
+# target to preprocess a source file
+modelo-jer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/modelo-jer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/modelo-jer.cpp.i
+.PHONY : modelo-jer.cpp.i
+
+modelo-jer.s: modelo-jer.cpp.s
+.PHONY : modelo-jer.s
+
+# target to generate assembly for a file
+modelo-jer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/modelo-jer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/modelo-jer.cpp.s
+.PHONY : modelo-jer.cpp.s
+
 objeto3d.o: objeto3d.cpp.o
 .PHONY : objeto3d.o
 
@@ -713,6 +740,9 @@ help:
 	@echo "... materiales-luces.o"
 	@echo "... materiales-luces.i"
 	@echo "... materiales-luces.s"
+	@echo "... modelo-jer.o"
+	@echo "... modelo-jer.i"
+	@echo "... modelo-jer.s"
 	@echo "... objeto3d.o"
 	@echo "... objeto3d.i"
 	@echo "... objeto3d.s"

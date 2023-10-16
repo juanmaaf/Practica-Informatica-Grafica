@@ -33,6 +33,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/release_exe.dir/malla-revol.cpp.o.d"
   "CMakeFiles/release_exe.dir/materiales-luces.cpp.o"
   "CMakeFiles/release_exe.dir/materiales-luces.cpp.o.d"
+  "CMakeFiles/release_exe.dir/modelo-jer.cpp.o"
+  "CMakeFiles/release_exe.dir/modelo-jer.cpp.o.d"
   "CMakeFiles/release_exe.dir/objeto3d.cpp.o"
   "CMakeFiles/release_exe.dir/objeto3d.cpp.o.d"
   "CMakeFiles/release_exe.dir/seleccion.cpp.o"
