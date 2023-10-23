@@ -27,4 +27,10 @@ class HeliceTrasera : public NodoGrafoEscena{
         HeliceTrasera();
 };
 
+class Base : public NodoGrafoEscena{
+    // Constructor
+    public:
+        Base();
+};
+
 #endif
