@@ -154,3 +154,42 @@ Base::Base(){
 }
 
 // -----------------------------------------------------------------------------
+
+unsigned Helicoptero::leerNumParametros() const{
+
+} 
+
+// -----------------------------------------------------------------------------
+
+void Helicoptero::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+    switch (iParam)
+    {
+        case 0:
+            break;
+        case 1:
+            break;
+        default:
+            break;
+    }
+}
+
+// -----------------------------------------------------------------------------
+
+void Helicoptero::girar_helices_superiores( const float alpha_nuevo ){
+    *giro_helices_superiores = glm::rotate( alpha_nuevo, glm::vec3(0.0, 1.0, 0.0));
+}
+
+// -----------------------------------------------------------------------------
+
+void Helicoptero::girar_helices_traseras( const float alpha_nuevo ){
+
+}
+
+// -----------------------------------------------------------------------------
+
+void Helicoptero::elevar_helicoptero( const float h_nuevo ){
+
+}
+
+// -----------------------------------------------------------------------------
+

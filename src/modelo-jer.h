@@ -4,9 +4,15 @@
 #include "grafo-escena.h"
 
 class Helicoptero : public NodoGrafoEscena{
-    // Constructor
+    protected:
+        glm::mat4 * giro_helices_superiores = nullptr, * giro_helices_traseras = nullptr, * altura_lanzadera = nullptr;
     public:
         Helicoptero();
+        unsigned leerNumParametros() const ;
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+        void girar_helices_superiores( const float alpha_nuevo );
+        void girar_helices_traseras( const float alpha_nuevo );
+        void elevar_helicoptero( const float h_nuevo );
 };
 
 class HeliceSuperior : public NodoGrafoEscena{
