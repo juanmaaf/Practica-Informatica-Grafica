@@ -2094,6 +2094,8 @@ CMakeFiles/debug_exe.dir/escena.cpp.o
  /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.h
  /home/juanmaaf/Escritorio/IG/PracticaIG/src/escena.h
  /home/juanmaaf/Escritorio/IG/PracticaIG/src/aplicacion-ig.h
+ /home/juanmaaf/Escritorio/IG/PracticaIG/src/modelo-jer.h
+ /home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.h
 
 CMakeFiles/debug_exe.dir/eventos-raton.cpp.o
  /home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-raton.cpp
@@ -8908,6 +8910,7 @@ CMakeFiles/debug_exe.dir/modelo-jer.cpp.o
  /home/juanmaaf/Escritorio/IG/PracticaIG/src/vaos-vbos.h
  /home/juanmaaf/Escritorio/IG/PracticaIG/src/materiales-luces.h
  /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.h
+ /home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-revol.h
 
 CMakeFiles/debug_exe.dir/objeto3d.cpp.o
  /home/juanmaaf/Escritorio/IG/PracticaIG/src/objeto3d.cpp

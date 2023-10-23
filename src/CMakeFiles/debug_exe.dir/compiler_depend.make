@@ -2089,7 +2089,9 @@ CMakeFiles/debug_exe.dir/escena.cpp.o: escena.cpp \
   materiales-luces.h \
   /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.h \
   escena.h \
-  aplicacion-ig.h
+  aplicacion-ig.h \
+  modelo-jer.h \
+  grafo-escena.h
 
 CMakeFiles/debug_exe.dir/eventos-raton.cpp.o: eventos-raton.cpp \
   /usr/include/stdc-predef.h \
@@ -8890,7 +8892,8 @@ CMakeFiles/debug_exe.dir/modelo-jer.cpp.o: modelo-jer.cpp \
   /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.h \
   vaos-vbos.h \
   materiales-luces.h \
-  /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.h
+  /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.h \
+  malla-revol.h
 
 CMakeFiles/debug_exe.dir/objeto3d.cpp.o: objeto3d.cpp \
   /usr/include/stdc-predef.h \
@@ -10845,9 +10848,9 @@ objeto3d.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/usr/include/glm/mat2x4.hpp:
-
 /usr/include/asm-generic/types.h:
+
+/usr/include/glm/mat2x4.hpp:
 
 /usr/include/c++/11/bits/ranges_cmp.h:
 
@@ -11543,12 +11546,6 @@ modelo-jer.cpp:
 
 /usr/include/glm/ext/quaternion_trigonometric.hpp:
 
-modelo-jer.h:
-
-/usr/include/assert.h:
-
-/usr/include/glm/ext/quaternion_trigonometric.inl:
-
 /usr/include/glm/ext/quaternion_transform.inl:
 
 /usr/include/glm/gtc/epsilon.inl:
@@ -11593,19 +11590,25 @@ escena.h:
 
 camara.cpp:
 
-eventos-raton.cpp:
+/usr/include/assert.h:
 
-seleccion.h:
+/usr/include/glm/ext/quaternion_trigonometric.inl:
 
-grafo-escena.h:
-
-/usr/include/c++/11/string:
-
-/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp:
+modelo-jer.h:
 
 /usr/include/glm/ext/vector_int4_sized.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/stat.h:
+
+grafo-escena.h:
+
+eventos-raton.cpp:
+
+seleccion.h:
+
+/usr/include/c++/11/string:
+
+/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 

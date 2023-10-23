@@ -41,6 +41,7 @@
 #include "camara.h"
 #include "materiales-luces.h"
 #include "escena.h"
+#include "modelo-jer.h"
 
 
 
@@ -324,13 +325,7 @@ Escena1::Escena1()
    
    objetos.push_back( new CuboColores() );
 
-   objetos.push_back( new EstrellaZ(3) );
-
-   objetos.push_back( new EstrellaZ(5) );
-
-   objetos.push_back( new EstrellaZ(7) );
-
-   objetos.push_back( new EstrellaZ(9) );
+   objetos.push_back( new EstrellaZ(4) );
 
    objetos.push_back( new CasaX() );
 
@@ -370,19 +365,13 @@ Escena2::Escena2()
 
    objetos.push_back(new Cilindro(24, 30) );
 
-   objetos.push_back(new Cilindro(8, 30) );
-
    objetos.push_back(new Cono(24, 30) );
-
-   objetos.push_back(new Cono(4, 30) );
 
    objetos.push_back(new Esfera(30, 30) );
 
    objetos.push_back(new PiramideEstrellaZ(8) );
 
    objetos.push_back(new RejillaY(10,8) );
-
-   objetos.push_back(new RejillaY(3,8) );
 
    objetos.push_back(new MallaTorre(5) );
 }
@@ -398,6 +387,8 @@ Escena3::Escena3()
 {
    using namespace std ;
    cout << "Creando objetos de la práctica 3." << endl ;
+
+   objetos.push_back(new Helicoptero() );
 
    
 }

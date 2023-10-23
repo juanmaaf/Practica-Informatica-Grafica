@@ -3,30 +3,28 @@
 
 #include "grafo-escena.h"
 
-class C : public NodoGrafoEscena{
+class Helicoptero : public NodoGrafoEscena{
     // Constructor
-    C();
+    public:
+        Helicoptero();
+};
 
-    // métodos virtuales, relativos a los parámetros del objeto
+class HeliceSuperior : public NodoGrafoEscena{
+    // Constructor
+    public:
+        HeliceSuperior();
+};
 
-    // Devuelve el número de parámetros de este objeto
-    // (por defecto no hay ningún parámetro: devuelve 0)
-    // (virtual: redefinir en clases derivadas)
-    //
-    // @return (unsigned) -- número de parámetros del objeto.
-    //
-    virtual unsigned leerNumParametros() const ;
+class Cabina : public NodoGrafoEscena{
+    // Constructor
+    public:
+        Cabina();
+};
 
-    // Actualiza el valor de un parámetro a un instante de tiempo
-    // (por defecto produce un error: número de parámetro fuera de rango, esto se debe
-    // a que por defecto un objeto 3D declara tener 0 parámetros, y esta función no se
-    // debe llamar, a no ser que se declaren tener más parámetros).
-    // (virtual: redefinir en clases derivadas)
-    //
-    //  @param iParam (unsigned) -- índice del parámetro (entre 0 y numParametros()-1 )
-    //  @param t_sec  (float)    -- tiempo en segundos desde el estado inicial
-    //
-    virtual void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+class HeliceTrasera : public NodoGrafoEscena{
+    // Constructor
+    public:
+        HeliceTrasera();
 };
 
 #endif
