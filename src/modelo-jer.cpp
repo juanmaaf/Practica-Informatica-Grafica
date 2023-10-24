@@ -6,11 +6,26 @@ using namespace std;
 
 // -----------------------------------------------------------------------------
 
-Helicoptero::Helicoptero(){
-    agregar( new HeliceSuperior() );
-    agregar( new HeliceTrasera() );
+Helicoptero::Helicoptero(const float giro_superior_inicial, const float giro_atras_inicial, const float h_inicial){
+    NodoGrafoEscena * helice_sup = new NodoGrafoEscena();
+    unsigned ind1 = helice_sup->agregar( glm::rotate( float(glm::radians(giro_superior_inicial)), glm::vec3( 0.0, 1.0, 0.0)));
+    helice_sup->agregar( new HeliceSuperior() );
+
+    giro_helices_superiores = helice_sup->leerPtrMatriz(ind1);
+
+    NodoGrafoEscena * helice_trasera = new NodoGrafoEscena();
+    unsigned ind2 = helice_trasera->agregar( glm::rotate( float(glm::radians(giro_atras_inicial)), glm::vec3( 0.0, 0.0, 1.0)));
+    helice_trasera->agregar( new HeliceTrasera() );
+
+    giro_helices_traseras = helice_trasera->leerPtrMatriz(ind2);
+
+    unsigned ind3 = agregar(glm::translate(glm::vec3( 0.0, h_inicial, 0.0)));
+    altura_helicoptero = leerPtrMatriz(ind3);
+
     agregar( new Cabina() );
     agregar( new Base() );
+    agregar( helice_sup );
+    agregar( helice_trasera );
 }
 
 // -----------------------------------------------------------------------------
@@ -156,17 +171,27 @@ Base::Base(){
 // -----------------------------------------------------------------------------
 
 unsigned Helicoptero::leerNumParametros() const{
-
+    return 3;
 } 
 
 // -----------------------------------------------------------------------------
 
 void Helicoptero::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+
     switch (iParam)
     {
-        case 0:
+        unsigned v;
+        case 0: // Girar Helices Sup
+            v = calcula_oscilante(t_sec);
+            girar_helices_superiores(v);
             break;
-        case 1:
+        case 1: // Girar Helices Tra
+            v = calcula_oscilante(t_sec);
+            girar_helices_traseras(v);
+            break;
+        case 2: // Elevar Helicoptero
+            v = calcula_lineal(t_sec);
+            elevar_helicoptero(v);
             break;
         default:
             break;
@@ -175,21 +200,49 @@ void Helicoptero::actualizarEstadoParametro( const unsigned iParam, const float 
 
 // -----------------------------------------------------------------------------
 
-void Helicoptero::girar_helices_superiores( const float alpha_nuevo ){
-    *giro_helices_superiores = glm::rotate( alpha_nuevo, glm::vec3(0.0, 1.0, 0.0));
+void Helicoptero::girar_helices_superiores( const float giro_superior_nuevo ){
+    *giro_helices_superiores = glm::rotate( giro_superior_nuevo, glm::vec3(0.0, 1.0, 0.0));
 }
 
 // -----------------------------------------------------------------------------
 
-void Helicoptero::girar_helices_traseras( const float alpha_nuevo ){
-
+void Helicoptero::girar_helices_traseras( const float giro_atras_nuevo ){
+    *giro_helices_traseras = glm::rotate( giro_atras_nuevo, glm::vec3(0.0, 0.0, 0.1));
 }
 
 // -----------------------------------------------------------------------------
 
 void Helicoptero::elevar_helicoptero( const float h_nuevo ){
-
+    *altura_helicoptero = glm::translate( glm::vec3(0.0, h_nuevo, 0.0) );
 }
 
 // -----------------------------------------------------------------------------
 
+unsigned Helicoptero::calcula_lineal(const float t_sec){
+    // a = vinicial
+    // b = 2pi*w
+    // w = velocidad angulan (ciclos/s)
+    unsigned w = 0.2;
+    unsigned a = 0;
+    unsigned b = 2 * M_PI * w;
+
+    return a+b*t_sec;
+}
+
+// -----------------------------------------------------------------------------
+
+unsigned Helicoptero::calcula_oscilante(const float t_sec){
+    // a = (vmax + vmin)/2
+    // b = (vmin - vmax)/2
+    // v = a + b*sin(2pint)
+    unsigned vmax = 1.0;
+    unsigned vmin = 0.1;
+    float n = 10;
+
+    unsigned a = (vmax + vmin)/2.0;
+    unsigned b = (vmin - vmax)/2.0;
+
+    return a+b*(sin(2*M_PI*n*t_sec));
+}
+
+// -----------------------------------------------------------------------------
