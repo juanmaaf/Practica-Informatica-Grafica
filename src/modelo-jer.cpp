@@ -168,7 +168,7 @@ Base::Base(){
 // -----------------------------------------------------------------------------
 
 unsigned Helicoptero::leerNumParametros() const{
-    return 3;
+    return 4;
 } 
 
 // -----------------------------------------------------------------------------
@@ -219,7 +219,7 @@ unsigned Helicoptero::calcula_lineal(const float t_sec){
     // a = vinicial
     // b = 2pi*w
     // w = velocidad angulan (ciclos/s)
-    unsigned w = 2;
+    unsigned w = 5;
     unsigned a = 1;
     unsigned b = 2 * M_PI * w;
 
@@ -232,14 +232,14 @@ unsigned Helicoptero::calcula_oscilante(const float t_sec){
     // a = (vmax + vmin)/2
     // b = (vmin - vmax)/2
     // v = a + b*sin(2pint)
-    unsigned vmax = 4;
-    unsigned vmin = 4;
+    float vmax = 10;
+    float vmin = 0;
     float n = 0.5;
 
-    unsigned a = (vmax + vmin)/2.0;
-    unsigned b = (vmin - vmax)/2.0;
+    float a = (vmax + vmin)/2.0;
+    float b = (vmin - vmax)/2.0;
 
-    return 4+4*(sin(2*M_PI*n*t_sec));
+    return a+b*(sin(2*M_PI*n*t_sec));
 }
 
 // -----------------------------------------------------------------------------
