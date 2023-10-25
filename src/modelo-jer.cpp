@@ -7,20 +7,19 @@ using namespace std;
 // -----------------------------------------------------------------------------
 
 Helicoptero::Helicoptero(const float giro_superior_inicial, const float giro_atras_inicial, const float h_inicial){
-    NodoGrafoEscena * helice_sup = new NodoGrafoEscena();
-    unsigned ind1 = helice_sup->agregar( glm::rotate( float(glm::radians(giro_superior_inicial)), glm::vec3( 0.0, 1.0, 0.0)));
-    helice_sup->agregar( new HeliceSuperior() );
-
-    giro_helices_superiores = helice_sup->leerPtrMatriz(ind1);
-
-    NodoGrafoEscena * helice_trasera = new NodoGrafoEscena();
-    unsigned ind2 = helice_trasera->agregar( glm::rotate( float(glm::radians(giro_atras_inicial)), glm::vec3( 0.0, 0.0, 1.0)));
-    helice_trasera->agregar( new HeliceTrasera() );
-
-    giro_helices_traseras = helice_trasera->leerPtrMatriz(ind2);
-
     unsigned ind3 = agregar(glm::translate(glm::vec3( 0.0, h_inicial, 0.0)));
     altura_helicoptero = leerPtrMatriz(ind3);
+
+    NodoGrafoEscena * helice_sup = new NodoGrafoEscena();
+    unsigned ind1 = helice_sup->agregar( glm::rotate( float(glm::radians(giro_superior_inicial)), glm::vec3( 0.0, 1.0, 0.0)));
+    giro_helices_superiores = helice_sup->leerPtrMatriz(ind1);
+    helice_sup->agregar( new HeliceSuperior() );
+
+    NodoGrafoEscena * helice_trasera = new NodoGrafoEscena();
+    helice_trasera->agregar( glm::translate( glm::vec3(-3.6, 0.8, 0.3) ) );
+    unsigned ind2 = helice_trasera->agregar( glm::rotate( float(glm::radians(giro_atras_inicial)), glm::vec3( 0.0, 0.0, 1.0)));
+    giro_helices_traseras = helice_trasera->leerPtrMatriz(ind2);
+    helice_trasera->agregar( new HeliceTrasera() );
 
     agregar( new Cabina() );
     agregar( new Base() );
@@ -51,12 +50,10 @@ HeliceTrasera::HeliceTrasera(){
     aspa->ponerColor({0.1, 0.1, 0.1 });
 
     NodoGrafoEscena * helice1 = new NodoGrafoEscena();
-    helice1->agregar( glm::translate( glm::vec3(-3.6, 0.8, 0.3) ) );
     helice1->agregar( glm::scale( glm::vec3(0.05, 0.4, 0.05) ));
     helice1->agregar( aspa );
 
     NodoGrafoEscena * helice2 = new NodoGrafoEscena();
-    helice2->agregar( glm::translate( glm::vec3(-3.6, 0.8, 0.3) ) );
     helice2->agregar( glm::scale( glm::vec3(0.4, 0.05, 0.05) ));
     helice2->agregar( aspa );
     
@@ -207,7 +204,7 @@ void Helicoptero::girar_helices_superiores( const float giro_superior_nuevo ){
 // -----------------------------------------------------------------------------
 
 void Helicoptero::girar_helices_traseras( const float giro_atras_nuevo ){
-    *giro_helices_traseras = glm::rotate( giro_atras_nuevo, glm::vec3(0.0, 0.0, 0.1));
+    *giro_helices_traseras = glm::rotate( giro_atras_nuevo, glm::vec3(0.0, 0.0, 1.0));
 }
 
 // -----------------------------------------------------------------------------
