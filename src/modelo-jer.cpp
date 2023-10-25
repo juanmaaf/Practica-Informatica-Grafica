@@ -219,8 +219,8 @@ unsigned Helicoptero::calcula_lineal(const float t_sec){
     // a = vinicial
     // b = 2pi*w
     // w = velocidad angulan (ciclos/s)
-    unsigned w = 0.2;
-    unsigned a = 0;
+    unsigned w = 1;
+    unsigned a = 1;
     unsigned b = 2 * M_PI * w;
 
     return a+b*t_sec;
