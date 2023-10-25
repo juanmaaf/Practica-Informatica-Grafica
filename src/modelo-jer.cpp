@@ -179,16 +179,16 @@ void Helicoptero::actualizarEstadoParametro( const unsigned iParam, const float 
     {
         unsigned v;
         case 0: // Girar Helices Sup
-            v = calcula_oscilante(t_sec);
+            v = calcula_lineal(t_sec);
             girar_helices_superiores(v);
             break;
         case 1: // Girar Helices Tra
-            v = calcula_oscilante(t_sec);
+            v = calcula_lineal(t_sec);
             girar_helices_traseras(v);
             break;
         case 2: // Elevar Helicoptero
-            v = calcula_lineal(t_sec);
-            elevar_helicoptero(v);
+            //v = calcula_oscilante(t_sec);
+            //elevar_helicoptero(v);
             break;
         default:
             break;
@@ -210,7 +210,7 @@ void Helicoptero::girar_helices_traseras( const float giro_atras_nuevo ){
 // -----------------------------------------------------------------------------
 
 void Helicoptero::elevar_helicoptero( const float h_nuevo ){
-    *altura_helicoptero = glm::translate( glm::vec3(0.0, h_nuevo, 0.0) );
+    *altura_helicoptero = glm::translate( glm::vec3(0.0, 0.0+h_nuevo, 0.0) );
 }
 
 // -----------------------------------------------------------------------------
@@ -232,9 +232,9 @@ unsigned Helicoptero::calcula_oscilante(const float t_sec){
     // a = (vmax + vmin)/2
     // b = (vmin - vmax)/2
     // v = a + b*sin(2pint)
-    unsigned vmax = 1.0;
-    unsigned vmin = 0.1;
-    float n = 10;
+    unsigned vmax = 1;
+    unsigned vmin = 0;
+    float n = 1;
 
     unsigned a = (vmax + vmin)/2.0;
     unsigned b = (vmin - vmax)/2.0;
