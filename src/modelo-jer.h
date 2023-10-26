@@ -5,7 +5,7 @@
 
 class Helicoptero : public NodoGrafoEscena{
     protected:
-        glm::mat4 * giro_helices_superiores = nullptr, * giro_helices_traseras = nullptr, * altura_helicoptero = nullptr;
+        glm::mat4 * giro_helices_superiores = nullptr, * giro_helices_traseras = nullptr, * altura_helicoptero = nullptr, * orientacion_helicoptero = nullptr;
     public:
         /*
             Animaciones:
@@ -13,14 +13,16 @@ class Helicoptero : public NodoGrafoEscena{
                 -Giro Hélices Traseras  (1)
                 -Elevar Helicóptero (2)
         */
-        Helicoptero(const float giro_superior_inicial, const float giro_atras_inicial, const float h_inicial);
+        Helicoptero(const float giro_superior_inicial, const float giro_atras_inicial, const float h_inicial, const float orientacion_inicial);
         unsigned leerNumParametros() const ;
         void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
         void girar_helices_superiores( const float giro_superior_nuevo );
         void girar_helices_traseras( const float giro_atras_nuevo);
         void elevar_helicoptero( const float h_nuevo );
-        unsigned calcula_lineal(const float t_sec);
-        unsigned calcula_oscilante(const float t_sec);
+        void orientar_helicoptero( const float orientacion_nueva );
+        float calcula_lineal(const float t_sec);
+        float calcula_oscilante_eleva(const float t_sec);
+        float calcula_oscilante_orienta(const float t_sec);
 };
 
 class HeliceSuperior : public NodoGrafoEscena{

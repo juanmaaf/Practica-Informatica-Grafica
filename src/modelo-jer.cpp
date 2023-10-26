@@ -6,7 +6,10 @@ using namespace std;
 
 // -----------------------------------------------------------------------------
 
-Helicoptero::Helicoptero(const float giro_superior_inicial, const float giro_atras_inicial, const float h_inicial){
+Helicoptero::Helicoptero(const float giro_superior_inicial, const float giro_atras_inicial, const float h_inicial, const float orientacion_inicial){
+    unsigned ind4 = agregar(glm::rotate(float(glm::radians(orientacion_inicial)), glm::vec3( 0.0, 1.0, 0.0)));
+    orientacion_helicoptero = leerPtrMatriz(ind4);
+
     unsigned ind3 = agregar(glm::translate(glm::vec3( 0.0, h_inicial, 0.0)));
     altura_helicoptero = leerPtrMatriz(ind3);
 
@@ -68,10 +71,10 @@ Cabina::Cabina(){
     eje->ponerColor({0.15, 0.15, 0.15 });
 
     Cubo * ala = new Cubo();
-    ala->ponerColor({0.7, 0.1, 0.1});
+    ala->ponerColor({0.6, 0.0, 0.0});
 
     Esfera * principal = new Esfera(20, 20);
-    principal->ponerColor({0.7, 0.1, 0.1});
+    principal->ponerColor({0.6, 0.0, 0.0});
 
     Cubo * frente = new Cubo();
     frente->ponerColor({0.1, 0.7, 0.9});
@@ -87,8 +90,8 @@ Cabina::Cabina(){
     cabina->agregar( principal );
 
     NodoGrafoEscena * cuerpo = new NodoGrafoEscena();
-    cuerpo->agregar( glm::translate( glm::vec3(-1.5, 0.7, 0.0) ) );
-    cuerpo->agregar( glm::scale( glm::vec3(2.0, 0.2, 0.2) ));
+    cuerpo->agregar( glm::translate( glm::vec3(-2.5, 0.7, 0.0) ) );
+    cuerpo->agregar( glm::scale( glm::vec3(1.0, 0.2, 0.2) ));
     cuerpo->agregar( ala );
 
     NodoGrafoEscena * extremo = new NodoGrafoEscena();
@@ -168,7 +171,7 @@ Base::Base(){
 // -----------------------------------------------------------------------------
 
 unsigned Helicoptero::leerNumParametros() const{
-    return 3;
+    return 4;
 } 
 
 // -----------------------------------------------------------------------------
@@ -187,8 +190,12 @@ void Helicoptero::actualizarEstadoParametro( const unsigned iParam, const float 
             girar_helices_traseras(v);
             break;
         case 2: // Elevar Helicoptero
-            v = calcula_oscilante(t_sec);
+            v = calcula_oscilante_eleva(t_sec);
             elevar_helicoptero(v);
+            break;
+        case 3: // Orientar Helicóptero
+            v = calcula_oscilante_orienta(t_sec);
+            orientar_helicoptero(v);
             break;
         default:
             break;
@@ -210,12 +217,18 @@ void Helicoptero::girar_helices_traseras( const float giro_atras_nuevo ){
 // -----------------------------------------------------------------------------
 
 void Helicoptero::elevar_helicoptero( const float h_nuevo ){
-    *altura_helicoptero = glm::translate( glm::vec3(0.0, 0.0+h_nuevo, 0.0) );
+    *altura_helicoptero = glm::translate( glm::vec3(0.0, h_nuevo, 0.0) );
 }
 
 // -----------------------------------------------------------------------------
 
-unsigned Helicoptero::calcula_lineal(const float t_sec){
+void Helicoptero::orientar_helicoptero( const float orientacion_nueva ){
+    *orientacion_helicoptero = glm::rotate( float(glm::radians(orientacion_nueva)), glm::vec3(0.0, 1.0, 0.0));
+}
+
+// -----------------------------------------------------------------------------
+
+float Helicoptero::calcula_lineal(const float t_sec){
     // a = vinicial
     // b = 2pi*w
     // w = velocidad angulan (ciclos/s)
@@ -228,11 +241,28 @@ unsigned Helicoptero::calcula_lineal(const float t_sec){
 
 // -----------------------------------------------------------------------------
 
-unsigned Helicoptero::calcula_oscilante(const float t_sec){
+float Helicoptero::calcula_oscilante_eleva(const float t_sec){
     // a = (vmax + vmin)/2
     // b = (vmin - vmax)/2
     // v = a + b*sin(2pint)
     float vmax = 10;
+    float vmin = 0;
+    float n = 0.5;
+
+    float a = (vmax + vmin)/2.0;
+    float b = (vmin - vmax)/2.0;
+
+    return a+b*(sin(2*M_PI*n*t_sec));
+}
+
+// -----------------------------------------------------------------------------
+
+float Helicoptero::calcula_oscilante_orienta(const float t_sec){
+    // a = (vmax + vmin)/2
+    // b = (vmin - vmax)/2
+    // v = a + b*sin(2pint)
+
+    float vmax = 45;
     float vmin = 0;
     float n = 0.5;
 
