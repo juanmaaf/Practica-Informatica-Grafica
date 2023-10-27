@@ -245,9 +245,9 @@ float Helicoptero::calcula_oscilante_eleva(const float t_sec){
     // a = (vmax + vmin)/2
     // b = (vmin - vmax)/2
     // v = a + b*sin(2pint)
-    float vmax = 10;
-    float vmin = 0;
-    float n = 0.5;
+    float vmax = 10.0f;
+    float vmin = 0.0f;
+    float n = 0.5f;
 
     float a = (vmax + vmin)/2.0;
     float b = (vmin - vmax)/2.0;
@@ -262,9 +262,9 @@ float Helicoptero::calcula_oscilante_orienta(const float t_sec){
     // b = (vmin - vmax)/2
     // v = a + b*sin(2pint)
 
-    float vmax = 45;
-    float vmin = 0;
-    float n = 0.5;
+    float vmax = 390.0f;
+    float vmin = 330.0f;
+    float n = 1.0f;
 
     float a = (vmax + vmin)/2.0;
     float b = (vmin - vmax)/2.0;
