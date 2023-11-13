@@ -24,7 +24,7 @@ Helicoptero::Helicoptero(const float giro_superior_inicial, const float giro_atr
     giro_helices_traseras = helice_trasera->leerPtrMatriz(ind2);
     helice_trasera->agregar( new HeliceTrasera() );
 
-    agregar( new Cabina() );
+    agregar( new Cuerpo() );
     agregar( new Base() );
     agregar( helice_sup );
     agregar( helice_trasera );
@@ -66,7 +66,7 @@ HeliceTrasera::HeliceTrasera(){
 
 // -----------------------------------------------------------------------------
 
-Cabina::Cabina(){
+Cuerpo::Cuerpo(){
     Cilindro * eje = new Cilindro(6,15);
     eje->ponerColor({0.15, 0.15, 0.15 });
 
@@ -89,10 +89,10 @@ Cabina::Cabina(){
     cabina->agregar( glm::scale( glm::vec3(2.0, 1.0, 1.0) ));
     cabina->agregar( principal );
 
-    NodoGrafoEscena * cuerpo = new NodoGrafoEscena();
-    cuerpo->agregar( glm::translate( glm::vec3(-2.5, 0.7, 0.0) ) );
-    cuerpo->agregar( glm::scale( glm::vec3(1.0, 0.2, 0.2) ));
-    cuerpo->agregar( ala );
+    NodoGrafoEscena * aleron = new NodoGrafoEscena();
+    aleron->agregar( glm::translate( glm::vec3(-2.5, 0.7, 0.0) ) );
+    aleron->agregar( glm::scale( glm::vec3(1.0, 0.2, 0.2) ));
+    aleron->agregar( ala );
 
     NodoGrafoEscena * extremo = new NodoGrafoEscena();
     extremo->agregar( glm::translate( glm::vec3(-3.7, 0.8, 0.0) ) );
@@ -112,7 +112,7 @@ Cabina::Cabina(){
 
     agregar(ejeHelicesSup);
     agregar(ejeHelicesTra);
-    agregar(cuerpo);
+    agregar(aleron);
     agregar(extremo);
     agregar(cabina);
     agregar(ventana);
@@ -138,25 +138,25 @@ Base::Base(){
 
     NodoGrafoEscena * conexion1 = new NodoGrafoEscena();
     conexion1->agregar( glm::translate( glm::vec3(0.4, -0.8, 0.5) ) );
-    conexion1->agregar( glm::rotate( float(glm::radians(20.0)), glm::vec3( -1.0, 0.0, 0.0)) );
+    conexion1->agregar( glm::rotate( float(glm::radians(-20.0)), glm::vec3( 1.0, 0.0, 0.0)) );
     conexion1->agregar( glm::scale( glm::vec3(0.1, 0.7, 0.1) ));
     conexion1->agregar( cilindro );
 
     NodoGrafoEscena * conexion2 = new NodoGrafoEscena();
     conexion2->agregar( glm::translate( glm::vec3(-0.4, -0.8, 0.5) ) );
-    conexion2->agregar( glm::rotate( float(glm::radians(20.0)), glm::vec3( -1.0, 0.0, 0.0)) );
+    conexion2->agregar( glm::rotate( float(glm::radians(-20.0)), glm::vec3( 1.0, 0.0, 0.0)) );
     conexion2->agregar( glm::scale( glm::vec3(0.1, 0.7, 0.1) ));
     conexion2->agregar( cilindro );
 
     NodoGrafoEscena * conexion3 = new NodoGrafoEscena();
     conexion3->agregar( glm::translate( glm::vec3(0.4, -0.8, -0.5) ) );
-    conexion3->agregar( glm::rotate( float(glm::radians(-20.0)), glm::vec3( -1.0, 0.0, 0.0)) );
+    conexion3->agregar( glm::rotate( float(glm::radians(20.0)), glm::vec3( 1.0, 0.0, 0.0)) );
     conexion3->agregar( glm::scale( glm::vec3(0.1, 0.7, 0.1) ));
     conexion3->agregar( cilindro );
 
     NodoGrafoEscena * conexion4 = new NodoGrafoEscena();
     conexion4->agregar( glm::translate( glm::vec3(-0.4, -0.8, -0.5) ) );
-    conexion4->agregar( glm::rotate( float(glm::radians(-20.0)), glm::vec3( -1.0, 0.0, 0.0)) );
+    conexion4->agregar( glm::rotate( float(glm::radians(20.0)), glm::vec3( 1.0, 0.0, 0.0)) );
     conexion4->agregar( glm::scale( glm::vec3(0.1, 0.7, 0.1) ));
     conexion4->agregar( cilindro );
     
@@ -180,22 +180,17 @@ void Helicoptero::actualizarEstadoParametro( const unsigned iParam, const float 
 
     switch (iParam)
     {
-        unsigned v;
         case 0: // Girar Helices Sup
-            v = calcula_lineal(t_sec);
-            girar_helices_superiores(v);
+            girar_helices_superiores(calcula_lineal(t_sec));
             break;
         case 1: // Girar Helices Tra
-            v = calcula_lineal(t_sec);
-            girar_helices_traseras(v);
+            girar_helices_traseras(calcula_lineal(t_sec));
             break;
         case 2: // Elevar Helicoptero
-            v = calcula_oscilante_eleva(t_sec);
-            elevar_helicoptero(v);
+            elevar_helicoptero(calcula_oscilante_eleva(t_sec));
             break;
         case 3: // Orientar Helicóptero
-            v = calcula_oscilante_orienta(t_sec);
-            orientar_helicoptero(v);
+            orientar_helicoptero(calcula_oscilante_orienta(t_sec));
             break;
         default:
             break;
@@ -262,8 +257,8 @@ float Helicoptero::calcula_oscilante_orienta(const float t_sec){
     // b = (vmin - vmax)/2
     // v = a + b*sin(2pint)
 
-    float vmax = 390.0f;
-    float vmin = 330.0f;
+    float vmax = 30.0f;
+    float vmin = -30.0f;
     float n = 1.0f;
 
     float a = (vmax + vmin)/2.0;

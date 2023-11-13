@@ -31,10 +31,10 @@ class HeliceSuperior : public NodoGrafoEscena{
         HeliceSuperior();
 };
 
-class Cabina : public NodoGrafoEscena{
+class Cuerpo : public NodoGrafoEscena{
     // Constructor
     public:
-        Cabina();
+        Cuerpo();
 };
 
 class HeliceTrasera : public NodoGrafoEscena{

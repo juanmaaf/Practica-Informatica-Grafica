@@ -327,6 +327,8 @@ Escena1::Escena1()
 
    objetos.push_back( new EstrellaZ(4) );
 
+   objetos.push_back( new EstrellaZ(6) );
+
    objetos.push_back( new CasaX() );
 
    objetos.push_back( new MallaTriangulo() );
@@ -389,6 +391,8 @@ Escena3::Escena3()
    cout << "Creando objetos de la práctica 3." << endl ;
 
    objetos.push_back(new Helicoptero(0.0, 0.0, 0.0, 0.0) );
+
+   objetos.push_back(new GrafoEstrellaX(8, 0.0) );
 
    
 }

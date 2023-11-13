@@ -118,6 +118,15 @@ class NodoGrafoEscena : public Objeto3D
 
 // *********************************************************************
 
+class GrafoEstrellaX : public NodoGrafoEscena
+{
+   protected:
+      glm::mat4 * matriz_giro = nullptr;
+   public:
+      GrafoEstrellaX(const int n, const float alpha_inicial);
+      void girar_respecto_X( const float alpha_nuevo );
+      float calcula_lineal(const float t_sec);
+};
 
 
 

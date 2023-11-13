@@ -29,6 +29,7 @@
 #include "grafo-escena.h"
 #include "aplicacion-ig.h"
 #include "seleccion.h"   // para 'ColorDesdeIdent' 
+#include <malla-revol.h>
 
 
 
@@ -364,7 +365,50 @@ bool NodoGrafoEscena::buscarObjeto
    return false ;
 }
 
+GrafoEstrellaX::GrafoEstrellaX(const int n, const float alpha_inicial){
+   unsigned ind1 = agregar(glm::rotate(float(glm::radians(alpha_inicial)), glm::vec3( 1.0, 0.0, 0.0)));
+   matriz_giro = leerPtrMatriz(ind1);
+   
+   NodoGrafoEscena * estrella = new NodoGrafoEscena();
+   estrella->agregar( glm::scale(glm::vec3(0.0, 2.6, 2.6) )); // 0.5 radio inicial * 2.6 = 1.3 radio buscado. Perpendicular eje X -> Está en Y,Z
+   estrella->agregar( glm::rotate( float(glm::radians(90.0)), glm::vec3( 0.0, 1.0, 0.0)));
+   estrella->agregar( glm::translate( glm::vec3(-0.5, -0.5, 0.0) ));
+   estrella->agregar(new EstrellaZ(n));
 
+   for(int i = 0; i < n; ++i){
+      float angulo = 2.0 * M_PI * i / n;
+      float x = 1.3 * cos(angulo);
+      float y = 1.3 * sin(angulo);
+      float z = 0.0;
+
+      NodoGrafoEscena * cono = new NodoGrafoEscena();
+      
+      cono->agregar(glm::rotate(float(angulo), glm::vec3(1.0, 0.0, 0.0)));
+      //cono->agregar(glm::rotate(float(glm::radians(90.0)), glm::vec3(0.0, 1.0, 0.0)));
+      cono->agregar( glm::translate(glm::vec3(x, y, z) ));
+      cono->agregar( glm::scale(glm::vec3(0.14, 0.15, 0.14) ));
+      cono->agregar( new Cono(6, 15) );
+
+      agregar(cono);
+   }
+   
+   agregar(estrella);
+}
+
+void GrafoEstrellaX::girar_respecto_X(const float alpha_nuevo){
+   *matriz_giro = glm::rotate( alpha_nuevo, glm::vec3(1.0, 0.0, 0.0));
+}
+
+float GrafoEstrellaX::calcula_lineal(const float t_sec){
+   // a = vinicial
+   // b = 2pi*w
+   // w = velocidad angulan (ciclos/s)
+   unsigned w = 2.5;
+   unsigned a = 0;
+   unsigned b = 2 * M_PI * w;
+
+   return a+b*t_sec;
+}
 
 
 

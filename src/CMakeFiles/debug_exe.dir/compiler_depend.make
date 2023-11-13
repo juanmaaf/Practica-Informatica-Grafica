@@ -3669,7 +3669,9 @@ CMakeFiles/debug_exe.dir/grafo-escena.cpp.o: grafo-escena.cpp \
   /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.h \
   aplicacion-ig.h \
   seleccion.h \
-  escena.h
+  escena.h \
+  malla-revol.h \
+  malla-ind.h
 
 CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o: /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp \
   /usr/include/stdc-predef.h \
