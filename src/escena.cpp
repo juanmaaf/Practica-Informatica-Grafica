@@ -390,9 +390,11 @@ Escena3::Escena3()
    using namespace std ;
    cout << "Creando objetos de la práctica 3." << endl ;
 
-   objetos.push_back(new Helicoptero(0.0, 0.0, 0.0, 0.0) );
+   objetos.push_back(new Helicoptero(5.0, 5.0, 10.0, 30.0) );
 
-   objetos.push_back(new GrafoEstrellaX(8, 0.0) );
+   objetos.push_back(new Helicoptero(8.0, 2.0, 15.0, 90.0) );
+
+   //objetos.push_back(new GrafoEstrellaX(8, 0.0) );
 
    
 }

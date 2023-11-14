@@ -6,21 +6,26 @@ using namespace std;
 
 // -----------------------------------------------------------------------------
 
-Helicoptero::Helicoptero(const float giro_superior_inicial, const float giro_atras_inicial, const float h_inicial, const float orientacion_inicial){
-    unsigned ind4 = agregar(glm::rotate(float(glm::radians(orientacion_inicial)), glm::vec3( 0.0, 1.0, 0.0)));
+Helicoptero::Helicoptero(const float giro_superior, const float giro_atras, const float h, const float orient){
+    giro_sup = giro_superior;
+    giro_at = giro_atras;
+    altura = h;
+    orientacion = orient;
+
+    unsigned ind4 = agregar( glm::scale(glm::vec3(1.1, 1.1, 1.1) ));
     orientacion_helicoptero = leerPtrMatriz(ind4);
 
-    unsigned ind3 = agregar(glm::translate(glm::vec3( 0.0, h_inicial, 0.0)));
+    unsigned ind3 = agregar( glm::scale(glm::vec3(1.1, 1.1, 1.1) ));
     altura_helicoptero = leerPtrMatriz(ind3);
 
     NodoGrafoEscena * helice_sup = new NodoGrafoEscena();
-    unsigned ind1 = helice_sup->agregar( glm::rotate( float(glm::radians(giro_superior_inicial)), glm::vec3( 0.0, 1.0, 0.0)));
+    unsigned ind1 = helice_sup->agregar( glm::scale(glm::vec3(1.1, 1.1, 1.1) ));
     giro_helices_superiores = helice_sup->leerPtrMatriz(ind1);
     helice_sup->agregar( new HeliceSuperior() );
 
     NodoGrafoEscena * helice_trasera = new NodoGrafoEscena();
     helice_trasera->agregar( glm::translate( glm::vec3(-3.6, 0.8, 0.3) ) );
-    unsigned ind2 = helice_trasera->agregar( glm::rotate( float(glm::radians(giro_atras_inicial)), glm::vec3( 0.0, 0.0, 1.0)));
+    unsigned ind2 = helice_trasera->agregar( glm::scale(glm::vec3(1.1, 1.1, 1.1) ));
     giro_helices_traseras = helice_trasera->leerPtrMatriz(ind2);
     helice_trasera->agregar( new HeliceTrasera() );
 
@@ -181,10 +186,10 @@ void Helicoptero::actualizarEstadoParametro( const unsigned iParam, const float 
     switch (iParam)
     {
         case 0: // Girar Helices Sup
-            girar_helices_superiores(calcula_lineal(t_sec));
+            girar_helices_superiores(calcula_lineal_superior(t_sec));
             break;
         case 1: // Girar Helices Tra
-            girar_helices_traseras(calcula_lineal(t_sec));
+            girar_helices_traseras(calcula_lineal_atras(t_sec));
             break;
         case 2: // Elevar Helicoptero
             elevar_helicoptero(calcula_oscilante_eleva(t_sec));
@@ -223,11 +228,24 @@ void Helicoptero::orientar_helicoptero( const float orientacion_nueva ){
 
 // -----------------------------------------------------------------------------
 
-float Helicoptero::calcula_lineal(const float t_sec){
+float Helicoptero::calcula_lineal_superior(const float t_sec){
     // a = vinicial
     // b = 2pi*w
     // w = velocidad angulan (ciclos/s)
-    unsigned w = 5;
+    unsigned w = giro_sup;
+    unsigned a = 1;
+    unsigned b = 2 * M_PI * w;
+
+    return a+b*t_sec;
+}
+
+// -----------------------------------------------------------------------------
+
+float Helicoptero::calcula_lineal_atras(const float t_sec){
+    // a = vinicial
+    // b = 2pi*w
+    // w = velocidad angulan (ciclos/s)
+    unsigned w = giro_at;
     unsigned a = 1;
     unsigned b = 2 * M_PI * w;
 
@@ -240,7 +258,7 @@ float Helicoptero::calcula_oscilante_eleva(const float t_sec){
     // a = (vmax + vmin)/2
     // b = (vmin - vmax)/2
     // v = a + b*sin(2pint)
-    float vmax = 10.0f;
+    float vmax = float(altura);
     float vmin = 0.0f;
     float n = 0.5f;
 
@@ -257,8 +275,8 @@ float Helicoptero::calcula_oscilante_orienta(const float t_sec){
     // b = (vmin - vmax)/2
     // v = a + b*sin(2pint)
 
-    float vmax = 30.0f;
-    float vmin = -30.0f;
+    float vmax = float(orientacion);
+    float vmin = -float(orientacion);
     float n = 1.0f;
 
     float a = (vmax + vmin)/2.0;
