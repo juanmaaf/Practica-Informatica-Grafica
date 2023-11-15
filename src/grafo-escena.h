@@ -126,6 +126,8 @@ class GrafoEstrellaX : public NodoGrafoEscena
       GrafoEstrellaX(const int n, const float alpha_inicial);
       void girar_respecto_X( const float alpha_nuevo );
       float calcula_lineal(const float t_sec);
+      unsigned leerNumParametros() const ;
+      void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
 };
 
 

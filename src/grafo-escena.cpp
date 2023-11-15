@@ -383,10 +383,11 @@ GrafoEstrellaX::GrafoEstrellaX(const int n, const float alpha_inicial){
 
       NodoGrafoEscena * cono = new NodoGrafoEscena();
       
-      cono->agregar(glm::rotate(float(angulo), glm::vec3(1.0, 0.0, 0.0)));
-      //cono->agregar(glm::rotate(float(glm::radians(90.0)), glm::vec3(0.0, 1.0, 0.0)));
+      
+      cono->agregar(glm::rotate(float(glm::radians(90.0)), glm::vec3(0.0, 1.0, 0.0)));
       cono->agregar( glm::translate(glm::vec3(x, y, z) ));
       cono->agregar( glm::scale(glm::vec3(0.14, 0.15, 0.14) ));
+      cono->agregar(glm::rotate(float(angulo), glm::vec3(1.0, 0.0, 0.0)));
       cono->agregar( new Cono(6, 15) );
 
       agregar(cono);
@@ -408,6 +409,23 @@ float GrafoEstrellaX::calcula_lineal(const float t_sec){
    unsigned b = 2 * M_PI * w;
 
    return a+b*t_sec;
+}
+
+
+unsigned GrafoEstrellaX::leerNumParametros() const{
+    return 1;
+} 
+
+
+void GrafoEstrellaX::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+
+   switch (iParam)
+   {
+      case 0: // Girar Helices Sup
+         girar_respecto_X(calcula_lineal(t_sec));
+      default:
+         break;
+   }
 }
 
 

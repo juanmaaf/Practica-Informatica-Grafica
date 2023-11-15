@@ -233,7 +233,7 @@ float Helicoptero::calcula_lineal_superior(const float t_sec){
     // b = 2pi*w
     // w = velocidad angulan (ciclos/s)
     unsigned w = giro_sup;
-    unsigned a = 1;
+    unsigned a = 0;
     unsigned b = 2 * M_PI * w;
 
     return a+b*t_sec;
@@ -246,7 +246,7 @@ float Helicoptero::calcula_lineal_atras(const float t_sec){
     // b = 2pi*w
     // w = velocidad angulan (ciclos/s)
     unsigned w = giro_at;
-    unsigned a = 1;
+    unsigned a = 0;
     unsigned b = 2 * M_PI * w;
 
     return a+b*t_sec;
