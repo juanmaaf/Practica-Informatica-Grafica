@@ -365,8 +365,11 @@ bool NodoGrafoEscena::buscarObjeto
    return false ;
 }
 
-GrafoEstrellaX::GrafoEstrellaX(const int n, const float alpha_inicial){
-   unsigned ind1 = agregar(glm::rotate(float(glm::radians(alpha_inicial)), glm::vec3( 1.0, 0.0, 0.0)));
+GrafoEstrellaX::GrafoEstrellaX(const int n, const float alpha){
+
+   velocidad_giro = alpha;
+
+   unsigned ind1 = agregar(glm::scale(glm::vec3( 1.0, 1.0, 1.0)));
    matriz_giro = leerPtrMatriz(ind1);
    
    NodoGrafoEscena * estrella = new NodoGrafoEscena();
@@ -387,7 +390,7 @@ GrafoEstrellaX::GrafoEstrellaX(const int n, const float alpha_inicial){
       cono->agregar(glm::rotate(float(glm::radians(90.0)), glm::vec3(0.0, 1.0, 0.0)));
       cono->agregar( glm::translate(glm::vec3(x, y, z) ));
       cono->agregar( glm::scale(glm::vec3(0.14, 0.15, 0.14) ));
-      cono->agregar(glm::rotate(float(angulo), glm::vec3(1.0, 0.0, 0.0)));
+      cono->agregar(glm::rotate(float(angulo - glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)));
       cono->agregar( new Cono(6, 15) );
 
       agregar(cono);
@@ -404,7 +407,7 @@ float GrafoEstrellaX::calcula_lineal(const float t_sec){
    // a = vinicial
    // b = 2pi*w
    // w = velocidad angulan (ciclos/s)
-   unsigned w = 2.5;
+   unsigned w = velocidad_giro;
    unsigned a = 0;
    unsigned b = 2 * M_PI * w;
 

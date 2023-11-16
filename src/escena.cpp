@@ -394,7 +394,9 @@ Escena3::Escena3()
 
    objetos.push_back(new Helicoptero(8.0, 2.0, 15.0, 90.0) );
 
-   objetos.push_back(new GrafoEstrellaX(8, 0.0) );
+   objetos.push_back(new GrafoEstrellaX(8, 2.5) );
+
+   objetos.push_back(new GrafoEstrellaX(15, 10.0) );
 
    
 }

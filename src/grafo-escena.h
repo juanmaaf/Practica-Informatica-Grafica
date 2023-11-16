@@ -122,8 +122,9 @@ class GrafoEstrellaX : public NodoGrafoEscena
 {
    protected:
       glm::mat4 * matriz_giro = nullptr;
+      float velocidad_giro;
    public:
-      GrafoEstrellaX(const int n, const float alpha_inicial);
+      GrafoEstrellaX(const int n, const float alpha);
       void girar_respecto_X( const float alpha_nuevo );
       float calcula_lineal(const float t_sec);
       unsigned leerNumParametros() const ;
