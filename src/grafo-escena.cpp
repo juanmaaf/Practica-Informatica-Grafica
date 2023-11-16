@@ -431,6 +431,98 @@ void GrafoEstrellaX::actualizarEstadoParametro( const unsigned iParam, const flo
    }
 }
 
+GrafoCubos::GrafoCubos(const float alpha){
+
+   velocidad_giro = alpha;
+
+   RejillaY * rejilla = new RejillaY(6,6);
+
+   NodoGrafoEscena * cubo_central = new NodoGrafoEscena();
+
+   cubo_central->agregar(glm::translate(glm::vec3(-0.5, -0.5, -0.5) ));
+
+   for(int i = 0; i < 4; ++i){
+      cubo_central->agregar(glm::translate(glm::vec3(0.0, 1.0, 0.0)) );
+      cubo_central->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(1.0, 0.0, 0.0)) );
+      cubo_central->agregar(rejilla);
+   }
+
+   for(int i = 0; i < 2; ++i){
+      if(i == 0){
+         cubo_central->agregar(glm::translate(glm::vec3(1.0, 0.0, 0.0)) );
+         cubo_central->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)) );
+      }
+      else{
+         cubo_central->agregar(glm::translate(glm::vec3(1.0, 0.0, 0.0)) );
+         cubo_central->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)) );
+         cubo_central->agregar(glm::translate(glm::vec3(1.0, 0.0, 0.0)) );
+         cubo_central->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)) );
+      }
+      
+      cubo_central->agregar(rejilla);
+   }
+
+   agregar(cubo_central);
+
+   Cubo * cubo = new Cubo();
+
+   NodoGrafoEscena * cubos_laterales = new NodoGrafoEscena();
+
+   for(int i = 0; i < 6; i++){
+
+      if(i < 4){
+         cubos_laterales->agregar(glm::rotate(float(glm::radians(90.0f * i)), glm::vec3(1.0, 0.0, 0.0)));
+      }
+      else{
+         if(i == 4){
+            cubos_laterales->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)));
+         }
+         if(i == 5){
+            cubos_laterales->agregar(glm::rotate(float(glm::radians(-90.0f)), glm::vec3(0.0, 0.0, 1.0)));
+         }
+      }
+
+      cubos_laterales->agregar(translate(glm::vec3(0.0, 0.5, 0.0)) );
+      cubos_laterales->agregar(glm::scale(glm::vec3(0.15, 0.25, 0.15)) );
+      cubos_laterales->agregar(translate(glm::vec3(0.0, 1.0, 0.0)) );
+      cubos_laterales->agregar(cubo);
+
+   }
+
+   agregar(cubos_laterales);
+}
+
+void GrafoCubos::rotacion_cubos(const float alpha_nuevo){
+   *matriz_giro = glm::rotate( alpha_nuevo, glm::vec3(1.0, 0.0, 0.0));
+}
+
+float GrafoCubos::calcula_lineal(const float t_sec){
+   // a = vinicial
+   // b = 2pi*w
+   // w = velocidad angulan (ciclos/s)
+   unsigned w = velocidad_giro;
+   unsigned a = 0;
+   unsigned b = 2 * M_PI * w;
+
+   return a+b*t_sec;
+}
+
+
+unsigned GrafoCubos::leerNumParametros() const{
+    return 1;
+} 
+
+
+void GrafoCubos::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+
+   switch (iParam)
+   {
+      case 0: // Girar Helices Sup
+         rotacion_cubos(calcula_lineal(t_sec));
+      default:
+         break;
+   }
+}
 
 
 

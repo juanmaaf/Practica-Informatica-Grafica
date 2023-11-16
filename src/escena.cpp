@@ -398,6 +398,8 @@ Escena3::Escena3()
 
    objetos.push_back(new GrafoEstrellaX(15, 10.0) );
 
+   objetos.push_back(new GrafoCubos(2.0) );
+
    
 }
 

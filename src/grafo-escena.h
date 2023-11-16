@@ -131,6 +131,19 @@ class GrafoEstrellaX : public NodoGrafoEscena
       void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
 };
 
+class GrafoCubos : public NodoGrafoEscena
+{
+   protected:
+      glm::mat4 * matriz_giro = nullptr;
+      float velocidad_giro;
+   public:
+      GrafoCubos(const float alpha);
+      void rotacion_cubos( const float alpha_nuevo );
+      float calcula_lineal(const float t_sec);
+      unsigned leerNumParametros() const ;
+      void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+};
+
 
 
 #endif // GRAFO_ESCENA_HPP
