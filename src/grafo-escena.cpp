@@ -437,15 +437,17 @@ GrafoCubos::GrafoCubos(const float alpha){
 
    // Rejilla
    NodoGrafoEscena * rejilla= new NodoGrafoEscena();
-   rejilla->agregar(glm::translate(glm::vec3((-0.5,-0.5,-0.5))));
+   rejilla->agregar(glm::translate(glm::vec3(-0.5,-0.5,-0.5) ));
    rejilla->agregar(new RejillaY(10,10)); // Base Cubo Central
 
    // Cubo
    NodoGrafoEscena * cubo = new NodoGrafoEscena();
    unsigned ind1 = cubo->agregar(rotate(0.0f,glm::vec3(0,1,0)));  // Animación: Cada cubo pequeño rota entorno al eje que pasa por su centro y el origen
+   matriz_giro = cubo->leerPtrMatriz(ind1);
+
    cubo->agregar(translate(glm::vec3{0,-0.75,0}));               
    cubo->agregar(scale(glm::vec3(0.15,0.25,0.15)));
-   cubo->agregar(new Cubo());                        // eSTO DA LUGAR AL CUBO DEL SUELO
+   cubo->agregar(new Cubo());
 
    // Como ya tenemos el objeto compuesto que se va a repetir ,agregamos 4 caras de nuestro 
    // objeto compuesto rotando cada objeto 90 grados sobre el eje X
@@ -462,8 +464,6 @@ GrafoCubos::GrafoCubos(const float alpha){
    agregar(rotate(float(glm::radians(180.0)), glm::vec3{1,0,0}));
    agregar(rejilla);
    agregar(cubo);
-
-   matriz_giro = cubo->leerPtrMatriz(ind1);
 }
 
 

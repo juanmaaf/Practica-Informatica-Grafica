@@ -161,8 +161,8 @@ Esfera::Esfera(const int num_verts_per, const unsigned nperfiles)
    std::vector<glm::vec3> perfil;
    for (int i = 0; i < num_verts_per; ++i) {
       float angulo = 2 * M_PI * i / (num_verts_per - 1);
-      float x = -1*cos(angulo);
-      float y = -1*sin(angulo);
+      float x = 1.0 * sin(angulo);
+      float y = -1.0 * cos(angulo);
       perfil.push_back( {x, y, 0.0});
    }
 
