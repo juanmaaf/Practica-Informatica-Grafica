@@ -31,7 +31,7 @@
 #include "seleccion.h"   // para 'ColorDesdeIdent' 
 #include <malla-revol.h>
 
-
+using namespace std;
 
 // *********************************************************************
 // Entrada del nodo del Grafo de Escena
@@ -435,65 +435,40 @@ GrafoCubos::GrafoCubos(const float alpha){
 
    velocidad_giro = alpha;
 
-   RejillaY * rejilla = new RejillaY(6,6);
+   // Rejilla
+   NodoGrafoEscena * rejilla= new NodoGrafoEscena();
+   rejilla->agregar(glm::translate(glm::vec3((-0.5,-0.5,-0.5))));
+   rejilla->agregar(new RejillaY(10,10)); // Base Cubo Central
 
-   NodoGrafoEscena * cubo_central = new NodoGrafoEscena();
+   // Cubo
+   NodoGrafoEscena * cubo = new NodoGrafoEscena();
+   unsigned ind1 = cubo->agregar(rotate(0.0f,glm::vec3(0,1,0)));  // Animación: Cada cubo pequeño rota entorno al eje que pasa por su centro y el origen
+   cubo->agregar(translate(glm::vec3{0,-0.75,0}));               
+   cubo->agregar(scale(glm::vec3(0.15,0.25,0.15)));
+   cubo->agregar(new Cubo());                        // eSTO DA LUGAR AL CUBO DEL SUELO
 
-   cubo_central->agregar(glm::translate(glm::vec3(-0.5, -0.5, -0.5) ));
-
-   for(int i = 0; i < 4; ++i){
-      cubo_central->agregar(glm::translate(glm::vec3(0.0, 1.0, 0.0)) );
-      cubo_central->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(1.0, 0.0, 0.0)) );
-      cubo_central->agregar(rejilla);
+   // Como ya tenemos el objeto compuesto que se va a repetir ,agregamos 4 caras de nuestro 
+   // objeto compuesto rotando cada objeto 90 grados sobre el eje X
+   for(int i = 0; i < 4; i++){
+      agregar(rotate(float(glm::radians(90.0)), glm::vec3{1,0,0}));
+      agregar(rejilla);
+      agregar(cubo);
    }
 
-   for(int i = 0; i < 2; ++i){
-      if(i == 0){
-         cubo_central->agregar(glm::translate(glm::vec3(1.0, 0.0, 0.0)) );
-         cubo_central->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)) );
-      }
-      else{
-         cubo_central->agregar(glm::translate(glm::vec3(1.0, 0.0, 0.0)) );
-         cubo_central->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)) );
-         cubo_central->agregar(glm::translate(glm::vec3(1.0, 0.0, 0.0)) );
-         cubo_central->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)) );
-      }
-      
-      cubo_central->agregar(rejilla);
-   }
+   // 2 caras restantes  rotando cada objeto 90 grados en Z
+   agregar(rotate(float(glm::radians(90.0)), glm::vec3{0,0,1}));
+   agregar(rejilla);
+   agregar(cubo);
+   agregar(rotate(float(glm::radians(180.0)), glm::vec3{1,0,0}));
+   agregar(rejilla);
+   agregar(cubo);
 
-   agregar(cubo_central);
-
-   Cubo * cubo = new Cubo();
-
-   NodoGrafoEscena * cubos_laterales = new NodoGrafoEscena();
-
-   for(int i = 0; i < 6; i++){
-
-      if(i < 4){
-         cubos_laterales->agregar(glm::rotate(float(glm::radians(90.0f * i)), glm::vec3(1.0, 0.0, 0.0)));
-      }
-      else{
-         if(i == 4){
-            cubos_laterales->agregar(glm::rotate(float(glm::radians(90.0f)), glm::vec3(0.0, 0.0, 1.0)));
-         }
-         if(i == 5){
-            cubos_laterales->agregar(glm::rotate(float(glm::radians(-90.0f)), glm::vec3(0.0, 0.0, 1.0)));
-         }
-      }
-
-      cubos_laterales->agregar(translate(glm::vec3(0.0, 0.5, 0.0)) );
-      cubos_laterales->agregar(glm::scale(glm::vec3(0.15, 0.25, 0.15)) );
-      cubos_laterales->agregar(translate(glm::vec3(0.0, 1.0, 0.0)) );
-      cubos_laterales->agregar(cubo);
-
-   }
-
-   agregar(cubos_laterales);
+   matriz_giro = cubo->leerPtrMatriz(ind1);
 }
 
+
 void GrafoCubos::rotacion_cubos(const float alpha_nuevo){
-   *matriz_giro = glm::rotate( alpha_nuevo, glm::vec3(1.0, 0.0, 0.0));
+   *matriz_giro = glm::rotate( alpha_nuevo, glm::vec3(0.0, 1.0, 0.0));
 }
 
 float GrafoCubos::calcula_lineal(const float t_sec){
