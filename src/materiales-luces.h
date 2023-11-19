@@ -1,3 +1,6 @@
+// Nombre: Juan Manuel, Apellidos: Aneas Franco, Titulación: (GIADE).
+// email: juanmanuelaf@correo.ugr.es, DNI o pasaporte: 74542495R
+
 // *********************************************************************
 // **
 // ** Gestión de materiales y texturas (declaraciones)

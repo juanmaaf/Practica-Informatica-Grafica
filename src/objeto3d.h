@@ -1,3 +1,6 @@
+// Nombre: Juan Manuel, Apellidos: Aneas Franco, Titulación: (GIADE).
+// email: juanmanuelaf@correo.ugr.es, DNI o pasaporte: 74542495R
+
 // *********************************************************************
 // **
 // ** Objetos que se pueden visualizar (declaración)
