@@ -376,6 +376,8 @@ Escena2::Escena2()
    objetos.push_back(new RejillaY(10,8) );
 
    objetos.push_back(new MallaTorre(5) );
+
+   objetos.push_back(new EjercicioPerfil(30, 30));
 }
 
 // -------------------------------------------------------------------------

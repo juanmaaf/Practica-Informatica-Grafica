@@ -170,3 +170,26 @@ Esfera::Esfera(const int num_verts_per, const unsigned nperfiles)
    inicializar(perfil, nperfiles);
 }
 
+// Clase EjercicioPerfil
+
+EjercicioPerfil::EjercicioPerfil(const int num_verts_per, const unsigned nperfiles)
+:  MallaRevol()
+{
+   // Crear el perfil de la esfera (un círculo en el plano XY)
+   std::vector<glm::vec3> perfil;
+   
+   for(int i = 0; i < num_verts_per/2; ++i){
+      float angulo = M_PI/2 * i / ((num_verts_per - 1)/2);
+      perfil.push_back(glm::vec3(0.6*glm::sin(angulo), -0.6*glm::cos(angulo), 0.0));
+   }
+
+   for(int i = 0; i < num_verts_per/2; ++i){
+      float angulo = M_PI/2 * i / ((num_verts_per - 1)/2);
+      perfil.push_back(glm::vec3(0.6 + 0.4*glm::sin(angulo), 0.4 - 0.4*glm::cos(angulo), 0.0));
+   }
+
+   perfil.push_back(glm::vec3(0.0, 0.4, 0.0));
+   
+   // Llama a la función de inicialización de MallaRevol utilizando el perfil creado
+   inicializar(perfil, nperfiles);
+}

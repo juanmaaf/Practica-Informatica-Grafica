@@ -108,4 +108,15 @@ class Esfera : public MallaRevol
    ) ;
 } ;
 
+class EjercicioPerfil : public MallaRevol
+{
+   public:
+   EjercicioPerfil
+   ( const int
+   num_verts_per, // número de vértices del perfil original (M )
+   const unsigned nperfiles
+   // número de perfiles (N )
+   ) ;
+} ;
+
 #endif
