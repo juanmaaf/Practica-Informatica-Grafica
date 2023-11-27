@@ -209,6 +209,22 @@ void ColFuentesLuz::activar( )
    //   - usar el método 'fijarFuentesLuz' del cauce para activarlas
    // .....
 
+   std::vector<glm::vec3> colores;
+   std::vector<glm::vec4> posiciones;
+
+   for(int i = 0; i < (int)vpf.size(); ++i){
+      colores.push_back(vpf[i]->color);
+
+      float latitud = vpf[i]->lati;
+      float longitud = vpf[i]->longi;
+
+      float x = sin(latitud) * cos(longitud);
+      float y = sin(latitud) * cos(longitud);
+      float z = cos(latitud);
+
+      posiciones.push_back(glm::vec4(x, y, z, 0.0f));
+   }
+   cauce->fijarFuentesLuz(colores, posiciones);
 }
 
 // ---------------------------------------------------------------------

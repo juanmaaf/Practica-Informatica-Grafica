@@ -45,6 +45,7 @@
 #include "materiales-luces.h"
 #include "escena.h"
 #include "modelo-jer.h"
+#include "examen-ec-p123.h"
 
 
 
@@ -315,6 +316,10 @@ Escena1::Escena1()
    using namespace std ;
    cout << "Creando objetos de la práctica 1." << endl ;
 
+   //Examen
+
+   //objetos.push_back( new P1MallaCubo() );
+
    objetos.push_back( new Cubo() );
 
    // COMPLETAR: práctica 1: añadir resto de objetos a la escena 1
@@ -353,6 +358,9 @@ Escena2::Escena2()
 {
    using namespace std ;
    cout << "Creando objetos de la práctica 2." << endl ;
+
+   // Examen
+   //objetos.push_back(new P2Rejilla(10,10));
 
    objetos.push_back(new MallaRevolPLY("peon.ply", 24) );
 
@@ -395,6 +403,10 @@ Escena3::Escena3()
    using namespace std ;
    cout << "Creando objetos de la práctica 3." << endl ;
 
+   // Examen 
+   // objetos.push_back( new P3Cuadrado() );
+   //objetos.push_back( new P3Caja() );
+   
    objetos.push_back(new Helicoptero(3.0, 2.0, 10.0, 25.0) );
 
    objetos.push_back(new Helicoptero(8.0, 2.0, 15.0, 90.0) );

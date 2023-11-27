@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/debug_exe.dir/eventos-raton.cpp.o.d"
   "CMakeFiles/debug_exe.dir/eventos-teclado.cpp.o"
   "CMakeFiles/debug_exe.dir/eventos-teclado.cpp.o.d"
+  "CMakeFiles/debug_exe.dir/examen-ec-p123.cpp.o"
+  "CMakeFiles/debug_exe.dir/examen-ec-p123.cpp.o.d"
   "CMakeFiles/debug_exe.dir/grafo-escena.cpp.o"
   "CMakeFiles/debug_exe.dir/grafo-escena.cpp.o.d"
   "CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o"

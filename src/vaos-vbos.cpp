@@ -389,7 +389,7 @@ void DescrVAO::crearVAO()
    for(unsigned i = 0; i < num_atribs; ++i){
       if(dvbo_atributo[i] != nullptr){
          if(atrib_habilitado[i] == false){
-            glDisableVertexAttribArray(0);
+            glDisableVertexAttribArray(i);
          }
       }
    }

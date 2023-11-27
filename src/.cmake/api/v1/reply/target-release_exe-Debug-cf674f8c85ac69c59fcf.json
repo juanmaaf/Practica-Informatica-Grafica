@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/juanmaaf/Escritorio/IG/PracticaIG/bin/debug_exe"
+			"path" : "/home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe"
 		}
 	],
 	"backtrace" : 1,
@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 53,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 54,
+				"line" : 59,
 				"parent" : 0
 			}
 		]
@@ -45,7 +45,7 @@
 					"fragment" : " -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g"
 				},
 				{
-					"fragment" : "-g"
+					"fragment" : "-O2"
 				}
 			],
 			"includes" : 
@@ -81,11 +81,12 @@
 				16,
 				17,
 				18,
-				19
+				19,
+				20
 			]
 		}
 	],
-	"id" : "debug_exe::@6890427a1f51a3e7e1df",
+	"id" : "release_exe::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -124,8 +125,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "debug_exe",
-	"nameOnDisk" : "debug_exe",
+	"name" : "release_exe",
+	"nameOnDisk" : "release_exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -156,14 +157,14 @@
 				16,
 				17,
 				18,
-				19
+				19,
+				20
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				20,
 				21,
 				22,
 				23,
@@ -181,7 +182,9 @@
 				35,
 				36,
 				37,
-				38
+				38,
+				39,
+				40
 			]
 		}
 	],
@@ -221,6 +224,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -335,6 +344,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.h",
 			"sourceGroupIndex" : 1
 		},
 		{

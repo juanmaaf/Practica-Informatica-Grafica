@@ -153,10 +153,24 @@ CMakeFiles/release_exe.dir/eventos-teclado.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/release_exe.dir/eventos-teclado.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp -o CMakeFiles/release_exe.dir/eventos-teclado.cpp.s
 
+CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o: CMakeFiles/release_exe.dir/flags.make
+CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o: examen-ec-p123.cpp
+CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o -MF CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o.d -o CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp
+
+CMakeFiles/release_exe.dir/examen-ec-p123.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/release_exe.dir/examen-ec-p123.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp > CMakeFiles/release_exe.dir/examen-ec-p123.cpp.i
+
+CMakeFiles/release_exe.dir/examen-ec-p123.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/release_exe.dir/examen-ec-p123.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp -o CMakeFiles/release_exe.dir/examen-ec-p123.cpp.s
+
 CMakeFiles/release_exe.dir/grafo-escena.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/grafo-escena.cpp.o: grafo-escena.cpp
 CMakeFiles/release_exe.dir/grafo-escena.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/release_exe.dir/grafo-escena.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/release_exe.dir/grafo-escena.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/grafo-escena.cpp.o -MF CMakeFiles/release_exe.dir/grafo-escena.cpp.o.d -o CMakeFiles/release_exe.dir/grafo-escena.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp
 
 CMakeFiles/release_exe.dir/grafo-escena.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/release_exe.dir/grafo-escena.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/main.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/main.cpp.o: main.cpp
 CMakeFiles/release_exe.dir/main.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/release_exe.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/release_exe.dir/main.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/main.cpp.o -MF CMakeFiles/release_exe.dir/main.cpp.o.d -o CMakeFiles/release_exe.dir/main.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/main.cpp
 
 CMakeFiles/release_exe.dir/main.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/release_exe.dir/main.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/malla-ind.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/malla-ind.cpp.o: malla-ind.cpp
 CMakeFiles/release_exe.dir/malla-ind.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/release_exe.dir/malla-ind.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/release_exe.dir/malla-ind.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/malla-ind.cpp.o -MF CMakeFiles/release_exe.dir/malla-ind.cpp.o.d -o CMakeFiles/release_exe.dir/malla-ind.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-ind.cpp
 
 CMakeFiles/release_exe.dir/malla-ind.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/release_exe.dir/malla-ind.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/malla-revol.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/malla-revol.cpp.o: malla-revol.cpp
 CMakeFiles/release_exe.dir/malla-revol.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/release_exe.dir/malla-revol.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/release_exe.dir/malla-revol.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/malla-revol.cpp.o -MF CMakeFiles/release_exe.dir/malla-revol.cpp.o.d -o CMakeFiles/release_exe.dir/malla-revol.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-revol.cpp
 
 CMakeFiles/release_exe.dir/malla-revol.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/release_exe.dir/malla-revol.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/materiales-luces.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/materiales-luces.cpp.o: materiales-luces.cpp
 CMakeFiles/release_exe.dir/materiales-luces.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/release_exe.dir/materiales-luces.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/release_exe.dir/materiales-luces.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/materiales-luces.cpp.o -MF CMakeFiles/release_exe.dir/materiales-luces.cpp.o.d -o CMakeFiles/release_exe.dir/materiales-luces.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/materiales-luces.cpp
 
 CMakeFiles/release_exe.dir/materiales-luces.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/release_exe.dir/materiales-luces.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/modelo-jer.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/modelo-jer.cpp.o: modelo-jer.cpp
 CMakeFiles/release_exe.dir/modelo-jer.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/release_exe.dir/modelo-jer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/release_exe.dir/modelo-jer.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/modelo-jer.cpp.o -MF CMakeFiles/release_exe.dir/modelo-jer.cpp.o.d -o CMakeFiles/release_exe.dir/modelo-jer.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/modelo-jer.cpp
 
 CMakeFiles/release_exe.dir/modelo-jer.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/release_exe.dir/modelo-jer.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/objeto3d.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/objeto3d.cpp.o: objeto3d.cpp
 CMakeFiles/release_exe.dir/objeto3d.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/release_exe.dir/objeto3d.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/release_exe.dir/objeto3d.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/objeto3d.cpp.o -MF CMakeFiles/release_exe.dir/objeto3d.cpp.o.d -o CMakeFiles/release_exe.dir/objeto3d.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/objeto3d.cpp
 
 CMakeFiles/release_exe.dir/objeto3d.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/release_exe.dir/objeto3d.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/seleccion.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/seleccion.cpp.o: seleccion.cpp
 CMakeFiles/release_exe.dir/seleccion.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/release_exe.dir/seleccion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/release_exe.dir/seleccion.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/seleccion.cpp.o -MF CMakeFiles/release_exe.dir/seleccion.cpp.o.d -o CMakeFiles/release_exe.dir/seleccion.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/seleccion.cpp
 
 CMakeFiles/release_exe.dir/seleccion.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/release_exe.dir/seleccion.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/vaos-vbos.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/vaos-vbos.cpp.o: vaos-vbos.cpp
 CMakeFiles/release_exe.dir/vaos-vbos.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/release_exe.dir/vaos-vbos.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/release_exe.dir/vaos-vbos.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/vaos-vbos.cpp.o -MF CMakeFiles/release_exe.dir/vaos-vbos.cpp.o.d -o CMakeFiles/release_exe.dir/vaos-vbos.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/vaos-vbos.cpp
 
 CMakeFiles/release_exe.dir/vaos-vbos.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/release_exe.dir/vaos-vbos.cpp.s: cmake_force
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o: /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o -MF CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o.d -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp
 
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o: /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o -MF CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o.d -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp
 
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o: /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o -MF CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o.d -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp
 
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.i: cmake_force
@@ -324,7 +338,7 @@ CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o: /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o -MF CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o.d -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp
 
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.i: cmake_force
@@ -338,7 +352,7 @@ CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o: CMakeFiles/release_exe.dir/flags.make
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o: /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o: CMakeFiles/release_exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o -MF CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o.d -o CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp
 
 CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.i: cmake_force
@@ -357,6 +371,7 @@ release_exe_OBJECTS = \
 "CMakeFiles/release_exe.dir/escena.cpp.o" \
 "CMakeFiles/release_exe.dir/eventos-raton.cpp.o" \
 "CMakeFiles/release_exe.dir/eventos-teclado.cpp.o" \
+"CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o" \
 "CMakeFiles/release_exe.dir/grafo-escena.cpp.o" \
 "CMakeFiles/release_exe.dir/main.cpp.o" \
 "CMakeFiles/release_exe.dir/malla-ind.cpp.o" \
@@ -381,6 +396,7 @@ release_exe_EXTERNAL_OBJECTS =
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: CMakeFiles/release_exe.dir/escena.cpp.o
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: CMakeFiles/release_exe.dir/eventos-raton.cpp.o
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: CMakeFiles/release_exe.dir/eventos-teclado.cpp.o
+/home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: CMakeFiles/release_exe.dir/grafo-escena.cpp.o
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: CMakeFiles/release_exe.dir/main.cpp.o
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: CMakeFiles/release_exe.dir/malla-ind.cpp.o
@@ -400,7 +416,7 @@ release_exe_EXTERNAL_OBJECTS =
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: /usr/lib/x86_64-linux-gnu/libGLX.so
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe: CMakeFiles/release_exe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/juanmaaf/Escritorio/IG/PracticaIG/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable /home/juanmaaf/Escritorio/IG/PracticaIG/bin/release_exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/release_exe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -304,6 +304,33 @@ eventos-teclado.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/eventos-teclado.cpp.s
 .PHONY : eventos-teclado.cpp.s
 
+examen-ec-p123.o: examen-ec-p123.cpp.o
+.PHONY : examen-ec-p123.o
+
+# target to build an object file
+examen-ec-p123.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/examen-ec-p123.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o
+.PHONY : examen-ec-p123.cpp.o
+
+examen-ec-p123.i: examen-ec-p123.cpp.i
+.PHONY : examen-ec-p123.i
+
+# target to preprocess a source file
+examen-ec-p123.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/examen-ec-p123.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/examen-ec-p123.cpp.i
+.PHONY : examen-ec-p123.cpp.i
+
+examen-ec-p123.s: examen-ec-p123.cpp.s
+.PHONY : examen-ec-p123.s
+
+# target to generate assembly for a file
+examen-ec-p123.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/examen-ec-p123.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/examen-ec-p123.cpp.s
+.PHONY : examen-ec-p123.cpp.s
+
 grafo-escena.o: grafo-escena.cpp.o
 .PHONY : grafo-escena.o
 
@@ -710,6 +737,9 @@ help:
 	@echo "... eventos-teclado.o"
 	@echo "... eventos-teclado.i"
 	@echo "... eventos-teclado.s"
+	@echo "... examen-ec-p123.o"
+	@echo "... examen-ec-p123.i"
+	@echo "... examen-ec-p123.s"
 	@echo "... grafo-escena.o"
 	@echo "... grafo-escena.i"
 	@echo "... grafo-escena.s"

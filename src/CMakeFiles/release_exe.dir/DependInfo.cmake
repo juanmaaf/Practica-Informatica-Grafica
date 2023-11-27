@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/escena.cpp" "CMakeFiles/release_exe.dir/escena.cpp.o" "gcc" "CMakeFiles/release_exe.dir/escena.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-raton.cpp" "CMakeFiles/release_exe.dir/eventos-raton.cpp.o" "gcc" "CMakeFiles/release_exe.dir/eventos-raton.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp" "CMakeFiles/release_exe.dir/eventos-teclado.cpp.o" "gcc" "CMakeFiles/release_exe.dir/eventos-teclado.cpp.o.d"
+  "/home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp" "CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o" "gcc" "CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp" "CMakeFiles/release_exe.dir/grafo-escena.cpp.o" "gcc" "CMakeFiles/release_exe.dir/grafo-escena.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o" "gcc" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/cauce.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o" "gcc" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/fbo.cpp.o.d"

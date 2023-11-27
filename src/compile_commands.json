@@ -31,6 +31,11 @@
 },
 {
   "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/examen-ec-p123.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
   "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/grafo-escena.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp",
   "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp"
 },
@@ -128,6 +133,11 @@
   "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
   "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/eventos-teclado.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp",
   "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/eventos-teclado.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/examen-ec-p123.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/examen-ec-p123.cpp"
 },
 {
   "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
