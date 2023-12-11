@@ -1,7 +1,7 @@
 // Nombre: Juan Manuel, Apellidos: Aneas Franco, Titulación: (GIADE).
 // email: juanmanuelaf@correo.ugr.es, DNI o pasaporte: 74542495R
 
-# include "examen-ec-p123.h"
+#include "examen-ec-p123.h"
 #include "malla-revol.h"
 
 // Clase P1MallaCubo

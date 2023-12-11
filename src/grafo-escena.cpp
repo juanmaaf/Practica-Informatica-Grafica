@@ -126,6 +126,11 @@ void NodoGrafoEscena::visualizarGL(  )
    // 3. Para cada entrada del vector de entradas:
    //     - si la entrada es de tipo objeto: llamar recursivamente a 'visualizarGL'
    //     - si la entrada es de tipo transformación: componer la matriz (con 'compMM')
+
+   if ( apl->iluminacion ){
+      pila_materiales->push();
+   }
+
    for(unsigned i = 0; i < entradas.size(); ++i ){
       switch (entradas[i].tipo){
          case TipoEntNGE::objeto:
@@ -136,9 +141,19 @@ void NodoGrafoEscena::visualizarGL(  )
             cauce->compMM( *(entradas[i].matriz) );
          break;
 
+         case TipoEntNGE::material : // si la entrada es de tipo ’material’
+            if(apl->iluminacion){
+               pila_materiales->activar( entradas[i].material );
+            }
+         break;
+
          default:
          break;
       }
+   }
+
+   if ( apl->iluminacion ){
+      pila_materiales->pop();
    }
 
    // 4. Restaurar la copia guardada de la matriz de modelado (con 'popMM')
@@ -157,9 +172,7 @@ void NodoGrafoEscena::visualizarGL(  )
    //   1. al inicio, hacer 'push' de la pila de materiales (guarda material actual en la pila)
    //   2. si una entrada es de tipo material, activarlo usando a pila de materiales
    //   3. al finalizar, hacer 'pop' de la pila de materiales (restaura el material activo al inicio)
-
    // ......
-
 
 }
 
@@ -229,6 +242,21 @@ void NodoGrafoEscena::visualizarNormalesGL(  )
    // - ignorar las entradas de tipo material, y la gestión de materiales (se usa sin iluminación)
 
    // .......
+
+   cauce->pushMM();
+
+   for(unsigned i = 0; i < entradas.size(); ++i){
+      switch (entradas[i].tipo){
+         case TipoEntNGE::objeto:
+            entradas[i].objeto->visualizarNormalesGL();
+         break;
+         
+         default:
+         break;
+      }
+   }
+
+   cauce->popMM();
 
 }
 
@@ -500,6 +528,13 @@ void GrafoCubos::actualizarEstadoParametro( const unsigned iParam, const float t
       default:
          break;
    }
+}
+
+NodoCubo24::NodoCubo24(){
+   NodoGrafoEscena * cubo = new NodoGrafoEscena();
+   cubo->agregar(new Cubo24());
+
+   agregar(cubo);
 }
 
 

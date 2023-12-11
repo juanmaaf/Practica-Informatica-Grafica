@@ -62,6 +62,9 @@ Escena::Escena()
    //
    // ...
 
+   col_fuentes = new Col2Fuentes();
+   material_ini = new Material(0.2, 0.8, 0.0, 1.0);
+
 
    // COMPLETAR: práctica 5: añadir varias cámaras perspectiva y ortogonales al vector de cámaras de la escena
    //
@@ -149,6 +152,11 @@ void Escena::visualizarGL( )
       // * activar la colección de fuentes de la escena
       // * activar el material inicial (usando 'pila_materiales')
       // ....
+
+      cauce->fijarEvalMIL(true);
+      cauce->fijarEvalText(false);
+      col_fuentes->activar();
+      apl->pila_materiales->activar(material_ini);
 
    }
    else // si la iluminación no está activada, deshabilitar MIL y texturas
@@ -254,6 +262,15 @@ void Escena::visualizarNormales(  )
    // 2. Visualizar las normales del objeto actual de la escena (con el método 'visualizarNormalesGL')
 
    // ......
+
+   cauce->fijarEvalMIL( false );
+   cauce->fijarEvalText( false );
+   cauce->fijarColor( 0.9, 0.1, 0.8 );
+
+   // recuperar el objeto actual de esta escena
+   Objeto3D * objeto = objetos[ind_objeto_actual] ; assert( objeto != nullptr );
+
+   objeto->visualizarNormalesGL();
 
 }
 
@@ -426,7 +443,15 @@ Escena3::Escena3()
 // los objetos que se indican en el guion de la práctica 4
 // .......
 
+Escena4::Escena4()
+{
+   using namespace std ;
+   cout << "Creando objetos de la práctica 4." << endl ;
 
+   objetos.push_back(new NodoCubo24() );
+
+   
+}
 
 // ----------------------------------------------------------------------
 // COMPLETAR: práctica 5: escribir implementación del constructor de 'Escena5'.

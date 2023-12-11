@@ -47,6 +47,7 @@ Textura::Textura( const std::string & nombreArchivoJPG )
    // busca en 'materiales/imgs' y si no está se busca en 'archivos-alumno'
    // .....
 
+   imagen = LeerArchivoJPEG(nombreArchivoJPG.c_str(), ancho, alto);
 }
 
 // ---------------------------------------------------------------------
@@ -59,6 +60,43 @@ void Textura::enviar()
    // y configurar parámetros de la textura (glTexParameter)
    // .......
 
+   glGenTextures( 1, &ident_textura);
+   // Activa textura con identificador ’idTex’ :
+   glActiveTexture(GL_TEXTURE0);
+   // Activa textura con identificador nombre_tex
+   glBindTexture( GL_TEXTURE_2D, ident_textura );
+   // Envia la textura a la GPU
+   glTexImage2D
+   ( 
+      GL_TEXTURE_2D, // GLenum target: tipo de textura.
+      0,
+      // GLint level: nivel de mipmap.
+      GL_RGB,
+      // GLint internalformat: formato de destino en GPU.
+      ancho,
+      // GLsizei width: número de columnas de texels.
+      alto,
+      // GLsizei height: numero de filas de texels.
+      0,
+      // GLint border: borde, no se usa, se pone a 0.
+      GL_RGB,
+      // GLenum format: formato origen en memoria apl.
+      GL_UNSIGNED_BYTE, // GLenum type: tipo valores.
+      imagen
+      // const void * data: puntero a texels en memoria apl.
+   );
+
+   // Generar mipmaps (versiones a resolución reducida)
+   glGenerateMipmap( GL_TEXTURE_2D );
+   // Selección de texels para texturas cercanas (magnificadas)
+   glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+   // Selección de texels para texturas lejanas (minimizadas)
+   glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR );
+   // Selección de texels con coord. de textura fuera de rango
+   glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
+   glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
+
+   enviada = true;
 }
 
 //----------------------------------------------------------------------
@@ -85,8 +123,37 @@ void Textura::activar(  )
 
    // COMPLETAR: práctica 4: enviar la textura a la GPU (solo la primera vez) y activarla
    // .......
+   if(!enviada)
+      enviar();
 
+   cauce->fijarEvalText(true, ident_textura);
+   cauce->fijarTipoGCT(modo_gen_ct, coefs_s, coefs_t);
 }
+
+TexturaXY::TexturaXY( const std::string & nom ): Textura(nom) {
+   modo_gen_ct = mgct_coords_objeto;
+   coefs_s[0] = 1.0f;
+   coefs_s[1] = 0.0f;
+   coefs_s[2] = 0.0f;
+   coefs_s[3] = 0.0f;
+   coefs_t[0] = 0.0f;
+   coefs_t[1] = 1.0f;
+   coefs_t[2] = 0.0f;
+   coefs_t[3] = 0.0f;
+}
+
+TexturaXZ::TexturaXZ( const std::string & nom ): Textura(nom) {
+   modo_gen_ct = mgct_coords_objeto;
+   coefs_s[0] = 1.0f;
+   coefs_s[1] = 0.0f;
+   coefs_s[2] = 0.0f;
+   coefs_s[3] = 0.0f;
+   coefs_t[0] = 0.0f;
+   coefs_t[1] = 0.0f;
+   coefs_t[2] = 1.0f;
+   coefs_t[3] = 0.0f;
+}
+
 // *********************************************************************
 // crea un material usando un color plano y los coeficientes de las componentes
 
@@ -143,6 +210,17 @@ void Material::activar( )
 
    // COMPLETAR: práctica 4: activar un material
    // .....
+
+   if(textura != nullptr)
+      textura->activar();
+   else 
+      cauce->fijarEvalText(false);
+   
+   assert(exp_pse >= 1.0);
+   cauce->fijarParamsMIL(k_amb, k_dif, k_pse, exp_pse);
+
+   // registrar el material actual en el cauce
+   //cauce->material_act = this ; 
 
 }
 //**********************************************************************
@@ -218,9 +296,9 @@ void ColFuentesLuz::activar( )
       float latitud = vpf[i]->lati;
       float longitud = vpf[i]->longi;
 
-      float x = sin(latitud) * cos(longitud);
-      float y = sin(latitud) * cos(longitud);
-      float z = cos(latitud);
+      float z = sin(latitud) * cos(longitud);
+      float x = sin(latitud) * sin(longitud);
+      float y = cos(latitud);
 
       posiciones.push_back(glm::vec4(x, y, z, 0.0f));
    }

@@ -75,6 +75,41 @@ void MallaInd::calcularNormalesTriangulos()
    // COMPLETAR: Práctica 4: creación de la tabla de normales de triángulos
    // ....
 
+   // Creación de la tabla de normales de triángulos
+   nor_tri.resize(nt);
+
+   for (unsigned i = 0; i < nt; ++i)
+   {
+      // Obtener los índices de los vértices del triángulo
+      unsigned p = triangulos[i].x;
+      unsigned q = triangulos[i].y;
+      unsigned r = triangulos[i].z;
+
+      // Obtener las posiciones de los vértices
+      glm::vec3 vertice_p = vertices[p];
+      glm::vec3 vertice_q = vertices[q];
+      glm::vec3 vertice_r = vertices[r];
+
+      // Calcular vectores de las aristas
+      glm::vec3 a = vertice_q - vertice_p;
+      glm::vec3 b = vertice_r - vertice_p;
+
+      // Calcular el vector normal mc (producto vectorial)
+      glm::vec3 mc = glm::cross(a, b);
+
+      // Verificar si el vector es degenerado (longitud nula)
+      if (glm::length(mc) > 0.0f)
+      {
+         // Normalizar el vector y asignarlo a la tabla de normales
+         nor_tri[i] = glm::normalize(mc);
+      }
+      else
+      {
+         // Asignar el vector nulo como vector normal
+         nor_tri[i] = glm::vec3(0.0f);
+      }
+   }
+
 }
 
 
@@ -88,9 +123,45 @@ void MallaInd::calcularNormales()
    // se debe invocar en primer lugar 'calcularNormalesTriangulos'
    // .......
 
+   // Calcular normales de triángulos (si no se han calculado)
+   calcularNormalesTriangulos();
 
+   // Crear un vector para almacenar temporales de normales de vértices
+   std::vector<vec3> nor_vert_temp(vertices.size(), vec3(0.0f));
+
+   // Recorrer la lista de triángulos para acumular las normales de caras a los vértices correspondientes
+   for (unsigned i = 0; i < triangulos.size(); ++i)
+   {
+      // Obtener índices de vértices del triángulo
+      unsigned p = triangulos[i].x;
+      unsigned q = triangulos[i].y;
+      unsigned r = triangulos[i].z;
+
+      // Acumular la normal del triángulo al vértice correspondiente
+      nor_vert_temp[p] += nor_tri[i];
+      nor_vert_temp[q] += nor_tri[i];
+      nor_vert_temp[r] += nor_tri[i];
+   }
+
+   nor_tri.clear();
+
+   // Normalizar las normales de vértices y asignarlas a la tabla de normales de vértices (nor_vert)
+   nor_ver.resize(vertices.size());
+   for (unsigned i = 0; i < vertices.size(); ++i)
+   {
+      // Verificar si el vector es degenerado (longitud nula)
+      if (glm::length(nor_vert_temp[i]) > 0.0f)
+      {
+         // Normalizar el vector y asignarlo a la tabla de normales de vértices
+         nor_ver[i] = glm::normalize(nor_vert_temp[i]);
+      }
+      else
+      {
+         // Asignar el vector nulo como vector normal
+         nor_ver[i] = glm::vec3(0.0f);
+      }
+   }
 }
-
 
 // --------------------------------------------------------------------------------------------
 
@@ -261,6 +332,33 @@ void MallaInd::visualizarNormalesGL(  )
    //       tipo de primitiva 'GL_LINES'.
 
    //  ..........
+
+    // Comprobar si el VAO de normales ya ha sido creado
+    if (dvao_normales == nullptr)
+    {
+        // Crear el vector de segmentos de normales
+        std::vector<glm::vec3> segmentos_normales;
+        for (unsigned i = 0; i < vertices.size(); ++i)
+        {
+            // Obtener la posición del vértice y su normal
+            glm::vec3 vi = vertices[i];
+            glm::vec3 ni = nor_ver[i];
+
+            // Añadir el vértice y su normal al vector de segmentos
+            segmentos_normales.push_back(vi);
+            segmentos_normales.push_back(vi + 0.35f*ni);
+        }
+
+        // Crear el objeto descriptor del VAO de normales
+        DescrVBOAtribs * dvbo_segmentos = new DescrVBOAtribs(0, segmentos_normales);
+        dvao_normales = new DescrVAO(numero_atributos_cauce, dvbo_segmentos);
+
+        // Vaciar la tabla de segmentos de normales
+        segmentos_normales.clear();
+    }
+
+    // Visualizar el VAO de normales
+    dvao_normales->draw(GL_LINES);
 
 }
 
@@ -723,3 +821,46 @@ MallaTorre::MallaTorre(unsigned n)
 
 // -----------------------------------------------------------------------------------------------
 
+Cubo24::Cubo24(){
+   vertices =
+      {  { -1.0, -1.0, -1.0 }, // 0.0 
+         { -1.0, -1.0, -1.0 }, // 0.1 
+         { -1.0, -1.0, -1.0 }, // 0.2
+         { -1.0, -1.0, +1.0 }, // 1.3 
+         { -1.0, -1.0, +1.0 }, // 1.4 
+         { -1.0, -1.0, +1.0 }, // 1.5 
+         { -1.0, +1.0, -1.0 }, // 2.6 
+         { -1.0, +1.0, -1.0 }, // 2.7
+         { -1.0, +1.0, -1.0 }, // 2.8
+         { -1.0, +1.0, +1.0 }, // 3.9
+         { -1.0, +1.0, +1.0 }, // 3.10
+         { -1.0, +1.0, +1.0 }, // 3.11 
+         { +1.0, -1.0, -1.0 }, // 4.12
+         { +1.0, -1.0, -1.0 }, // 4.13
+         { +1.0, -1.0, -1.0 }, // 4.14
+         { +1.0, -1.0, +1.0 }, // 5.15
+         { +1.0, -1.0, +1.0 }, // 5.16
+         { +1.0, -1.0, +1.0 }, // 5.17
+         { +1.0, +1.0, -1.0 }, // 6.18
+         { +1.0, +1.0, -1.0 }, // 6.19
+         { +1.0, +1.0, -1.0 }, // 6.20
+         { +1.0, +1.0, +1.0 }, // 7.21
+         { +1.0, +1.0, +1.0 }, // 7.22
+         { +1.0, +1.0, +1.0 }, // 7.23
+      } ;
+
+   triangulos =
+      {  {9,0,3}, {0,9,6}, // X-
+         {10,4,15}, {15,21,10}, // X+ (+4)
+
+         {22,16,18}, {16,12,18}, // Y-
+         {13,1,19}, {1,7,19}, // Y+ (+2)
+
+         {8,11,20}, {11,23,20}, // Z-
+         {17,5,2}, {17,2,14}  // Z+ (+1)
+      };
+
+   calcularNormales();
+}
+
+// -----------------------------------------------------------------------------------------------

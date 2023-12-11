@@ -27,6 +27,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o.d"
   "CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o"
   "CMakeFiles/debug_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o.d"
+  "CMakeFiles/debug_exe.dir/latapeones.cpp.o"
+  "CMakeFiles/debug_exe.dir/latapeones.cpp.o.d"
   "CMakeFiles/debug_exe.dir/main.cpp.o"
   "CMakeFiles/debug_exe.dir/main.cpp.o.d"
   "CMakeFiles/debug_exe.dir/malla-ind.cpp.o"

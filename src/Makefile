@@ -493,6 +493,33 @@ home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.s
 .PHONY : home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.s
 
+latapeones.o: latapeones.cpp.o
+.PHONY : latapeones.o
+
+# target to build an object file
+latapeones.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/latapeones.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/latapeones.cpp.o
+.PHONY : latapeones.cpp.o
+
+latapeones.i: latapeones.cpp.i
+.PHONY : latapeones.i
+
+# target to preprocess a source file
+latapeones.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/latapeones.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/latapeones.cpp.i
+.PHONY : latapeones.cpp.i
+
+latapeones.s: latapeones.cpp.s
+.PHONY : latapeones.s
+
+# target to generate assembly for a file
+latapeones.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/debug_exe.dir/build.make CMakeFiles/debug_exe.dir/latapeones.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/release_exe.dir/build.make CMakeFiles/release_exe.dir/latapeones.cpp.s
+.PHONY : latapeones.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -758,6 +785,9 @@ help:
 	@echo "... home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.o"
 	@echo "... home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.i"
 	@echo "... home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.s"
+	@echo "... latapeones.o"
+	@echo "... latapeones.i"
+	@echo "... latapeones.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

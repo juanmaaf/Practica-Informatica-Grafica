@@ -41,6 +41,11 @@
 },
 {
   "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/latapeones.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/latapeones.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/latapeones.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
   "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -g -o CMakeFiles/debug_exe.dir/main.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/main.cpp",
   "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/main.cpp"
 },
@@ -143,6 +148,11 @@
   "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
   "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/grafo-escena.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp",
   "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/grafo-escena.cpp"
+},
+{
+  "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",
+  "command": "/usr/bin/g++  -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../src -I/home/juanmaaf/Escritorio/IG/PracticaIG/builds/linux/../../materiales/src-cpp  -std=c++20 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field -Wfatal-errors -g -O2 -o CMakeFiles/release_exe.dir/latapeones.cpp.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/src/latapeones.cpp",
+  "file": "/home/juanmaaf/Escritorio/IG/PracticaIG/src/latapeones.cpp"
 },
 {
   "directory": "/home/juanmaaf/Escritorio/IG/PracticaIG/src",

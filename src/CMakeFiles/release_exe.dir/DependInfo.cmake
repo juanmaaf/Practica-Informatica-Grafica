@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o" "gcc" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/ig-aux.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o" "gcc" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-jpg.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o" "gcc" "CMakeFiles/release_exe.dir/home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp.o.d"
+  "/home/juanmaaf/Escritorio/IG/PracticaIG/src/latapeones.cpp" "CMakeFiles/release_exe.dir/latapeones.cpp.o" "gcc" "CMakeFiles/release_exe.dir/latapeones.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/main.cpp" "CMakeFiles/release_exe.dir/main.cpp.o" "gcc" "CMakeFiles/release_exe.dir/main.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-ind.cpp" "CMakeFiles/release_exe.dir/malla-ind.cpp.o" "gcc" "CMakeFiles/release_exe.dir/malla-ind.cpp.o.d"
   "/home/juanmaaf/Escritorio/IG/PracticaIG/src/malla-revol.cpp" "CMakeFiles/release_exe.dir/malla-revol.cpp.o" "gcc" "CMakeFiles/release_exe.dir/malla-revol.cpp.o.d"
