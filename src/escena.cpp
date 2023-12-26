@@ -453,9 +453,7 @@ Escena4::Escena4()
 
    objetos.push_back(new NodoCubo24() );
 
-   objetos.push_back(new NodoCono() );
-
-   objetos.push_back(new NodoEsfera() );
+   objetos.push_back(new HelicopteroP4(3.0, 2.0, 10.0, 25.0) );
    
 }
 

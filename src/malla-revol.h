@@ -122,5 +122,18 @@ class EjercicioPerfil : public MallaRevol
    ) ;
 } ;
 
+class CilindroP4 : public MallaRevol
+{
+   public:
+   // Constructor: crea el perfil original y llama a inicializar
+   // la base tiene el centro en el origen, el radio y la altura son 1
+   CilindroP4
+   (
+   const int
+   num_verts_per, // número de vértices del perfil original (m)
+   const unsigned nperfiles
+   // número de perfiles (n)
+   ) ;
+} ;
 
 #endif

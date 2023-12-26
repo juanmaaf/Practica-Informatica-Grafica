@@ -327,3 +327,25 @@ EjercicioPerfil::EjercicioPerfil(const int num_verts_per, const unsigned nperfil
    inicializar(perfil, nperfiles);
 }
 
+// Clase CilindroP4
+
+CilindroP4::CilindroP4(const int num_verts_per, const unsigned nperfiles)
+:  MallaRevol()
+{
+   std::vector<glm::vec3> perfil;
+   float altura = 1.0f;
+   float radio = 1.0f;
+   float altura_norm = altura / (num_verts_per - 3);
+
+
+   //perfil.push_back({0.0,0.0,0.0}); - Sin vértice inferior
+
+   for(int i = 0; i < num_verts_per - 2; ++i){
+      perfil.push_back({radio, altura_norm * i, 0.0});
+   }
+
+   //perfil.push_back({0.0, altura,0.0}); - Sin vértice superior
+
+   inicializar(perfil, nperfiles);
+}
+
