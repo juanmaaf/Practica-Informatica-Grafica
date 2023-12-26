@@ -336,8 +336,8 @@ void MallaInd::visualizarNormalesGL(  )
     // Comprobar si el VAO de normales ya ha sido creado
     if (dvao_normales == nullptr)
     {
-        // Crear el vector de segmentos de normales
-        std::vector<glm::vec3> segmentos_normales;
+        // Dar valores al vector de segmentos de normales
+
         for (unsigned i = 0; i < vertices.size(); ++i)
         {
             // Obtener la posición del vértice y su normal
@@ -403,6 +403,8 @@ MallaPLY::MallaPLY( const std::string & nombre_arch )
    // COMPLETAR: práctica 4: invocar  a 'calcularNormales' para el cálculo de normales
    // .................
 
+   calcularNormales();
+
 }
 
 // ****************************************************************************
@@ -435,6 +437,8 @@ Cubo::Cubo()
          {0,6,4}, {0,2,6}, // Z-
          {1,5,7}, {1,7,3}  // Z+ (+1)
       } ;
+
+   calcularNormales();
 }
 
 //Clase Tetraedro
@@ -457,6 +461,8 @@ Tetraedro::Tetraedro()
       {1, 2, 3}, // Cara 2
       {0, 2, 3} // Cara 3
    };
+
+   calcularNormales();
 }
 
 // Clase 'CuboColores
@@ -494,7 +500,7 @@ CuboColores::CuboColores()
 
       col_ver.push_back({r, g, b});
    }
-   
+   calcularNormales();
 }
 
 // Clase EstrellaZ
@@ -859,6 +865,33 @@ Cubo24::Cubo24(){
          {8,11,20}, {11,23,20}, // Z-
          {17,5,2}, {17,2,14}  // Z+ (+1)
       };
+      
+   cc_tt_ver = 
+   {  {0.0, 1.0},     // 1 
+      {1.0, 1.0},     // 4 
+      {1.0, 0.0},     // 6 
+      {1.0, 1.0},     // 1 
+      {0.0, 1.0},     // 2
+      {1.0, 1.0},     // 6
+      {0.0, 0.0},     // 1 
+      {1.0, 0.0},     // 4
+      {1.0, 0.0},     // 5  
+      {1.0, 0.0},     // 1
+      {0.0, 0.0},     // 2 
+      {0.0, 0.0},     // 5
+      {1.0, 1.0},     // 3
+      {0.0, 1.0},     // 4   
+      {0.0, 0.0},     // 6
+      {1.0, 1.0},     // 2  
+      {0.0, 1.0},     // 3
+      {0.0, 1.0},     // 6
+      {1.0, 0.0},     // 3 
+      {0.0, 0.0},     // 4 
+      {1.0, 1.0},     // 5
+      {1.0, 0.0},     // 2 
+      {0.0, 0.0},     // 3 
+      {0.0, 1.0},     // 5  
+   };
 
    calcularNormales();
 }

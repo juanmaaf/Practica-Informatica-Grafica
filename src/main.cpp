@@ -41,7 +41,6 @@ using namespace std ;
 int main( int argc, char *argv[] )
 {   
 
-
    using namespace std ;
    cout << "Prácticas de IG (GIM) - curso 2023-24 (" << NOMBRE_OS << ")" << endl ;
 

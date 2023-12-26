@@ -250,6 +250,10 @@ void NodoGrafoEscena::visualizarNormalesGL(  )
          case TipoEntNGE::objeto:
             entradas[i].objeto->visualizarNormalesGL();
          break;
+
+         case TipoEntNGE::transformacion:
+            cauce->compMM( *(entradas[i].matriz) );
+         break;
          
          default:
          break;
@@ -531,10 +535,26 @@ void GrafoCubos::actualizarEstadoParametro( const unsigned iParam, const float t
 }
 
 NodoCubo24::NodoCubo24(){
-   NodoGrafoEscena * cubo = new NodoGrafoEscena();
-   cubo->agregar(new Cubo24());
+   ponerNombre( std::string("Grafo Cubo24") );
 
-   agregar(cubo);
+   Textura * textura = new Textura("window-icon.jpg");
+   Material * material = new Material(textura , 1.0, 1.0, 1.0, 100.0);
+
+   agregar(material);
+   agregar(new Cubo24());
+}
+
+NodoCono::NodoCono(){
+   NodoGrafoEscena * cono = new NodoGrafoEscena();
+   cono->agregar(new Cono(20, 20));
+
+   agregar(cono);
+}
+
+NodoEsfera::NodoEsfera(){
+   Esfera * esfera = new Esfera(30, 30);
+
+   agregar(esfera);
 }
 
 

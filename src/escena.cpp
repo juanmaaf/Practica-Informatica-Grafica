@@ -46,6 +46,7 @@
 #include "escena.h"
 #include "modelo-jer.h"
 #include "examen-ec-p123.h"
+#include "latapeones.h"
 
 
 
@@ -63,7 +64,7 @@ Escena::Escena()
    // ...
 
    col_fuentes = new Col2Fuentes();
-   material_ini = new Material(0.2, 0.8, 0.0, 1.0);
+   material_ini = new Material(0.2, 0.5, 0.9, 50.0);
 
 
    // COMPLETAR: práctica 5: añadir varias cámaras perspectiva y ortogonales al vector de cámaras de la escena
@@ -379,7 +380,7 @@ Escena2::Escena2()
    // Examen
    //objetos.push_back(new P2Rejilla(10,10));
 
-   objetos.push_back(new MallaRevolPLY("peon.ply", 24) );
+   objetos.push_back(new MallaRevolPLY("peon.ply", 10) );
 
    objetos.push_back(new MallaRevolPLY("lata-pcue.ply", 24) );
 
@@ -397,7 +398,7 @@ Escena2::Escena2()
 
    objetos.push_back(new Cono(24, 30) );
 
-   objetos.push_back(new Esfera(30, 30) );
+   objetos.push_back(new Esfera(30, 20) );
 
    objetos.push_back(new PiramideEstrellaZ(8) );
 
@@ -448,8 +449,13 @@ Escena4::Escena4()
    using namespace std ;
    cout << "Creando objetos de la práctica 4." << endl ;
 
+   objetos.push_back(new LataPeones() );
+
    objetos.push_back(new NodoCubo24() );
 
+   objetos.push_back(new NodoCono() );
+
+   objetos.push_back(new NodoEsfera() );
    
 }
 

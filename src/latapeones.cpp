@@ -33,7 +33,7 @@ Lata::Lata(string textura) {
     agregar(lata_pcue);
 }
 
-/*LataPeones::LataPeones() {
+LataPeones::LataPeones() {
 
     ponerNombre( std::string("Grafo LataPeones") );
 
@@ -61,9 +61,9 @@ Lata::Lata(string textura) {
 
     NodoGrafoEscena * peon_blanco = new NodoGrafoEscena();
     peon_blanco->ponerColor({1,1,1});
-    peon_blanco->agregar(MAT_Traslacion({0.5,0,1}));
-    peon_blanco->agregar(MAT_Escalado(0.20,0.20,0.20));
-    peon_blanco->agregar(MAT_Traslacion({0,1.4,0}));
+    peon_blanco->agregar(glm::translate(glm::vec3(0.5,0,1)));
+    peon_blanco->agregar(glm::scale(glm::vec3(0.20,0.20,0.20)));
+    peon_blanco->agregar(glm::translate(glm::vec3(0,1.4,0)));
     peon_blanco->agregar(material_blanco);
     peon_blanco->agregar(peon);
     peon_blanco->ponerNombre("Peón blanco");
@@ -71,18 +71,18 @@ Lata::Lata(string textura) {
 
     NodoGrafoEscena * peon_negro = new NodoGrafoEscena();
     peon_negro->ponerColor({0,0,0});
-    peon_negro->agregar(MAT_Traslacion({1,0,1}));
-    peon_negro->agregar(MAT_Escalado(0.20,0.20,0.20));
-    peon_negro->agregar(MAT_Traslacion({0,1.4,0}));
+    peon_negro->agregar(glm::translate(glm::vec3(1,0,1)));
+    peon_negro->agregar(glm::scale(glm::vec3(0.20,0.20,0.20)));
+    peon_negro->agregar(glm::translate(glm::vec3(0,1.4,0)));
     peon_negro->agregar(material_negro);
     peon_negro->agregar(peon);
     peon_negro->ponerNombre("Peón negro");
     peon_negro->ponerIdentificador(ident_peon_negro);
 
     NodoGrafoEscena * peon_madera = new NodoGrafoEscena();
-    peon_madera->agregar(MAT_Traslacion({0,0,1}));
-    peon_madera->agregar(MAT_Escalado(0.20,0.20,0.20));
-    peon_madera->agregar(MAT_Traslacion({0,1.4,0}));
+    peon_madera->agregar(glm::translate(glm::vec3(0,0,1)));
+    peon_madera->agregar(glm::scale(glm::vec3(0.20,0.20,0.20)));
+    peon_madera->agregar(glm::translate(glm::vec3(0,1.4,0)));
     peon_madera->agregar(material_madera);
     peon_madera->agregar(peon);
     peon_madera->ponerNombre("Peón de madera");
@@ -93,25 +93,3 @@ Lata::Lata(string textura) {
     agregar(lata_cola);
     agregar(peon_madera);
 }
-
-VariasLatasPeones::VariasLatasPeones() {
-    
-    // Identificadores
-    int ident_lata_pepsi = 5;
-    int ident_lata_ugr = 6;
-
-    // Nodos
-    NodoGrafoEscena * lata_pepsi = new Lata("lata-pepsi.jpg");
-    lata_pepsi->ponerNombre("Lata de Pepsi");
-    lata_pepsi->ponerIdentificador(ident_lata_pepsi);
-
-    NodoGrafoEscena * lata_ugr = new Lata("window-icon.jpg");
-    lata_ugr->ponerNombre("Lata de la UGR");
-    lata_ugr->ponerIdentificador(ident_lata_ugr);
-
-    agregar(new LataPeones());
-    agregar(MAT_Traslacion({1,0,0}));
-    agregar(lata_pepsi);
-    agregar(MAT_Traslacion({1,0,0}));
-    agregar(lata_ugr);
-}*/

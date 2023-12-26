@@ -85,7 +85,7 @@ void Textura::enviar()
       imagen
       // const void * data: puntero a texels en memoria apl.
    );
-
+   
    // Generar mipmaps (versiones a resolución reducida)
    glGenerateMipmap( GL_TEXTURE_2D );
    // Selección de texels para texturas cercanas (magnificadas)
@@ -219,7 +219,7 @@ void Material::activar( )
    assert(exp_pse >= 1.0);
    cauce->fijarParamsMIL(k_amb, k_dif, k_pse, exp_pse);
 
-   // registrar el material actual en el cauce
+   //registrar el material actual en el cauce
    //cauce->material_act = this ; 
 
 }
@@ -293,8 +293,8 @@ void ColFuentesLuz::activar( )
    for(int i = 0; i < (int)vpf.size(); ++i){
       colores.push_back(vpf[i]->color);
 
-      float latitud = vpf[i]->lati;
-      float longitud = vpf[i]->longi;
+      float latitud = vpf[i]->lati*2*M_PI/360.0;
+      float longitud = vpf[i]->longi*2*M_PI/360.0;
 
       float z = sin(latitud) * cos(longitud);
       float x = sin(latitud) * sin(longitud);

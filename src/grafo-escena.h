@@ -153,6 +153,18 @@ class NodoCubo24 : public NodoGrafoEscena
       NodoCubo24();
 };
 
+class NodoCono: public NodoGrafoEscena
+{
+   public:
+      NodoCono();
+};
+
+class NodoEsfera : public NodoGrafoEscena
+{
+   public:
+      NodoEsfera();
+};
+
 
 
 #endif // GRAFO_ESCENA_HPP

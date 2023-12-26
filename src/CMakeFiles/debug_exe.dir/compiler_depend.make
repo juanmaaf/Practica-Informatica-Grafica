@@ -2092,7 +2092,8 @@ CMakeFiles/debug_exe.dir/escena.cpp.o: escena.cpp \
   aplicacion-ig.h \
   modelo-jer.h \
   grafo-escena.h \
-  examen-ec-p123.h
+  examen-ec-p123.h \
+  latapeones.h
 
 CMakeFiles/debug_exe.dir/eventos-raton.cpp.o: eventos-raton.cpp \
   /usr/include/stdc-predef.h \
@@ -11527,8 +11528,6 @@ malla-revol.cpp:
 
 main.cpp:
 
-latapeones.h:
-
 latapeones.cpp:
 
 /usr/include/x86_64-linux-gnu/jconfig.h:
@@ -11722,6 +11721,10 @@ malla-revol.h:
 /usr/include/stdio.h:
 
 /usr/include/c++/11/cstdio:
+
+/usr/include/linux/stat.h:
+
+/usr/include/glm/ext/matrix_float3x4_precision.hpp:
 
 /home/juanmaaf/Escritorio/IG/PracticaIG/materiales/src-cpp/lector-ply.cpp:
 
@@ -12489,6 +12492,8 @@ aplicacion-ig.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
 
+latapeones.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
 /usr/include/c++/11/bits/fstream.tcc:
@@ -12674,7 +12679,3 @@ seleccion.h:
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/bits/stat.h:
-
-/usr/include/glm/ext/matrix_float3x4_precision.hpp:
-
-/usr/include/linux/stat.h:
