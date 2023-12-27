@@ -17,4 +17,9 @@ class LataPeones : public NodoGrafoEscena {
         LataPeones();
 };
 
+class VariasLatasPeones : public NodoGrafoEscena {
+    public:
+        VariasLatasPeones();
+};
+
 #endif

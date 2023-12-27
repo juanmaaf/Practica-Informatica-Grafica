@@ -67,7 +67,13 @@ int LeerIdentEnPixel( int xpix, int ypix )
    // .....(sustituir el 'return 0' por lo que corresponda)
    // .....
 
-   return 0 ;
+   unsigned char bytes[3] ; // para guardar los tres bytes
+   
+   // leer los 3 bytes del frame-buffer
+   glReadPixels( xpix,ypix, 1,1, GL_RGB, GL_UNSIGNED_BYTE, (void *)bytes);
+   
+   // reconstruir el indentificador y devolverlo:
+   return bytes[0] + ( 0x100U*bytes[1] ) + ( 0x10000U*bytes[2] ) ;
 
 }
 
@@ -100,24 +106,37 @@ bool AplicacionIG::seleccion( int x, int y )
    //        el tamaño actual de la ventana en dos parámetros)
    //      * Activar el framebuffer, con su método 'activar'.
    // .......
+   if(fbo == nullptr)
+      fbo = new Framebuffer(ventana_tam_x, ventana_tam_y);
+   
+   fbo->activar(ventana_tam_x, ventana_tam_y);
 
 
    // (2) Visualizar la escena actual en modo selección. Se usará el método 'visualizarGL_Seleccion' de la clae 'Escena'
    //     
    // .......
 
+   escena->visualizarGL_Seleccion();
 
    // (3) Leer el identificador del pixel en las coordenadas (x,y), se usa 'LeerIdentEnPixel'.
    // .......
+
+   int ident_pixel = LeerIdentEnPixel(x,y);
 
 
    // (4) Desactivar el FBO (vuelve a activar el FBO por defecto, con nombre '0'), 
    //     se usa el método 'desactivar' del FBO
    // .......
 
+   fbo->desactivar();
 
    // (5) Si el identificador del pixel es 0, imprimir mensaje y terminar (devolver 'false')
    // .......
+
+   if(ident_pixel == 0) {
+      cout << " No hay ningun objeto seleccionable en este pixel " << endl << flush;
+      return false;
+   }
 
 
    // (6) Buscar el identificdor en el objeto raiz de la escena y ejecutar 'cuandoClick',
@@ -130,6 +149,14 @@ bool AplicacionIG::seleccion( int x, int y )
    //
    // .......
 
+   
+   Objeto3D *objeto = escena->objetoActual();
+   glm::vec3 centro;
+
+   if (objeto->buscarObjeto(ident_pixel, glm::mat4(1.0f), &objeto, centro))
+   {
+      return objeto->cuandoClick(centro);
+   }
 
    // si el flujo de control llega aquí, es que no se encuentra ese identificador, devolver false:
    cout << "El identificador del objeto en el pixel no se encuentra en el objeto raíz que se está visualizando." << endl ;

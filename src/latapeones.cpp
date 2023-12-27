@@ -93,3 +93,25 @@ LataPeones::LataPeones() {
     agregar(lata_cola);
     agregar(peon_madera);
 }
+
+VariasLatasPeones::VariasLatasPeones() {
+    
+    // Identificadores
+    int ident_lata_pepsi = 5;
+    int ident_lata_ugr = 6;
+
+    // Nodos
+    NodoGrafoEscena * lata_pepsi = new Lata("lata-pepsi.jpg");
+    lata_pepsi->ponerNombre("Lata de Pepsi");
+    lata_pepsi->ponerIdentificador(ident_lata_pepsi);
+
+    NodoGrafoEscena * lata_ugr = new Lata("window-icon.jpg");
+    lata_ugr->ponerNombre("Lata de la UGR");
+    lata_ugr->ponerIdentificador(ident_lata_ugr);
+
+    agregar(new LataPeones());
+    agregar(glm::translate(glm::vec3(1,0,0) ));
+    agregar(lata_pepsi);
+    agregar(glm::translate(glm::vec3(1,0,0) ));
+    agregar(lata_ugr);
+}

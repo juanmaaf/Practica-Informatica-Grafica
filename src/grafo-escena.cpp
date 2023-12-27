@@ -269,9 +269,9 @@ void NodoGrafoEscena::visualizarNormalesGL(  )
 // basados en los identificadores de los objetos
 void NodoGrafoEscena::visualizarModoSeleccionGL()
 {
-   using namespace std ;
-   assert( apl != nullptr );
-   Cauce * cauce = apl->cauce ; assert( cauce != nullptr );
+   using namespace std;
+   assert(apl != nullptr);
+   Cauce *cauce = apl->cauce; assert(cauce != nullptr);
 
    // COMPLETAR: práctica 5: visualizar este nodo en modo selección.
    //
@@ -289,7 +289,35 @@ void NodoGrafoEscena::visualizarModoSeleccionGL()
    //
    // ........
 
+   int identificador = leerIdentificador();
 
+   if (identificador != -1) {
+      // 2. Leer identificador y configurar el color del cauce
+      cauce->pushColor();
+      cauce->fijarColor(ColorDesdeIdent(identificador));
+   }
+
+   // 3. Guardar una copia de la matriz de modelado
+   cauce->pushMM();
+
+   // 4. Recorrer la lista de nodos y procesar las entradas
+   for (const auto& entrada : entradas) {
+      if (entrada.tipo == TipoEntNGE::transformacion) {
+         // Para las entradas transformación, componer la matriz
+         cauce->compMM(*entrada.matriz);
+      } else if (entrada.tipo == TipoEntNGE::objeto) {
+         // Para las entradas subobjeto, invocar recursivamente a 'visualizarModoSeleccionGL'
+         entrada.objeto->visualizarModoSeleccionGL();
+      }
+   }
+
+   // 5. Restaurar la matriz de modelado original
+   cauce->popMM();
+
+   if (identificador != -1) {
+      // 6. Restaurar el color previo del cauce
+      cauce->popColor();
+   }
 }
 
 // -----------------------------------------------------------------------------
@@ -363,6 +391,32 @@ void NodoGrafoEscena::calcularCentroOC()
    //   (si el centro ya ha sido calculado, no volver a hacerlo)
    // ........
 
+   if(!centro_calculado) {
+      int num_hijos = 0;
+      glm::mat4 mmodelado = glm::mat4(1.0f);
+      glm::vec3 centro_aux = {0, 0, 0};
+
+      for(unsigned int i = 0; i < entradas.size(); i++) {
+         if(entradas[i].tipo == TipoEntNGE::transformacion) {
+            mmodelado = mmodelado * (*entradas[i].matriz);
+         }
+         if(entradas[i].tipo == TipoEntNGE::objeto) {
+            entradas[i].objeto->calcularCentroOC();
+            centro_aux = glm::vec3(centro_aux) + glm::vec3(mmodelado * glm::vec4(entradas[i].objeto->leerCentroOC(), 1.0f));
+            num_hijos++;
+         }
+      }
+
+      // Si hay hijos, calcula el centro promedio, de lo contrario, deja el centro en (0, 0, 0).
+      if (num_hijos > 0) {
+         ponerCentroOC(glm::vec3(centro_aux) / float(num_hijos));
+      }
+      else{
+         ponerCentroOC(glm::vec3(centro_aux));
+      }
+
+      centro_calculado = true;
+   }
 }
 // -----------------------------------------------------------------------------
 // método para buscar un objeto con un identificador y devolver un puntero al mismo
@@ -383,17 +437,34 @@ bool NodoGrafoEscena::buscarObjeto
    // COMPLETAR: práctica 5: buscar un sub-objeto con un identificador
    // Se deben de dar estos pasos:
 
+   glm::mat4 mmodelado_aux = mmodelado;
+
    // 1. calcula el centro del objeto, (solo la primera vez)
    // ........
-
+   if(!centro_calculado){
+      calcularCentroOC();
+   }
 
    // 2. si el identificador del nodo es el que se busca, ya está (terminar)
    // ........
-
+   if (leerIdentificador() == ident_busc) {
+      *objeto = this;
+      centro_wc = glm::vec3(mmodelado * glm::vec4(leerCentroOC(), 1.0f));
+      return true;
+   }
 
    // 3. El nodo no es el buscado: buscar recursivamente en los hijos
    //    (si alguna llamada para un sub-árbol lo encuentra, terminar y devolver 'true')
    // ........
+   else {
+      for(unsigned int i = 0; i < entradas.size(); i++) {
+         if(entradas[i].tipo == TipoEntNGE::transformacion )
+            mmodelado_aux = mmodelado_aux * (*entradas[i].matriz);
+         if(entradas[i].tipo == TipoEntNGE::objeto)
+            if(entradas[i].objeto->buscarObjeto(ident_busc, mmodelado_aux, objeto, centro_wc))
+               return true;
+      }
+   }
 
 
    // ni este nodo ni ningún hijo es el buscado: terminar
@@ -538,23 +609,16 @@ NodoCubo24::NodoCubo24(){
    ponerNombre( std::string("Grafo Cubo24") );
 
    Textura * textura = new Textura("window-icon.jpg");
-   Material * material = new Material(textura , 1.0, 1.0, 1.0, 100.0);
+   Material * material = new Material(textura , 1.0, 1.0, 1.0, 50.0);
 
    agregar(material);
    agregar(new Cubo24());
 }
 
-NodoCono::NodoCono(){
-   NodoGrafoEscena * cono = new NodoGrafoEscena();
-   cono->agregar(new Cono(20, 20));
-
-   agregar(cono);
-}
-
-NodoEsfera::NodoEsfera(){
-   Esfera * esfera = new Esfera(30, 30);
-
-   agregar(esfera);
+// Clase 'NodoDiscoP4
+NodoDiscoP4::NodoDiscoP4(int ejr){
+   agregar(new Material(new Textura("cuadricula.jpg"), 1.0, 1.0, 1.0, 1.0));
+   agregar( new MallaDiscoP4(ejr) );
 }
 
 

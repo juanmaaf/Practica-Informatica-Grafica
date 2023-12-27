@@ -71,8 +71,12 @@ Escena::Escena()
    //
    // Añadir sentencias 'push_back' para añadir varias cámaras al vector 'camaras'.
    // Eliminar este 'push_back' de la cámara orbital simple ('CamaraOrbitalSimple') por varias cámaras de 3 modos ('Camara3Modos')
-   camaras.push_back( new CamaraOrbitalSimple() );
-
+   camaras.push_back(new Camara3Modos(false,{3.0f, 0.0f, 0.0f}, 3.0f, {0.0f, 0.0f, 0.0f}, 70.0f));          // Perspectiva perfil
+   camaras.push_back(new Camara3Modos(false,{0.00000001f, 3.0f, 0.0f}, 3.0f, {0.0f, 0.0f, 0.0f}, 70.0f));   // Perspectiva planta   
+   camaras.push_back(new Camara3Modos(false,{0.0f, 0.0f, 3.0f}, 3.0f, {0.0f, 0.0f, 0.0f}, 70.0f));          // Perspectiva alzado 
+   camaras.push_back(new Camara3Modos(true,{3.0f, 0.0f, 0.0f}, 3.0f, {0.0f, 0.0f, 0.0f}));                  // ortográfica perfil
+   camaras.push_back(new Camara3Modos(true,{0.00000001f, 3.0f, 0.0f}, 3.0f, {0.0f, 0.0f, 0.0f}));           // Ortográfica planta
+   camaras.push_back(new Camara3Modos(true,{0.0f, 0.0f, 3.0f}, 3.0f, {0.0f, 0.0f, 0.0f}));                  // Ortográfica alzado
 }
 // -----------------------------------------------------------------------------------------------
 // visualiza la escena en la ventana actual, usando la configuración especificada en 'cv'
@@ -221,25 +225,41 @@ void Escena::visualizarGL_Seleccion(  )
    //
    // ........
 
+   glViewport(0, 0, apl->ventana_tam_x, apl->ventana_tam_y);
+   glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
-   // (2) Activar  y configurar el cauce:
+   // (2) Activar y configurar el cauce:
    //      + Activar el cauce (con el método 'activar')
    //      + Desactivar iluminación y texturas en el cauce
    //      + Poner el color actual del cauce a '0' (por defecto los objetos no son seleccionables)
    // ........
 
+   cauce->activar();
+   cauce->fijarEvalMIL( false );
+   cauce->fijarEvalText( false );
+   cauce->fijarColor(glm::vec3(0.0, 0.0, 0.0));
 
    // (3) Limpiar el framebuffer (color y profundidad) con color (0,0,0) (para indicar que en ningún pixel hay nada seleccionable)
    // ........
 
+   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
    // (4) Recuperar la cámara actual (con 'camaraActual') y activarla en el cauce, 
    // ........
 
+   Camara *camara = camaraActual();
+   camara->activar(*cauce);
 
    // (5) Recuperar (con 'objetoActual') el objeto raíz actual de esta escena y 
    //     visualizarlo con 'visualizarModoSeleccionGL'.
    // ........
+
+   Objeto3D *objetoRaiz = objetoActual();
+   if (objetoRaiz != nullptr)
+   {
+      objetoRaiz->visualizarModoSeleccionGL();
+   }
 
 }
 
@@ -454,6 +474,10 @@ Escena4::Escena4()
    objetos.push_back(new NodoCubo24() );
 
    objetos.push_back(new HelicopteroP4(3.0, 2.0, 10.0, 25.0) );
+
+   objetos.push_back(new NodoDiscoP4(1) );
+
+   objetos.push_back(new NodoDiscoP4(2) );
    
 }
 
@@ -464,5 +488,12 @@ Escena4::Escena4()
 // los objetos que se indican en el guion de la práctica 5
 // .......
 
+Escena5::Escena5()
+{
+   using namespace std ;
+   cout << "Creando objetos de la práctica 5." << endl ;
 
+   objetos.push_back(new VariasLatasPeones() );
+   
+}
 

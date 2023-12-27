@@ -1,0 +1,800 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags:  
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -Aa 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+gcc: warning: ‘-mcpu=’ is deprecated; use ‘-mtune=’ or ‘-march=’ instead
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cb58c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cb58c.dir/build.make CMakeFiles/cmTC_cb58c.dir/build
+gmake[1]: Entering directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb58c.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE    -v -o CMakeFiles/cmTC_cb58c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+gcc: error: unrecognized command-line option '-q64'; did you mean '-m64'?
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+gmake[1]: *** [CMakeFiles/cmTC_cb58c.dir/build.make:78: CMakeFiles/cmTC_cb58c.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_cb58c/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_48e01/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_48e01.dir/build.make CMakeFiles/cmTC_48e01.dir/build
+gmake[1]: se entra en el directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_48e01.dir/testCCompiler.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE  -o CMakeFiles/cmTC_48e01.dir/testCCompiler.c.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp/testCCompiler.c
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gmake[1]: *** [CMakeFiles/cmTC_48e01.dir/build.make:78: CMakeFiles/cmTC_48e01.dir/testCCompiler.c.o] Error 1
+gmake[1]: se sale del directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_48e01/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags:  
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -Aa 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+gcc: warning: ‘-mcpu=’ is deprecated; use ‘-mtune=’ or ‘-march=’ instead
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8bb76/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8bb76.dir/build.make CMakeFiles/cmTC_8bb76.dir/build
+gmake[1]: Entering directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bb76.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE    -v -o CMakeFiles/cmTC_8bb76.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+gcc: error: unrecognized command-line option '-q64'; did you mean '-m64'?
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+gmake[1]: *** [CMakeFiles/cmTC_8bb76.dir/build.make:78: CMakeFiles/cmTC_8bb76.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8bb76/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_780a7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_780a7.dir/build.make CMakeFiles/cmTC_780a7.dir/build
+gmake[1]: se entra en el directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_780a7.dir/testCCompiler.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE  -o CMakeFiles/cmTC_780a7.dir/testCCompiler.c.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp/testCCompiler.c
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gmake[1]: *** [CMakeFiles/cmTC_780a7.dir/build.make:78: CMakeFiles/cmTC_780a7.dir/testCCompiler.c.o] Error 1
+gmake[1]: se sale del directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_780a7/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags:  
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -Aa 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+gcc: warning: ‘-mcpu=’ is deprecated; use ‘-mtune=’ or ‘-march=’ instead
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f1179/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f1179.dir/build.make CMakeFiles/cmTC_f1179.dir/build
+gmake[1]: Entering directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f1179.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE    -v -o CMakeFiles/cmTC_f1179.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+gcc: error: unrecognized command-line option '-q64'; did you mean '-m64'?
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+gmake[1]: *** [CMakeFiles/cmTC_f1179.dir/build.make:78: CMakeFiles/cmTC_f1179.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f1179/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0626b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0626b.dir/build.make CMakeFiles/cmTC_0626b.dir/build
+gmake[1]: se entra en el directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0626b.dir/testCCompiler.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE  -o CMakeFiles/cmTC_0626b.dir/testCCompiler.c.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp/testCCompiler.c
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gmake[1]: *** [CMakeFiles/cmTC_0626b.dir/build.make:78: CMakeFiles/cmTC_0626b.dir/testCCompiler.c.o] Error 1
+gmake[1]: se sale del directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0626b/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags:  
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -Aa 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+gcc: warning: ‘-mcpu=’ is deprecated; use ‘-mtune=’ or ‘-march=’ instead
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e7979/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e7979.dir/build.make CMakeFiles/cmTC_e7979.dir/build
+gmake[1]: Entering directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7979.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE    -v -o CMakeFiles/cmTC_e7979.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+gcc: error: unrecognized command-line option '-q64'; did you mean '-m64'?
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+gmake[1]: *** [CMakeFiles/cmTC_e7979.dir/build.make:78: CMakeFiles/cmTC_e7979.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e7979/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_57f27/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_57f27.dir/build.make CMakeFiles/cmTC_57f27.dir/build
+gmake[1]: se entra en el directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_57f27.dir/testCCompiler.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE  -o CMakeFiles/cmTC_57f27.dir/testCCompiler.c.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp/testCCompiler.c
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gmake[1]: *** [CMakeFiles/cmTC_57f27.dir/build.make:78: CMakeFiles/cmTC_57f27.dir/testCCompiler.c.o] Error 1
+gmake[1]: se sale del directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_57f27/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags:  
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -Aa 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+gcc: warning: ‘-mcpu=’ is deprecated; use ‘-mtune=’ or ‘-march=’ instead
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e6fdf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e6fdf.dir/build.make CMakeFiles/cmTC_e6fdf.dir/build
+gmake[1]: Entering directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6fdf.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE    -v -o CMakeFiles/cmTC_e6fdf.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+gcc: error: unrecognized command-line option '-q64'; did you mean '-m64'?
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+gmake[1]: *** [CMakeFiles/cmTC_e6fdf.dir/build.make:78: CMakeFiles/cmTC_e6fdf.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e6fdf/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8329e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8329e.dir/build.make CMakeFiles/cmTC_8329e.dir/build
+gmake[1]: se entra en el directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8329e.dir/testCCompiler.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE  -o CMakeFiles/cmTC_8329e.dir/testCCompiler.c.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp/testCCompiler.c
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gmake[1]: *** [CMakeFiles/cmTC_8329e.dir/build.make:78: CMakeFiles/cmTC_8329e.dir/testCCompiler.c.o] Error 1
+gmake[1]: se sale del directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8329e/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags:  
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -Aa 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+gcc: warning: ‘-mcpu=’ is deprecated; use ‘-mtune=’ or ‘-march=’ instead
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_24f43/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_24f43.dir/build.make CMakeFiles/cmTC_24f43.dir/build
+gmake[1]: Entering directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24f43.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE    -v -o CMakeFiles/cmTC_24f43.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+gcc: error: unrecognized command-line option '-q64'; did you mean '-m64'?
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+gmake[1]: *** [CMakeFiles/cmTC_24f43.dir/build.make:78: CMakeFiles/cmTC_24f43.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_24f43/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4d291/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4d291.dir/build.make CMakeFiles/cmTC_4d291.dir/build
+gmake[1]: se entra en el directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4d291.dir/testCCompiler.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE  -o CMakeFiles/cmTC_4d291.dir/testCCompiler.c.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp/testCCompiler.c
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gmake[1]: *** [CMakeFiles/cmTC_4d291.dir/build.make:78: CMakeFiles/cmTC_4d291.dir/testCCompiler.c.o] Error 1
+gmake[1]: se sale del directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_4d291/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags:  
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -Aa 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+gcc: warning: ‘-mcpu=’ is deprecated; use ‘-mtune=’ or ‘-march=’ instead
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bb0a8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bb0a8.dir/build.make CMakeFiles/cmTC_bb0a8.dir/build
+gmake[1]: Entering directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb0a8.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE    -v -o CMakeFiles/cmTC_bb0a8.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+gcc: error: unrecognized command-line option '-q64'; did you mean '-m64'?
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+gmake[1]: *** [CMakeFiles/cmTC_bb0a8.dir/build.make:78: CMakeFiles/cmTC_bb0a8.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_bb0a8/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_23a93/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_23a93.dir/build.make CMakeFiles/cmTC_23a93.dir/build
+gmake[1]: se entra en el directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23a93.dir/testCCompiler.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE  -o CMakeFiles/cmTC_23a93.dir/testCCompiler.c.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp/testCCompiler.c
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gmake[1]: *** [CMakeFiles/cmTC_23a93.dir/build.make:78: CMakeFiles/cmTC_23a93.dir/testCCompiler.c.o] Error 1
+gmake[1]: se sale del directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_23a93/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags:  
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -Aa 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+gcc: warning: ‘-mcpu=’ is deprecated; use ‘-mtune=’ or ‘-march=’ instead
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/gcc 
+Build flags: -q64;-DBUILD_REAL_64_BIT_MODE
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e1077/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e1077.dir/build.make CMakeFiles/cmTC_e1077.dir/build
+gmake[1]: Entering directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1077.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE    -v -o CMakeFiles/cmTC_e1077.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+gcc: error: unrecognized command-line option '-q64'; did you mean '-m64'?
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+gmake[1]: *** [CMakeFiles/cmTC_e1077.dir/build.make:78: CMakeFiles/cmTC_e1077.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e1077/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3798e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3798e.dir/build.make CMakeFiles/cmTC_3798e.dir/build
+gmake[1]: se entra en el directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3798e.dir/testCCompiler.c.o
+/usr/bin/gcc   -q64 -DBUILD_REAL_64_BIT_MODE  -o CMakeFiles/cmTC_3798e.dir/testCCompiler.c.o -c /home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp/testCCompiler.c
+gcc: error: unrecognized command-line option ‘-q64’; did you mean ‘-m64’?
+gmake[1]: *** [CMakeFiles/cmTC_3798e.dir/build.make:78: CMakeFiles/cmTC_3798e.dir/testCCompiler.c.o] Error 1
+gmake[1]: se sale del directorio '/home/juanmaaf/Escritorio/IG/PracticaIG/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3798e/fast] Error 2
+
+
+

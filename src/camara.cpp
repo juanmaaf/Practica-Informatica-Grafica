@@ -335,6 +335,8 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // actualizar las coordenadas cartesianas a partir de las polares
          // .....
 
+         org_polares = org_polares + glm::vec3(da/100.0,db/100.0,0);
+         org_cartesianas = Cartesianas(org_polares);
          actualizarEjesMCV();
          break ;
       }
@@ -349,7 +351,11 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // 5. actualizar los ejes del MCV (actualizarEjesMCV)
          // .....
 
-         actualizarEjesMCV() ;
+         org_polares = org_polares + glm::vec3(da/100.0,db/100.0,0);
+         glm::vec3 aux = Cartesianas(org_polares);
+         punto_atencion = punto_atencion - (aux - org_cartesianas);
+         org_cartesianas = aux;
+         actualizarEjesMCV();
          break ;
       }
       case ModoCam::prim_pers_despl :
@@ -361,6 +367,7 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // .....
          // (nota: los ejes no cambian)
 
+         punto_atencion = punto_atencion + da/100.0f*eje[X] + db/100.0f*eje[Y];
          break ;
       }
    }
@@ -370,35 +377,43 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
 // acercar/alejar la cámara respecto al punto de atención
 // (el eje es el eje Z, relativo al marco de la camara, es decir, perpendicular al plano de visión)
 
-void Camara3Modos::moverZ( const float dz )
+void Camara3Modos::moverZ(const float dz)
 {
-
-   switch( modo_actual )
+   switch (modo_actual)
    {
-      case ModoCam::examinar :
-      {
-         // COMPLETAR: práctica 5: mover en Z la cámara en modo 'examinar'
-         //
-         // actualizar el radio de las coordenadas polares
-         // actualizar las coordenadas cartesianas a partir de las polares
-         // nota: los ejes no cambian, ni el punto de atención
-         // .....
+   case ModoCam::examinar:
+   {
+      // COMPLETAR: práctica 5: mover en Z la cámara en modo 'examinar'
+      //
+      // actualizar el radio de las coordenadas polares
+      // actualizar las coordenadas cartesianas a partir de las polares
+      // nota: los ejes no cambian, ni el punto de atención
+      // .....
 
-         break ;
-      }
-      case ModoCam::prim_pers_rot :
-      case ModoCam::prim_pers_despl :
-      {
-         // COMPLETAR: práctica 5: mover en Z la cámara en modo 'primera persona'
-         //
-         // desplazar el punto de atención 'dz' unidades en el eje Z
-         // nota: los ejes no cambian
-         // .....
+      float r_min = 0.2, // distancia mínima al origen
+         rc = 0.04;      // ratio de crecimiento cuando 'dz=1'
 
-         break ;
-      }
+      org_polares[2] = r_min + (org_polares[2] - r_min) * pow((1.0 + rc), dz);
+      org_cartesianas = Cartesianas(org_polares);
+      break;
    }
-   matrices_actualizadas = false ;
+   case ModoCam::prim_pers_rot:
+   {
+      punto_atencion = punto_atencion + dz / 100.0f * eje[Z];
+      break;
+   }
+   case ModoCam::prim_pers_despl:
+   {
+      // COMPLETAR: práctica 5: mover en Z la cámara en modo 'primera persona'
+      //
+      // desplazar el punto de atención 'dz' unidades en el eje Z
+      // nota: los ejes no cambian
+      // .....
+      punto_atencion = punto_atencion + dz / 100.0f * eje[Z];
+      break;
+   }
+   }
+   matrices_actualizadas = false;
 }
 // ----------------------------------------------------------------------------
 // hacer que apunte hacía el punto de atención 'nuevo_punto_aten' y pasar a modo examinar
@@ -411,7 +426,9 @@ void Camara3Modos::mirarHacia( const glm::vec3 & nuevo_punto_aten )
    // Actualizar las coordenadas cartesianas (desplazarlas)
    // Actualizar las coordenadas polares a partir de las cartesianas
    // Poner el modo actual en modo examinar
-
+   org_cartesianas = org_cartesianas + punto_atencion - nuevo_punto_aten;
+   org_polares = Esfericas(org_cartesianas);
+   punto_atencion = nuevo_punto_aten;
 
    // actualizar los ejes del marco de coordenadas del mundo
    actualizarEjesMCV();

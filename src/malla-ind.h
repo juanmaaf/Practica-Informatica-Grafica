@@ -216,4 +216,20 @@ class Cubo24 : public MallaInd
 
 // ---------------------------------------------------------------------
 
+class Cubo24SinMap : public MallaInd
+{
+   public:
+      Cubo24SinMap();
+};
+
+// ---------------------------------------------------------------------
+
+class MallaDiscoP4 : public MallaInd
+{
+   public:
+      MallaDiscoP4(int ejr);
+};
+
+// ---------------------------------------------------------------------
+
 #endif

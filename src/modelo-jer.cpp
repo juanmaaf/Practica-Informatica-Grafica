@@ -327,9 +327,13 @@ HeliceSuperiorP4::HeliceSuperiorP4(){
     Cubo24 * aspa = new Cubo24();
     aspa->ponerColor({0.1, 0.1, 0.1 });
 
+    Textura * textura_helice = new Textura("textura-helice.jpg");
+    Material * material_helice = new Material(textura_helice, 0.25, 0.75, 1.0, 50.0);
+
     NodoGrafoEscena * helice = new NodoGrafoEscena();
     helice->agregar( glm::translate( glm::vec3(0.0, 2.0, 0.0) ) );
     helice->agregar( glm::scale( glm::vec3(3.0, 0.1, 0.2) ));
+    helice->agregar(material_helice);
     helice->agregar( aspa );
 
     agregar(helice);
@@ -343,12 +347,17 @@ HeliceTraseraP4::HeliceTraseraP4(){
     Cubo24 * aspa = new Cubo24();
     aspa->ponerColor({0.1, 0.1, 0.1 });
 
+    Textura * textura_helice = new Textura("textura-helice.jpg");
+    Material * material_helice = new Material(textura_helice, 0.25, 0.75, 1.0, 50.0);
+
     NodoGrafoEscena * helice1 = new NodoGrafoEscena();
     helice1->agregar( glm::scale( glm::vec3(0.05, 0.4, 0.05) ));
+    helice1->agregar(material_helice);
     helice1->agregar( aspa );
 
     NodoGrafoEscena * helice2 = new NodoGrafoEscena();
     helice2->agregar( glm::scale( glm::vec3(0.4, 0.05, 0.05) ));
+    helice2->agregar(material_helice);
     helice2->agregar( aspa );
     
     agregar(helice1);
@@ -370,35 +379,53 @@ CuerpoP4::CuerpoP4(){
     Cubo24 * frente = new Cubo24();
     frente->ponerColor({0.1, 0.7, 0.9});
 
+    Textura * textura_eje = new Textura("textura-eje.jpg");
+    Material * material_eje = new Material(textura_eje, 0.25, 0.75, 1.0, 50.0);
+
     NodoGrafoEscena * ejeHelicesSup = new NodoGrafoEscena();
     ejeHelicesSup->agregar( glm::translate( glm::vec3(0.0, 1.7, 0.0) ) );
     ejeHelicesSup->agregar( glm::scale( glm::vec3(0.1, 0.5, 0.1) ));
+    ejeHelicesSup->agregar(material_eje);
     ejeHelicesSup->agregar( eje );
+
+    Textura * textura_cabina = new TexturaXY("textura-cuerpo.jpg");
+    Material * material_cabina = new Material(textura_cabina, 0.25, 0.75, 1.0, 50.0);
 
     NodoGrafoEscena * cabina = new NodoGrafoEscena();
     cabina->agregar( glm::translate( glm::vec3(0.0, 0.7, 0.0) ) );
     cabina->agregar( glm::scale( glm::vec3(2.0, 1.0, 1.0) ));
+    cabina->agregar ( material_cabina );
     cabina->agregar( principal );
+
+    Textura * textura_ala = new Textura("textura-ala.jpg");
+    Material * material_ala = new Material(textura_ala, 0.25, 0.75, 1.0, 50.0);
 
     NodoGrafoEscena * aleron = new NodoGrafoEscena();
     aleron->agregar( glm::translate( glm::vec3(-2.5, 0.7, 0.0) ) );
     aleron->agregar( glm::scale( glm::vec3(1.0, 0.2, 0.2) ));
+    aleron->agregar ( material_ala );
     aleron->agregar( ala );
 
     NodoGrafoEscena * extremo = new NodoGrafoEscena();
     extremo->agregar( glm::translate( glm::vec3(-3.7, 0.8, 0.0) ) );
     extremo->agregar( glm::scale( glm::vec3(0.2, 0.5, 0.2) ));
+    extremo->agregar( material_ala );
     extremo->agregar( ala );
 
     NodoGrafoEscena * ejeHelicesTra = new NodoGrafoEscena();
     ejeHelicesTra->agregar( glm::translate( glm::vec3(-3.6, 0.8, 0.0) ) );
     ejeHelicesTra->agregar( glm::scale( glm::vec3(0.05, 0.05, 0.4) ));
     ejeHelicesTra->agregar( glm::rotate( float(glm::radians(90.0)), glm::vec3( 1.0, 0.0, 0.0)) );
+    ejeHelicesTra->agregar(material_eje);
     ejeHelicesTra->agregar( eje );
+
+    Textura * textura_ventana = new Textura("textura-ventana.jpg");
+    Material * material_ventana = new Material(textura_ventana , 1.0, 1.0, 1.0, 50.0);
 
     NodoGrafoEscena * ventana = new NodoGrafoEscena();
     ventana->agregar( glm::translate( glm::vec3(1.8, 0.8, 0.0) ) );
     ventana->agregar( glm::scale( glm::vec3(0.2, 0.3, 0.4) ));
+    ventana->agregar( material_ventana );
     ventana->agregar( frente );
 
     agregar(ejeHelicesSup);
@@ -412,43 +439,52 @@ CuerpoP4::CuerpoP4(){
 // -----------------------------------------------------------------------------
 
 BaseP4::BaseP4(){
+    Textura * textura_base = new TexturaXY("textura-base.jpg");
+    Material * material_base = new Material(textura_base, 0.25, 0.75, 1.0, 50.0);
+
     CilindroP4 * cilindro = new CilindroP4(6,15);
-    cilindro->ponerColor({0.2, 0.2, 0.2 });
+    cilindro->ponerColor({0.1, 0.2, 0.2 });
 
     NodoGrafoEscena * apoyo1 = new NodoGrafoEscena();
     apoyo1->agregar( glm::translate( glm::vec3(1.0, -0.8, 0.5) ) );
     apoyo1->agregar( glm::scale( glm::vec3(2.0, 0.15, 0.15) ));
     apoyo1->agregar( glm::rotate( float(glm::radians(90.0)), glm::vec3( 0.0, 0.0, 1.0)) );
+    apoyo1->agregar( material_base );
     apoyo1->agregar( cilindro );
 
     NodoGrafoEscena * apoyo2 = new NodoGrafoEscena();
     apoyo2->agregar( glm::translate( glm::vec3(1.0, -0.8, -0.5) ) );
     apoyo2->agregar( glm::scale( glm::vec3(2.0, 0.15, 0.15) ));
     apoyo2->agregar( glm::rotate( float(glm::radians(90.0)), glm::vec3( 0.0, 0.0, 1.0)) );
+    apoyo2->agregar( material_base );
     apoyo2->agregar( cilindro );
 
     NodoGrafoEscena * conexion1 = new NodoGrafoEscena();
     conexion1->agregar( glm::translate( glm::vec3(0.4, -0.8, 0.5) ) );
     conexion1->agregar( glm::rotate( float(glm::radians(-20.0)), glm::vec3( 1.0, 0.0, 0.0)) );
     conexion1->agregar( glm::scale( glm::vec3(0.1, 0.7, 0.1) ));
+    conexion1->agregar( material_base );
     conexion1->agregar( cilindro );
 
     NodoGrafoEscena * conexion2 = new NodoGrafoEscena();
     conexion2->agregar( glm::translate( glm::vec3(-0.4, -0.8, 0.5) ) );
     conexion2->agregar( glm::rotate( float(glm::radians(-20.0)), glm::vec3( 1.0, 0.0, 0.0)) );
     conexion2->agregar( glm::scale( glm::vec3(0.1, 0.7, 0.1) ));
+    conexion2->agregar( material_base );
     conexion2->agregar( cilindro );
 
     NodoGrafoEscena * conexion3 = new NodoGrafoEscena();
     conexion3->agregar( glm::translate( glm::vec3(0.4, -0.8, -0.5) ) );
     conexion3->agregar( glm::rotate( float(glm::radians(20.0)), glm::vec3( 1.0, 0.0, 0.0)) );
     conexion3->agregar( glm::scale( glm::vec3(0.1, 0.7, 0.1) ));
+    conexion3->agregar( material_base );
     conexion3->agregar( cilindro );
 
     NodoGrafoEscena * conexion4 = new NodoGrafoEscena();
     conexion4->agregar( glm::translate( glm::vec3(-0.4, -0.8, -0.5) ) );
     conexion4->agregar( glm::rotate( float(glm::radians(20.0)), glm::vec3( 1.0, 0.0, 0.0)) );
     conexion4->agregar( glm::scale( glm::vec3(0.1, 0.7, 0.1) ));
+    conexion4->agregar( material_base );
     conexion4->agregar( cilindro );
     
     agregar(apoyo1);
