@@ -494,6 +494,8 @@ Escena5::Escena5()
    cout << "Creando objetos de la práctica 5." << endl ;
 
    objetos.push_back(new VariasLatasPeones() );
+
+   objetos.push_back(new HelicopteroP5(3.0, 2.0, 10.0, 25.0) );
    
 }
 
