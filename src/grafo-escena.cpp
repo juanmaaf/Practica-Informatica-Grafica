@@ -33,6 +33,7 @@
 #include "aplicacion-ig.h"
 #include "seleccion.h"   // para 'ColorDesdeIdent' 
 #include <malla-revol.h>
+#include <string>
 
 using namespace std;
 
@@ -621,7 +622,59 @@ NodoDiscoP4::NodoDiscoP4(int ejr){
    agregar( new MallaDiscoP4(ejr) );
 }
 
+// Clase GrafoEsferasP5
 
+GrafoEsferasP5::GrafoEsferasP5() {
+   const unsigned
+      n_filas_esferas = 8,
+      n_esferas_x_fila= 5 ;
+   const float
+      e = 0.4/n_esferas_x_fila ;
+
+   agregar( glm::scale(glm::vec3( e,e,e ) ));
+
+   for( unsigned i = 0 ; i < n_filas_esferas ; i++ ){
+      NodoGrafoEscena * fila_esferas = new NodoGrafoEscena() ;
+
+      for( unsigned j = 0 ; j < n_esferas_x_fila ; j++ ){
+         MallaInd * esfera = new Esfera(50,50) ;
+         esfera->ponerNombre("Se ha seleccionado la esfera número " + std::to_string(j+1) + " de la fila número " + std::to_string(i+1));
+         esfera->ponerIdentificador(n_filas_esferas*i+j+1);
+         fila_esferas->agregar( glm::translate(glm::vec3(2.2f, 0.0, 0.0 )));
+         fila_esferas->agregar( esfera );
+      }
+
+      agregar( fila_esferas );
+      agregar( glm::translate(glm::vec3(0.0, 0.0, 5.0) ));
+   }
+}
+
+// Clase GrafoEsferasP5_2
+
+GrafoEsferasP5_2::GrafoEsferasP5_2() {
+   const unsigned
+      n_filas_esferas = 8,
+      n_esferas_x_fila = 5 ;
+   const float
+      e = 2.5/n_esferas_x_fila ;
+
+   agregar( glm::scale(glm::vec3( e, e, e ) ));
+
+   for( unsigned i = 0 ; i < n_filas_esferas ; i++ ) {
+      NodoGrafoEscena * fila_esferas = new NodoGrafoEscena() ;
+      fila_esferas->agregar( glm::translate(glm::vec3( 3.0, 0.0, 0.0 ) ));
+
+      for( unsigned j = 0 ; j < n_esferas_x_fila ; j++ ){
+         MallaInd * esfera = new Esfera(50,50) ;
+         esfera->ponerIdentificador(n_filas_esferas*i+j+1);
+         fila_esferas->agregar( glm::translate( glm::vec3(2.5, 0.0, 0.0) ));
+         fila_esferas->agregar( esfera );
+      }
+      
+      agregar( fila_esferas );
+      agregar( glm::rotate( float(glm::radians(360.0/n_filas_esferas)), glm::vec3( 0.0, 1.0, 0.0 )  ));
+   }
+}
 
 
 

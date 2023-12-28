@@ -496,6 +496,10 @@ Escena5::Escena5()
    objetos.push_back(new VariasLatasPeones() );
 
    objetos.push_back(new HelicopteroP5(3.0, 2.0, 10.0, 25.0) );
+
+   objetos.push_back(new GrafoEsferasP5() );
+
+   objetos.push_back(new GrafoEsferasP5_2() );
    
 }
 

@@ -232,4 +232,12 @@ class MallaDiscoP4 : public MallaInd
 
 // ---------------------------------------------------------------------
 
+class EsferasGrafoP5 : public MallaInd
+{
+   public:
+      EsferasGrafoP5();
+};
+
+// ---------------------------------------------------------------------
+
 #endif

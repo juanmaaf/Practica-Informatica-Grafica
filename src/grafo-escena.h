@@ -160,6 +160,18 @@ class NodoDiscoP4 : public NodoGrafoEscena
       NodoDiscoP4(int ejr);
 };
 
+class GrafoEsferasP5 : public NodoGrafoEscena
+{
+   public:
+      GrafoEsferasP5();
+};
+
+class GrafoEsferasP5_2 : public NodoGrafoEscena
+{
+   public:
+      GrafoEsferasP5_2();
+};
+
 
 
 #endif // GRAFO_ESCENA_HPP
