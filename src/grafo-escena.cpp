@@ -625,57 +625,99 @@ NodoDiscoP4::NodoDiscoP4(int ejr){
 // Clase GrafoEsferasP5
 
 GrafoEsferasP5::GrafoEsferasP5() {
-   const unsigned
-      n_filas_esferas = 8,
-      n_esferas_x_fila= 5 ;
-   const float
-      e = 0.4/n_esferas_x_fila ;
+   const unsigned n_filas_esferas = 8,
+                  n_esferas_x_fila = 5 ;
+   const float e = 0.4/n_esferas_x_fila ;
 
    agregar( glm::scale(glm::vec3( e,e,e ) ));
-
    for( unsigned i = 0 ; i < n_filas_esferas ; i++ ){
       NodoGrafoEscena * fila_esferas = new NodoGrafoEscena() ;
-
       for( unsigned j = 0 ; j < n_esferas_x_fila ; j++ ){
-         MallaInd * esfera = new Esfera(50,50) ;
-         esfera->ponerNombre("Se ha seleccionado la esfera número " + std::to_string(j+1) + " de la fila número " + std::to_string(i+1));
+         MiEsferaE1 * esfera = new MiEsferaE1(i,j) ;
+         esfera->ponerNombre("Se ha seleccionado la esfera número " + std::to_string(j) + " de la fila número " + std::to_string(i));
          esfera->ponerIdentificador(n_filas_esferas*i+j+1);
-         fila_esferas->agregar( glm::translate(glm::vec3(2.2f, 0.0, 0.0 )));
+         fila_esferas->agregar( glm::translate(glm::vec3( 2.2, 0.0, 0.0 ) ));
          fila_esferas->agregar( esfera );
       }
-
       agregar( fila_esferas );
-      agregar( glm::translate(glm::vec3(0.0, 0.0, 5.0) ));
+      agregar( glm::translate(glm::vec3( 0.0, 0.0, 5.0 ) ));
    }
 }
 
 // Clase GrafoEsferasP5_2
 
 GrafoEsferasP5_2::GrafoEsferasP5_2() {
-   const unsigned
-      n_filas_esferas = 8,
-      n_esferas_x_fila = 5 ;
-   const float
-      e = 2.5/n_esferas_x_fila ;
+   const unsigned n_filas_esferas = 8,
+                  n_esferas_x_fila = 5 ;
+   const float e = 2.5/n_esferas_x_fila ;
 
-   agregar( glm::scale(glm::vec3( e, e, e ) ));
-
+   agregar( glm::scale(glm::vec3( e,e,e ) ));
    for( unsigned i = 0 ; i < n_filas_esferas ; i++ ) {
       NodoGrafoEscena * fila_esferas = new NodoGrafoEscena() ;
       fila_esferas->agregar( glm::translate(glm::vec3( 3.0, 0.0, 0.0 ) ));
-
-      for( unsigned j = 0 ; j < n_esferas_x_fila ; j++ ){
-         MallaInd * esfera = new Esfera(50,50) ;
+      for( unsigned j = 0 ; j < n_esferas_x_fila ; j++ ) {
+         MiEsferaE2 * esfera = new MiEsferaE2() ;
+         esfera->ponerNombre("Se ha seleccionado la esfera número " + std::to_string(j) + " de la fila número " + std::to_string(i));
          esfera->ponerIdentificador(n_filas_esferas*i+j+1);
-         fila_esferas->agregar( glm::translate( glm::vec3(2.5, 0.0, 0.0) ));
+         fila_esferas->agregar( glm::translate(glm::vec3( 2.5, 0.0, 0.0 ) ));
          fila_esferas->agregar( esfera );
       }
-      
       agregar( fila_esferas );
-      agregar( glm::rotate( float(glm::radians(360.0/n_filas_esferas)), glm::vec3( 0.0, 1.0, 0.0 )  ));
+      agregar( glm::rotate( float(glm::radians(360.0/n_filas_esferas)), glm::vec3( 0.0, 1.0, 0.0 ) ));
    }
 }
 
+MiEsferaE1::MiEsferaE1(int i, int j){
+   NodoGrafoEscena * esfera = new NodoGrafoEscena();
+
+   esfera->agregar(new Material(0.2, 0.5, 0.9, 50.0));
+   esfera->agregar(new Esfera(30,30));
+   
+   agregar(esfera);
+}
+
+bool MiEsferaE1::cuandoClick(const glm::vec3 & centro_wc){
+   using namespace std ;
+   assert( apl != nullptr );
+
+   cout << "Ejecutando método 'cuandoClick' por de la clase MiEsferaE1." << endl ;
+   cout << leerNombre() << "'" << endl ;
+
+   return true;
+}
+
+MiEsferaE2::MiEsferaE2(){
+
+   NodoGrafoEscena * esfera = new NodoGrafoEscena();
+   esfera->agregar(new Material(0.2, 0.5, 0.9, 50.0));
+   esfera->agregar(new Esfera(30,30));
+   
+   agregar(esfera);
+}
+
+bool MiEsferaE2::cuandoClick(const glm::vec3 & centro_wc){
+   using namespace std ;
+   assert( apl != nullptr );
+   Escena * escena = apl->escenas[apl->ind_escena_act] ; assert( escena != nullptr );
+
+   cout << "Ejecutando método 'cuandoClick' por de la clase MiEsferaE2." << endl ;
+   cout << leerNombre() << "'" << endl ;
+
+   if(!tieneColor()){
+      ponerColor({1.0, 1.0, 1.0});
+   }
+
+   // Si blanco -> a rojo
+   if(leerColor().r == 1.0 && leerColor().g == 1.0 && leerColor().b == 1.0){
+      ponerColor({1.0, 0.0, 0.0});
+   }
+   // Si rojo -> a blanco
+   else if(leerColor().r == 1.0 && leerColor().g == 0.0 && leerColor().b == 0.0){
+      ponerColor({1.0, 1.0, 1.0});
+   }
+
+   return true;
+}
 
 
 

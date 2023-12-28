@@ -172,6 +172,20 @@ class GrafoEsferasP5_2 : public NodoGrafoEscena
       GrafoEsferasP5_2();
 };
 
+class MiEsferaE1 : public NodoGrafoEscena
+{
+   public:
+      MiEsferaE1(int i, int j);
+      bool cuandoClick(const glm::vec3 & centro_wc);
+};
+
+class MiEsferaE2 : public NodoGrafoEscena
+{
+   public:
+      MiEsferaE2();
+      bool cuandoClick(const glm::vec3 & centro_wc);
+};
+
 
 
 #endif // GRAFO_ESCENA_HPP
