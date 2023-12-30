@@ -443,7 +443,7 @@ BaseP4::BaseP4(){
     Material * material_base = new Material(textura_base, 0.25, 0.75, 1.0, 50.0);
 
     CilindroP4 * cilindro = new CilindroP4(6,15);
-    cilindro->ponerColor({0.1, 0.2, 0.2 });
+    cilindro->ponerColor({0.1, 0.1, 0.1 });
 
     NodoGrafoEscena * apoyo1 = new NodoGrafoEscena();
     apoyo1->agregar( glm::translate( glm::vec3(1.0, -0.8, 0.5) ) );
@@ -782,7 +782,7 @@ BaseP5::BaseP5(){
     Material * material_base = new Material(textura_base, 0.25, 0.75, 1.0, 50.0);
 
     CilindroP4 * cilindro = new CilindroP4(6,15);
-    cilindro->ponerColor({0.1, 0.2, 0.2 });
+    cilindro->ponerColor({0.1, 0.1, 0.1 });
 
     NodoGrafoEscena * apoyo1 = new NodoGrafoEscena();
     apoyo1->agregar( glm::translate( glm::vec3(1.0, -0.8, 0.5) ) );
