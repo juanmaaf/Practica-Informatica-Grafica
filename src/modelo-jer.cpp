@@ -620,8 +620,7 @@ HelicopteroP5::HelicopteroP5(const float giro_superior, const float giro_atras, 
     // Identificadores
     int ident_helice_sup = 1;
     int ident_helice_tra = 2;
-    int ident_cuerpo = 3;
-    int ident_base = 4;
+    int ident_base = 3;
 
     unsigned ind4 = agregar( glm::scale(glm::vec3(1.1, 1.1, 1.1) ));
     orientacion_helicoptero = leerPtrMatriz(ind4);
@@ -645,8 +644,6 @@ HelicopteroP5::HelicopteroP5(const float giro_superior, const float giro_atras, 
     helice_trasera->agregar( new HeliceTraseraP4() );
 
     NodoGrafoEscena * cuerpo = new NodoGrafoEscena();
-    cuerpo->ponerNombre("Cuerpo");
-    cuerpo->ponerIdentificador(ident_cuerpo);
     cuerpo->agregar( new CuerpoP5() );
 
     NodoGrafoEscena * base = new NodoGrafoEscena();
@@ -706,6 +703,9 @@ HeliceTraseraP5::HeliceTraseraP5(){
 // -----------------------------------------------------------------------------
 
 CuerpoP5::CuerpoP5(){
+    int ident_cabina = 4;
+    int ident_ventana = 5;
+
     CilindroP4 * eje = new CilindroP4(6,15);
     eje->ponerColor({0.15, 0.15, 0.15 });
 
@@ -733,6 +733,8 @@ CuerpoP5::CuerpoP5(){
     NodoGrafoEscena * cabina = new NodoGrafoEscena();
     cabina->agregar( glm::translate( glm::vec3(0.0, 0.7, 0.0) ) );
     cabina->agregar( glm::scale( glm::vec3(2.0, 1.0, 1.0) ));
+    cabina->ponerNombre("Cabina");
+    cabina->ponerIdentificador(ident_cabina);
     cabina->agregar ( material_cabina );
     cabina->agregar( principal );
 
@@ -764,6 +766,8 @@ CuerpoP5::CuerpoP5(){
     NodoGrafoEscena * ventana = new NodoGrafoEscena();
     ventana->agregar( glm::translate( glm::vec3(1.8, 0.8, 0.0) ) );
     ventana->agregar( glm::scale( glm::vec3(0.2, 0.3, 0.4) ));
+    ventana->ponerNombre("Ventana");
+    ventana->ponerIdentificador(ident_ventana);
     ventana->agregar( material_ventana );
     ventana->agregar( frente );
 
